@@ -10,6 +10,7 @@ body {
     max-width: 100%;
 }
 
+/* 深浅色模式 */
 @media (prefers-color-scheme: dark) {
     body {
         background-color: rgb(19, 23, 32);
@@ -116,10 +117,33 @@ a {
     font-size: 2.5em;
 }
 
+/* 渐变字体 */
 
 b {
-    color: rgb(23, 129, 181);
+    background-image: linear-gradient(to right, #48c6ef 0%, #6f86d6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
+
+.green-title {
+    background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.orange-title {
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.pink-title {
+    background-image: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* 间距 */
 
 .block {
     margin-top: 200px;
@@ -136,6 +160,7 @@ b {
     border-radius: 10px;
 }
 
+/* 不明意义的卡片 */
 .turbo_card {
     padding: 20px 20px 20px 20px;
     border-radius: 1em;
@@ -143,7 +168,6 @@ b {
         0px 0px 5.3px rgba(0, 0, 0, 0.028),
         0px 0px 17.9px rgba(0, 0, 0, 0.042),
         0px 0px 80px rgba(0, 0, 0, 0.07);
-
 }
 
 .policy_title {
@@ -203,16 +227,16 @@ h1 {
     background: rgb(39, 117, 182);
     clip-path: circle(45%);
     padding: 15px;
-    text-decoration: none!important;
-    color: white!important;
+    text-decoration: none !important;
+    color: white !important;
 }
 
-.social_media > a{
-    text-decoration: none!important;
-    color: white!important;
+.social_media>a {
+    text-decoration: none !important;
+    color: white !important;
 }
 
 small {
     font-size: 40%;
-    color: gray;
+    color: #B2B2B2;
 }
