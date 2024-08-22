@@ -143,6 +143,13 @@ b {
     -webkit-text-fill-color: transparent;
 }
 
+.purple-title {
+    background-image: linear-gradient(to top, #a7a6cb 0%, #8989ba 52%, #8989ba 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
 /* 间距 */
 
 .block {
