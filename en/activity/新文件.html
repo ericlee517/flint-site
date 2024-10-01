@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>打地鼠游戏</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin: 20px 0;
+        }
+
+        #game-board {
+            width: 250px;
+            margin: 0 auto;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .hole {
+            width: 50px;
+            height: 50px;
+            background-color: #4CAF50;
+            border: 1px solid #388E3C;
+            float: left;
+            transition: background-color 0.2s ease;
+            border-radius: 5px;
+        }
+
+        .hole:hover {
+            background-color: #81C784;
+        }
+
+        .mole {
+            width: 50px;
+            height: 50px;
+            background-color: #F44336;
+            border-radius: 50%;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+
+        p {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        #score {
+            font-weight: bold;
+            font-size: 24px;
+            color: #2196F3;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>打地鼠游戏</h1>
+    <p>得分：<span id="score">0</span></p><br>
+    <div id="game-board"></div>
+
+
+    <script>
+        // 游戏区域的大小
+        const rows = 5;
+        const cols = 5;
+
+        // 地鼠出现的时间间隔（毫秒）
+        const moleInterval = 1000;
+
+        // 初始得分
+        let score = 0;
+
+        // 创建游戏区域
+        function createGameBoard() {
+            const gameBoard = document.getElementById('game-board');
+            for (let i = 0; i < rows; i++) {
+                for (let j = 0; j < cols; j++) {
+                    const hole = document.createElement('div');
+                    hole.classList.add('hole');
+                    hole.dataset.row = i;
+                    hole.dataset.col = j;
+                    gameBoard.appendChild(hole);
+                }
+            }
+        }
+
+        // 随机生成地鼠出现的位置
+        function getRandomHole() {
+            const row = Math.floor(Math.random() * rows);
+            const col = Math.floor(Math.random() * cols);
+            return document.querySelector(`[data-row="${row}"][data-col="${col}"]`);
+        }
+
+        // 显示地鼠
+        function showMole(hole) {
+            const mole = document.createElement('div');
+            mole.classList.add('mole');
+            hole.appendChild(mole);
+        }
+        // 隐藏地鼠
+        function hideMole(hole) {
+            const mole = hole.querySelector('.mole');
+            if (mole) {
+                mole.remove();
+            }
+        }
+
+        // 处理点击事件
+        function handleClick(event) {
+            if (event.target.classList.contains('mole')) {
+                score++;
+                document.getElementById('score').textContent = score;
+                hideMole(event.target.parentNode);
+            }
+        }
+
+        // 游戏主循环
+        function gameLoop() {
+            const hole = getRandomHole();
+            showMole(hole);
+            setTimeout(() => {
+                hideMole(hole);
+            }, 1000);
+        }
+
+        createGameBoard();
+        document.getElementById('game-board').addEventListener('click', handleClick);
+        setInterval(gameLoop, moleInterval);
+    </script>
+</body>
+
+</html>

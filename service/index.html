@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page_title">服务 - Turbo Flint</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+</head>
+
+<body>
+    <div id="header">
+        <Navbar></Navbar>
+    </div>
+   
+        <hgroup>
+
+            <br>
+            <h1 class="s-46">服务</h1>
+            <p style="color: gray;">由Turbo Flint为您提供的多样化服务。</p>
+        </hgroup>
+        <hr>
+        <div class="main">
+        <h2>基础性服务</h2>
+<article>
+            <tag>公测中</tag><br><br>
+            <hgroup>
+                <h1>火石凭证</h1>
+                <p>创建属于你的火石凭证，即可带来快速的服务体验。</p>
+            </hgroup>
+            <a href="https://turboid.turboflint.cn/" role="button" style="color: white;">立即申请</a>
+        </article>
+
+        <hr>
+        
+
+        <h2>咨询服务</h2>
+        <article>
+            <hgroup>
+                <h1>产品文档</h1>
+                <p>所有产品的详细使用文档，帮助您快速掌握使用技巧。</p>
+            </hgroup>
+            <a href="https://docs.turboflint.cn" role="button" style="color: white;">立即前往</a>
+        </article>
+        </div>
+    <script src="https://cdn.staticfile.net/vue/3.2.36/vue.global.prod.js"></script>
+    <script src="../script/main_load.js"></script>
+    <script src=",,/script/main.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script>
+        function showError() {
+            Toastify({
+                text: "火石凭证 服务暂未开放。",
+                duration: 3000,
+                newWindow: true,
+                gravity: "top", // `top` or `bottom`
+                position: "center", // `left`, `center` or `right`
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                style: {
+                    background: "linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%)",
+                },
+                onClick: function() {} // Callback after click
+            }).showToast();
+        }
+    </script>
+</body>
+
+</html>

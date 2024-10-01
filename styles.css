@@ -1,0 +1,152 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('//cdn.repository.webfont.com/webfonts/nomal/153070/48121/651ea7b56f50f609e40af58e.gif?r=244901430360');
+    src: url('//cdn.repository.webfont.com/webfonts/nomal/153070/48121/651ea7b56f50f609e40af58e.gif?r=244901430360?#iefix') format('embedded-opentype'), url('//cdn.repository.webfont.com/webfonts/nomal/153070/48121/651ea7b56f50f609e40af58e.png?r=244901430360') format('woff2'), url('//cdn.repository.webfont.com/webfonts/nomal/153070/48121/651ea7b56f50f609e40af58e.bmp?r=244901430360') format('woff'), url('//cdn.repository.webfont.com/webfonts/nomal/153070/48121/651ea7b56f50f609e40af58e.jpg?r=244901430360') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    font-family: NotoSans;
+}
+
+.w-100 {
+    font-weight: 100;
+}
+
+.w-200 {
+    font-weight: 200;
+}
+
+.w-300 {
+    font-weight: 300;
+}
+
+.w-400 {
+    font-weight: 400;
+}
+
+.w-500 {
+    font-weight: 500;
+}
+
+.w-600 {
+    font-weight: 600;
+}
+
+.w-700 {
+    font-weight: 700;
+}
+
+.w-800 {
+    font-weight: 800;
+}
+
+.w-900 {
+    font-weight: 900;
+}
+
+.s-10 {
+    font-size: 10px;
+}
+
+.s-12 {
+    font-size: 12px;
+}
+
+.s-14 {
+    font-size: 14px;
+}
+
+.s-16 {
+    font-size: 16px;
+}
+
+.s-18 {
+    font-size: 18px;
+}
+
+.s-20 {
+    font-size: 20px;
+}
+
+.s-22 {
+    font-size: 22px;
+}
+
+.s-24 {
+    font-size: 24px;
+}
+
+.s-26 {
+    font-size: 26px;
+}
+
+.s-28 {
+    font-size: 28px;
+}
+
+.s-30 {
+    font-size: 30px;
+}
+
+.s-32 {
+    font-size: 32px;
+}
+
+.s-34 {
+    font-size: 34px;
+}
+
+.s-36 {
+    font-size: 36px;
+}
+
+.s-38 {
+    font-size: 38px;
+}
+
+.s-40 {
+    font-size: 40px;
+}
+
+.s-42 {
+    font-size: 42px;
+}
+.s-44{
+    font-size: 44px;
+}
+
+.s-46{
+    font-size: 46px;
+}
+
+.i-1 {
+    text-indent: 1em;
+}
+
+.i-2 {
+    text-indent: 1.5em;
+}
+
+.i-3 {
+    text-indent: 2em;
+}
+
+.p-5 {
+    padding: 5px 5px;
+}
+
+.p-10 {
+    padding: 10px 10px;
+}
+
+.montserrat {
+    font-family: 'Montserrat';
+}
+
+.article {
+    width: min(60ch, 100% - 2rem);
+    margin-inline: auto;
+    text-indent: 1rem;
+}

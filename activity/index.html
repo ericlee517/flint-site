@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/pico.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.net/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+  <title>活动 - Turbo Flint</title>
+</head>
+
+<body>
+<article>
+<b style="color: orange">Warning：</b>该页面正在开发中。<br>
+</article>
+  <h2>猜数字游戏</h2>
+
+  <p>我已经想好了一个 1 到 100 之间的数字，你来猜猜看吧！</p>
+  <input type="number" id="guessInput">
+  <button onclick="checkGuess()">猜一猜</button>
+  <p id="result"></p>
+
+  <script>
+    let targetNumber = Math.floor(Math.random() * 100) + 1;
+
+    function checkGuess() {
+      let guess = parseInt(document.getElementById('guessInput').value);
+      let resultElement = document.getElementById('result');
+
+      if (isNaN(guess)) {
+        resultElement.innerHTML = '请输入一个有效的数字！';
+        return;
+      }
+
+      if (guess === targetNumber) {
+        resultElement.innerHTML = '恭喜你，猜对了！';
+      } else if (guess > targetNumber) {
+        resultElement.innerHTML = '你猜的数字太大了，再试试！';
+      } else {
+        resultElement.innerHTML = '你猜的数字太小了，再试试！';
+      }
+    }
+  </script>
+</body>
+
+</html>
