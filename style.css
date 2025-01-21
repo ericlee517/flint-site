@@ -37,7 +37,7 @@ code {
 }
 
 tag {
-    background: green;
+    background: gray;
     padding: 5px 5px 5px 5px;
     color: white;
     border-radius: 3px;
@@ -52,6 +52,10 @@ img {
     margin-top: 15px;
 }
 
+footer {
+    padding: auto !important;
+}
+
 article{
     max-width: 500px;
     flex-grow: 1;
@@ -63,12 +67,11 @@ article{
 }
 
 #header {
-    grid-area: header;
+   margin: 10px;
 }
 
-#main {
-    grid-area: main;
-    margin: 10px;
+.nav-logo{
+    width: 8dvh;
 }
 
 #footer {
@@ -94,9 +97,6 @@ a {
     text-decoration: none;
 }
 
-#header {
-    grid-area: header;
-}
 
 #main {
     grid-area: main;
@@ -132,7 +132,7 @@ a {
 /* 渐变字体 */
 
 b {
-    background-image: linear-gradient(to right, #48c6ef 0%, #6f86d6 100%);
+    background-image: linear-gradient(to right, #48c6ef 0%, #336df4 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }

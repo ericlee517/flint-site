@@ -3,7 +3,7 @@ AppNavBar.component('Navbar', {
             template: `
          <nav>
         <ul>
-            <li><strong>Turbo Flint</strong></li>
+            <a hrer="../../"><li><img src="https://static.turboflint.cn/image/flint_logo.jpg" class="nav-logo"></li></a>
         </ul>
         <ul>
             <li><a href="../../">首页</a></li>
