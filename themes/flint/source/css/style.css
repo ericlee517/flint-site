@@ -1,0 +1,235 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+/* 渐变字体 */
+
+b {
+  color: #007bff;
+}
+
+.green-title {
+  background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.orange-title {
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.pink-title {
+  background-image: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.purple-title {
+  background-image: linear-gradient(
+    to top,
+    #a7a6cb 0%,
+    #8989ba 52%,
+    #8989ba 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero {
+  background: linear-gradient(to bottom, #ffe5ec, #ffffff);
+  text-align: left;
+}
+
+.navbar-to-hero {
+  background: linear-gradient(
+    to bottom,
+    #ffe5ec,
+    #ffffff
+  ); /* 这里使用和hero相同的渐变，可根据需求调整 */
+}
+
+
+.hero-button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.hero button {
+  background-color: #007bff;
+  transition: background-color 0.3s ease;
+}
+
+.pink-from-top-to-bottom {
+  background: linear-gradient(to bottom, #fff7f9, #ffffff);
+}
+
+.pink-from-bottom-to-top {
+  background: linear-gradient(to top, #fff4f7, #ffffff);
+}
+
+@keyframes meteor-fly {
+  0% {
+    right: -100px;
+    opacity: 1;
+  }
+  100% {
+    right: 100%;
+    opacity: 0;
+  }
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -100px;
+  width: 200px;
+  height: 4px;
+  background: linear-gradient(
+    to left,
+    rgba(255, 117, 140, 0),
+    rgba(255, 117, 140, 1)
+  );
+  transform: translateY(-50%);
+  animation: meteor-fly 8s linear infinite;
+}
+
+.hero::before:nth-of-type(1) {
+  top: 10%;
+  animation: meteor-fly 3s linear infinite;
+}
+.hero::before:nth-of-type(2) {
+  top: 20%;
+  animation: meteor-fly 4s linear infinite;
+}
+.hero::before:nth-of-type(3) {
+  top: 30%;
+  animation: meteor-fly 5s linear infinite;
+}
+.hero::before:nth-of-type(4) {
+  top: 40%;
+  animation: meteor-fly 6s linear infinite;
+}
+.hero::before:nth-of-type(5) {
+  top: 50%;
+  animation: meteor-fly 7s linear infinite;
+}
+.hero::before:nth-of-type(6) {
+  top: 60%;
+  animation: meteor-fly 8s linear infinite;
+}
+.hero::before:nth-of-type(7) {
+  top: 70%;
+  animation: meteor-fly 9s linear infinite;
+}
+.hero::before:nth-of-type(8) {
+  top: 80%;
+  animation: meteor-fly 10s linear infinite;
+}
+.hero::before:nth-of-type(9) {
+  top: 90%;
+  animation: meteor-fly 11s linear infinite;
+}
+.hero::before:nth-of-type(10) {
+  top: 100%;
+  animation: meteor-fly 12s linear infinite;
+}
+.hero {
+  position: relative;
+  background: linear-gradient(to bottom, #ffe5ec, #ffffff);
+  text-align: left;
+  overflow: hidden;
+}
+
+.navbar-to-hero {
+  background: linear-gradient(
+    to bottom,
+    #ffe5ec,
+    #ffffff
+  ); /* 这里使用和hero相同的渐变，可根据需求调整 */
+}
+
+.hero h1,
+.hero p {
+  /* 移除动画代码 */
+}
+
+/* 移除关键帧动画 */
+/* @keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+} */
+
+.hero-button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.hero button {
+  background-color: #007bff;
+  transition: background-color 0.3s ease;
+}
+
+.pink-from-top-to-bottom {
+  background: linear-gradient(to bottom, #fff7f9, #ffffff);
+}
+
+.pink-from-bottom-to-top {
+  background: linear-gradient(to top, #fff4f7, #ffffff);
+}
+
+/* 自定义图片样式 */
+.custom-img {
+  max-width: 100%;
+  max-height: 350px; /* 可根据实际需求调整最大高度 */
+  object-fit: contain; /* 让图片按比例缩放并完全包含在容器内 */
+}
+
+.masonry {
+  /* 清除浮动 */
+  overflow: hidden;
+}
+
+.masonry .item {
+  box-sizing: border-box;
+  float: left;
+  width: 33.3333%; /* 一列三张图片 */
+  padding: 0 8px;
+  margin-bottom: 16px;
+}
+
+.the-post-content p {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  text-indent: 2em;
+}

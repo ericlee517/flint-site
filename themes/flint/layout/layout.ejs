@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="corporate">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content=""<%- url_for('image/logos/logo_nav.png') %>">
+<meta property="og:url" content="https://turboflint.cn/">
+<meta name="description" content="涡轮火石是一个致力于创作和开发创意的团队，旨在创造出更多有新意的小说宇宙。">
+<% if (page.title) { %>
+    <title><%= page.title %> - Turbo Flint 官方网站</title>
+<% } else { %>
+    <title><%= config.title %></title>
+<% } %>
+   <link rel="icon" type="icon/png" href="<%- url_for('image/logos/logo_black.png') %>">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+    <%- css('css/style.css') %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+</head>
+<body class="flex flex-col h-screen">
+    <%- include('nav.ejs') %>
+    <%- body %>
+    <%- partial('_partial/footer') %>
+    <%- js('js/script.js') %>
+    <%- js('js/lazysizes.min.js') %>
+    <%- js('js/waterfall.min.js') %>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elem = document.querySelector('.masonry');
+            var msnry = new Masonry( elem, {
+                columnWidth: '.item',
+                itemSelector: '.item',
+                percentPosition: true
+            });
+        });
+    </script>
+</body>
+</html>

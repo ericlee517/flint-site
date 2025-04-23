@@ -1,0 +1,48 @@
+<div class="footer-group">
+<footer class="footer sm:footer-horizontal bg-base-200 text-base-content p-10">
+    <!-- 检查 theme.footer.links 是否存在且为数组 -->
+    <% if (theme.footer && Array.isArray(theme.footer.links)) { %>
+        <nav>
+            <h6 class="footer-title">链接</h6>
+            <% theme.footer.links.forEach(link => { %>
+                <% if (link.url) { %>
+                    <a class="link link-hover" href="<%= link.url %>" target="_blank"><%= link.title %></a>
+                <% } else { %>
+                    <a class="link link-hover" target="_blank"><%= link.title %></a>
+                <% } %>
+            <% }); %>
+        </nav>
+    <% } %>
+    <!-- 检查 theme.footer.document 是否存在且为数组 -->
+    <% if (theme.footer && Array.isArray(theme.footer.document)) { %>
+        <nav>
+            <h6 class="footer-title">文档</h6>
+            <% theme.footer.document.forEach(doc => { %>
+                <% if (doc.url) { %>
+                    <a class="link link-hover" href="<%= doc.url %>" target="_blank"><%= doc.title %></a>
+                <% } else { %>
+                    <a class="link link-hover" target="_blank"><%= doc.title %></a>
+                <% } %>
+            <% }); %>
+        </nav>
+    <% } %>
+    <!-- 检查 theme.footer.contact 是否存在且为数组 -->
+    <% if (theme.footer && Array.isArray(theme.footer.contact)) { %>
+        <nav>
+            <h6 class="footer-title">联系</h6>
+            <% theme.footer.contact.forEach(contact => { %>
+                <% if (contact.url) { %>
+                    <a class="link link-hover" href="<%= contact.url %>" target="_blank"><%= contact.title %></a>
+                <% } else { %>
+                    <a class="link link-hover" target="_blank"><%= contact.title %></a>
+                <% } %>
+            <% }); %>
+        </nav>
+    <% } %>
+</footer>
+<footer class="footer sm:footer-horizontal footer-center bg-base-200 text-base-content p-4">
+    <aside>
+        <p>Copyright © 2025 - All right reserved by Turbo Flint</p>
+    </aside>
+</footer>
+</div>

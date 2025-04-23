@@ -1,0 +1,124 @@
+<div class="flex-grow bg-base-100">
+<div class="pink-from-top-to-bottom hero hero-animated bg-base-200 min-h-screen blue-background">
+    <div class="hero-content">
+        <div class="justnothingbutifwedonthavethisitwillbroke">
+            <h1 class="text-8xl font-bold pink-title">每个宇宙<br>拥有无限可能</h1>
+            <p class="py-6 text-2xl">
+                我们正在创造一个个<b class="pink-title">全新的</b>，富有创意的小说宇宙，每一位角色都有<b
+                    class="pink-title">无限的</b>可能性。在这个时代的浪潮中，我们将为你带来最具<b
+                    class="pink-title">创新性</b>的小说宇宙。
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<div class="container mx-auto px-4 py-8">
+    <h2 class="text-4xl font-bold mb-4">项目<br><small class="text-base-content/30">Projects</small></h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <% if (Array.isArray(theme['project-card'])) { %>
+            <% theme['project-card'].forEach(project => { %>
+                <div class="card bg-base-100 shadow-lg">
+                    <figure>
+                        <% if (project.image) { %>
+                            <img src="<%= project.image %>" alt="<%= project.title %>" />
+                        <% } %>
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title text-2xl"><%= project.title %> 
+                            <% if (project.status) { %>
+                                <div class="badge badge-soft badge-primary"><%= project.status %></div>
+                            <% } %>
+                        </h2>
+                        <p><%= project.description || 'No description available.' %></p>
+                        <div class="card-actions justify-end">
+                            <% if (project.url) { %>
+                                <a class="btn btn-primary" href="<%= project.url %>">查看详情</a>
+                            <% } else { %>
+                                <span class="btn btn-disabled">链接不可用</span>
+                            <% } %>
+                        </div>
+                    </div>
+                </div>
+            <% }); %>
+        <% } else { %>
+            <p>No projects available.</p>
+        <% } %>
+    </div>
+</div>
+
+<div class="container mx-auto px-4 py-8">
+    <h2 class="text-4xl font-bold mb-4 mt-25">图片<br><small class="text-base-content/30">Photos</small></h2>
+    <div class="masonry">
+        <div class="item">
+            <img src="image/eye.jpg" alt="Photo 1">
+        </div>
+        <div class="item">
+            <img src="image/dark_room.jpg" alt="Photo 2" >
+        </div>
+        <div class="item">
+            <img src="https://static.turboflint.cn/image/almas-salakhov-c7k6Z8T9sfM-unsplash.jpg" alt="Photo 3">
+        </div> 
+        <div class="item">
+            <img src="image/sand.jpg" alt="">
+        </div>
+        <div class="item">
+            <img src="image/broken.png" alt="">
+        </div>
+        <div class="item">
+            <img src="image/sand_2.jpg" alt="">
+        </div>
+        <div class="item">
+            <img src="image/sunset.jpg" alt="">
+        </div>
+    </div>
+</div>
+
+<div class="container mx-auto px-4 py-8">
+    <h2 class="text-4xl font-bold mb-4 mt-25">团队成员<br><small class="text-base-content/30">Team Members</small></h2>
+    <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <% if (Array.isArray(theme['team-members'])) { %>
+            <% theme['team-members'].forEach(member => { %>
+                <div class="team-member">
+                    <!-- 修正变量拼写错误 -->
+                    <img src="<%= member.avatar %>" alt="<%= member.name %>" class="rounded-md w-52 h-52 shadow-xl mb-6" />
+                    <span class="text-2xl"><%= member.name %></span>
+                    <p class="text-base-content/30"><%= member.description %></p>
+                </div>
+            <% }); %>
+        <% } %> <!-- 补充 if 语句结束标签 -->
+    </div>
+</div>
+
+<div class="container mx-auto px-4 py-8">
+    <h2 class="text-4xl font-bold mb-4 mt-25">关于<br><small class="text-base-content/30">About</small></h2>
+    <div tabindex="0" class="collapse collapse-arrow bg-base-100 border-base-300 border mb-4">
+        <div class="collapse-title font-semibold">我们是谁？</div>
+        <div class="collapse-content text-sm">
+            我们是火石，是一个制作概念性宇宙以及概念内容的团队。我们致力于创造庞大的宇宙观和丰富的角色设定，让读者身临其境地感受到每个角色的故事和情感。
+        </div>
+    </div>
+
+    <div tabindex="0" class="collapse collapse-arrow bg-base-100 border-base-300 border">
+        <div class="collapse-title font-semibold">火石为什么而生？</div>
+        <div class="collapse-content text-sm">
+           火石为创作而生。我们的目标是为读者带来一个充满无限可能性的世界，让读者能够在这个世界中自由地探索和发现。
+        </div>
+    </div>
+</div>
+
+</div>
+
+<dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+    <div class="modal-box">
+        <h3 class="text-lg font-bold">Hello!</h3>
+        <p class="py-4">Press ESC key or click the button below to close</p>
+        <div class="modal-action">
+            <form method="dialog">
+                <!-- if there is a button in form, it will close the modal -->
+                <button class="btn">Close</button>
+            </form>
+        </div>
+    </div>
+</dialog>

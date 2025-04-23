@@ -1,0 +1,41 @@
+project-card:
+  - title: BROKEN Universe
+    image: image/broken.png
+    description: 在这个神秘无限的宇宙中，每个人都有属于自己的故事。他们讲述着自己的成长经历，为了生活而战，为了自己的未来而战。
+    url: https://broken.turboflint.cn
+    status: 已推出
+  - title: No Line Universe
+    image: image/noline.jpg
+    description: 一个专注于青春、艺术和文化的小说宇宙。在这个宇宙中，无论是谁，他们虽然有自己的故事，但又能互相相连起来。
+    url: https://noline.turboflint.cn
+    status: 已推出
+
+team-members:
+  - name: 李野树
+    avatar: image/wild_tree.jpg
+    description: 内容创作者
+
+footer:
+  links:
+    - title: 破碎宇宙项目
+      url: https://broken.turboflint.cn
+    - title: No Line 宇宙项目
+      url: https://noline.turboflint.cn
+    - title: Tailwindcss
+      url: https://tailwindcss.com
+    - title: Daisyui
+      url: https://daisyui.com
+  document:
+    - title: 产品文档
+      url: https://docs.turboflint.cn/
+    - title: Hexo主题文档
+      url: https://hexo-theme-docs.turboflint.cn/
+  contact:
+   - title: GitHub
+     url: https://github.com/ericlee517
+   - title: Email
+     url: mailto:ericlee517@outlook.com
+   - title: 微信公众号
+     url: ../wechat
+    
+    
