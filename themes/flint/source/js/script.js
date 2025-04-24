@@ -1,7 +1,12 @@
-// Select all h1 to h6 elements
-const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, ul, li, table');
+/*
+* the main javascript
+* lastest update: 2025/04/24
+* author: ericlee517
+* description: basic for the tags to comfirm with tailwindcss.
+*/
 
-// Define Tailwind CSS classes for each heading level
+
+const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, ul, li, table');
 const tailwindClasses = {
     h1: 'text-4xl font-bold mt-10 mb-4',
     h2: 'text-3xl font-semibold mt-10 mb-4',
@@ -14,7 +19,6 @@ const tailwindClasses = {
     table: 'table text-lg mb-6'
 };
 
-// Loop through each heading and add the corresponding Tailwind class if no class exists
 headings.forEach(heading => {
     const tagName = heading.tagName.toLowerCase();
     if (!heading.classList.length && tailwindClasses[tagName]) {

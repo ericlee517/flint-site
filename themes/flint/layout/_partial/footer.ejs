@@ -1,6 +1,5 @@
 <div class="footer-group">
 <footer class="footer sm:footer-horizontal bg-base-200 text-base-content p-10">
-    <!-- 检查 theme.footer.links 是否存在且为数组 -->
     <% if (theme.footer && Array.isArray(theme.footer.links)) { %>
         <nav>
             <h6 class="footer-title">链接</h6>
@@ -13,7 +12,6 @@
             <% }); %>
         </nav>
     <% } %>
-    <!-- 检查 theme.footer.document 是否存在且为数组 -->
     <% if (theme.footer && Array.isArray(theme.footer.document)) { %>
         <nav>
             <h6 class="footer-title">文档</h6>
@@ -26,7 +24,6 @@
             <% }); %>
         </nav>
     <% } %>
-    <!-- 检查 theme.footer.contact 是否存在且为数组 -->
     <% if (theme.footer && Array.isArray(theme.footer.contact)) { %>
         <nav>
             <h6 class="footer-title">联系</h6>
@@ -42,7 +39,7 @@
 </footer>
 <footer class="footer sm:footer-horizontal footer-center bg-base-200 text-base-content p-4">
     <aside>
-        <p>Copyright © 2025 - All right reserved by Turbo Flint</p>
+        <p>Copyright © 2023 - 2025 - All right reserved by Turbo Flint</p>
     </aside>
 </footer>
 </div>

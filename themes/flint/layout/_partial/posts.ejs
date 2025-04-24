@@ -11,10 +11,10 @@
             </figure>
             <div class="card-body">
                 <h2 class="card-title text-2xl"><%= post.title %></h2>
-<p><span class="badge badge-soft badge-secondary"><%- date(post.date, "YYYY-MM-DD") %></span> <span class="badge badge-soft badge-primary"><% if (post.categories && post.categories.length > 0) { %><% post.categories.forEach(function(category) { %><span class="badge badge-soft badge-primary"><%= category.name %></span><% }); %><% } else { %><span class="badge badge-soft badge-secondary">暂无分类</span><% } %></span></p>
+<p><span class="badge badge-neutral"><%- date(post.date, "YYYY-MM-DD") %></span> <% if (post.categories && post.categories.length > 0) { %><% post.categories.forEach(function(category) { %><span class="badge badge-outline badge-secondary"><%= category.name %></span><% }); %><% } else { %><span class="badge badge-outline badge-secondary">暂无分类</span><% } %></p>
                 <p><%= post.excerpt || post.description || '此文章还没有简介。' %></p>
                 <div class="card-actions justify-end">
-                    <a href="../<%= post.path %>" target="_blank" class="btn btn-primary">阅读</a>
+                    <a href="../<%= post.path %>" target="_blank" class="btn btn-neutral">阅读</a>
                 </div>
             </div>
         </div>

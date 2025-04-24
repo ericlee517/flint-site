@@ -28,13 +28,13 @@
                     <div class="card-body">
                         <h2 class="card-title text-2xl"><%= project.title %> 
                             <% if (project.status) { %>
-                                <div class="badge badge-soft badge-primary"><%= project.status %></div>
+                                <div class="badge badge-neutral w-22 text-center"><%= project.status %></div>
                             <% } %>
                         </h2>
                         <p><%= project.description || 'No description available.' %></p>
                         <div class="card-actions justify-end">
                             <% if (project.url) { %>
-                                <a class="btn btn-primary" href="<%= project.url %>">查看详情</a>
+                                <a class="btn btn-neutral" href="<%= project.url %>">查看详情</a>
                             <% } else { %>
                                 <span class="btn btn-disabled">链接不可用</span>
                             <% } %>
@@ -81,13 +81,12 @@
         <% if (Array.isArray(theme['team-members'])) { %>
             <% theme['team-members'].forEach(member => { %>
                 <div class="team-member">
-                    <!-- 修正变量拼写错误 -->
-                    <img src="<%= member.avatar %>" alt="<%= member.name %>" class="rounded-md w-52 h-52 shadow-xl mb-6" />
+                    <img src="<%= member.avatar %>" alt="<%= member.name %>" class="rounded-md shadow-xl mb-6 object-cover" style="width: 168px; height: 168px;" />
                     <span class="text-2xl"><%= member.name %></span>
                     <p class="text-base-content/30"><%= member.description %></p>
                 </div>
             <% }); %>
-        <% } %> <!-- 补充 if 语句结束标签 -->
+        <% } %> 
     </div>
 </div>
 
@@ -109,16 +108,3 @@
 </div>
 
 </div>
-
-<dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
-    <div class="modal-box">
-        <h3 class="text-lg font-bold">Hello!</h3>
-        <p class="py-4">Press ESC key or click the button below to close</p>
-        <div class="modal-action">
-            <form method="dialog">
-                <!-- if there is a button in form, it will close the modal -->
-                <button class="btn">Close</button>
-            </form>
-        </div>
-    </div>
-</dialog>
