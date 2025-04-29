@@ -17,3 +17,7 @@
 <% if (is_page() && page.type === 'contact') { %>
 	<%- partial('_partial/contact') %>
 <% } %>
+
+<% if (is_page() && page.type === '404') { %>
+	<%- partial('_partial/404') %>
+<% } %>

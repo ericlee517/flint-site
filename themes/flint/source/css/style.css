@@ -4,40 +4,6 @@ body {
   font-weight: 500;
   font-style: normal;
 }
-/* 渐变字体 */
-
-b {
-  color: #007bff;
-}
-
-.green-title {
-  background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.orange-title {
-  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.pink-title {
-  background-image: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.purple-title {
-  background-image: linear-gradient(
-    to top,
-    #a7a6cb 0%,
-    #8989ba 52%,
-    #8989ba 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 
 .hero {
   background: linear-gradient(to bottom, #ffe5ec, #ffffff);
@@ -50,27 +16,6 @@ b {
     #ffe5ec,
     #ffffff
   ); /* 这里使用和hero相同的渐变，可根据需求调整 */
-}
-
-
-.hero-button {
-  background-color: #007bff;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-}
-
-.hero button {
-  background-color: #007bff;
-  transition: background-color 0.3s ease;
 }
 
 .pink-from-top-to-bottom {
@@ -92,6 +37,7 @@ b {
   }
 }
 
+/* Hero 背景流星 */
 .hero::before {
   content: "";
   position: absolute;
@@ -102,7 +48,7 @@ b {
   background: linear-gradient(
     to left,
     rgba(255, 117, 140, 0),
-    rgba(255, 117, 140, 1)
+    rgb(107, 106, 106)
   );
   transform: translateY(-50%);
   animation: meteor-fly 8s linear infinite;
@@ -148,11 +94,28 @@ b {
   top: 100%;
   animation: meteor-fly 12s linear infinite;
 }
+
+/* Hero 背景颜色 */
+
 .hero {
   position: relative;
-  background: linear-gradient(to bottom, #ffe5ec, #ffffff);
+  background: linear-gradient(to bottom, #eaeaea, #ffffff);
   text-align: left;
   overflow: hidden;
+}
+
+.hero-title {
+  background: linear-gradient(to bottom, #000000, #6d6d6d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gray-text {
+  background: linear-gradient(to bottom, #000000, #6d6d6d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .navbar-to-hero {
@@ -161,51 +124,6 @@ b {
     #ffe5ec,
     #ffffff
   ); /* 这里使用和hero相同的渐变，可根据需求调整 */
-}
-
-.hero h1,
-.hero p {
-  /* 移除动画代码 */
-}
-
-/* 移除关键帧动画 */
-/* @keyframes fadeInScale {
-    from {
-        opacity: 0;
-        transform: translateY(20px) scale(0.9);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-} */
-
-.hero-button {
-  background-color: #007bff;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-}
-
-.hero button {
-  background-color: #007bff;
-  transition: background-color 0.3s ease;
-}
-
-.pink-from-top-to-bottom {
-  background: linear-gradient(to bottom, #fff7f9, #ffffff);
-}
-
-.pink-from-bottom-to-top {
-  background: linear-gradient(to top, #fff4f7, #ffffff);
 }
 
 /* 自定义图片样式 */
@@ -232,4 +150,20 @@ b {
   margin-top: 25px;
   margin-bottom: 25px;
   text-indent: 2em;
+}
+
+.the-post-content a {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.link-underline {
+  text-decoration: underline;
+}
+
+.drawer .navbar {
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(16.5px);
+  margin-bottom: 100px;
 }

@@ -1,12 +1,12 @@
 <div class="flex-grow bg-base-100">
-<div class="pink-from-top-to-bottom hero hero-animated bg-base-200 min-h-screen blue-background">
+<div class="hero hero-animated bg-base-200 min-h-screen">
     <div class="hero-content">
         <div class="justnothingbutifwedonthavethisitwillbroke">
-            <h1 class="text-8xl font-bold pink-title">每个宇宙<br>拥有无限可能</h1>
+            <h1 class="text-8xl font-bold hero-title">每个宇宙<br>拥有无限可能</h1>
             <p class="py-6 text-2xl">
-                我们正在创造一个个<b class="pink-title">全新的</b>，富有创意的小说宇宙，每一位角色都有<b
-                    class="pink-title">无限的</b>可能性。在这个时代的浪潮中，我们将为你带来最具<b
-                    class="pink-title">创新性</b>的小说宇宙。
+                我们正在创造一个个<b class="gray-text">全新的</b>，富有创意的小说宇宙，每一位角色都有<b
+                    class="gray-text">无限的</b>可能性。在这个时代的浪潮中，我们将为你带来最具<b
+                    class="gray-text">创新性</b>的小说宇宙。
             </p>
         </div>
     </div>
@@ -22,7 +22,7 @@
                 <div class="card bg-base-100 shadow-lg">
                     <figure>
                         <% if (project.image) { %>
-                            <img src="<%= project.image %>" alt="<%= project.title %>" />
+                            <img data-src="<%= project.image %>" alt="<%= project.title %>" class="lazyload"/>
                         <% } %>
                     </figure>
                     <div class="card-body">
@@ -61,16 +61,16 @@
             <img src="https://static.turboflint.cn/image/almas-salakhov-c7k6Z8T9sfM-unsplash.jpg" alt="Photo 3">
         </div> 
         <div class="item">
-            <img src="image/sand.jpg" alt="">
+            <img src="image/sand.jpg" alt="Photo 4">
         </div>
         <div class="item">
-            <img src="image/broken.png" alt="">
+            <img src="image/broken.png" alt="Photo 5">
         </div>
         <div class="item">
-            <img src="image/sand_2.jpg" alt="">
+            <img src="image/sand_2.jpg" alt=" Photo 6">
         </div>
         <div class="item">
-            <img src="image/sunset.jpg" alt="">
+            <img src="image/sunset.jpg" alt="Photo 7">
         </div>
     </div>
 </div>
@@ -81,7 +81,7 @@
         <% if (Array.isArray(theme['team-members'])) { %>
             <% theme['team-members'].forEach(member => { %>
                 <div class="team-member">
-                    <img src="<%= member.avatar %>" alt="<%= member.name %>" class="rounded-md shadow-xl mb-6 object-cover" style="width: 168px; height: 168px;" />
+                    <img data-src="<%= member.avatar %>" alt="<%= member.name %>" class="rounded-md shadow-xl mb-6 object-cover lazyload" style="width: 168px; height: 168px;" />
                     <span class="text-2xl"><%= member.name %></span>
                     <p class="text-base-content/30"><%= member.description %></p>
                 </div>

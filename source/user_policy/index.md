@@ -1,7 +1,7 @@
 ---
-layout: policies
+layout: policy
 title: 火石用户隐私政策
-type: policies
+type: policy
 excerpt: 这是适用于大部分用户的隐私政策，该政策明确指出用户对个人信息的权利和义务。
 ---
 

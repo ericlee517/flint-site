@@ -9,6 +9,10 @@ project-card:
     description: 一个专注于青春、艺术和文化的小说宇宙。在这个宇宙中，无论是谁，他们虽然有自己的故事，但又能互相相连起来。
     url: https://noline.turboflint.cn
     status: 已推出
+  - title: Leaping Universe
+    image: https://static.turboflint.cn/image/blog/leaping_900*383.png
+    description: 以跃进机作为中心，探索未知的世界。
+    status: 敬请期待
 
 team-members:
   - name: 李野树

@@ -1,7 +1,7 @@
 ---
-layout: policies
+layout: policy
 title: 火石未成年人隐私政策
-type: policies
+type: policy
 excerpt: 这是专适用于未成年人用户的隐私政策，该政策明确指出家长对未成年人用户的相关的权利和义务。
 ---
 

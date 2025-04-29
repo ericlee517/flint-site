@@ -1,13 +1,13 @@
-<div class="container mx-auto px-4 m-8 max-w-screen-xl flex-grow">
+<div class="container mx-auto px-4 py-20 m-8 max-w-screen-xl flex-grow">
     <h1 class="text-5xl mb-5 text-center">文章<br><small class="text-base-content/30">Articles</small></h1>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols- gap-20 justify-center">
         <% site.posts.sort('-date').each(function(post) { %>
         <div class="card bg-base-100 shadow-lg">
             <figure class="relative w-full h-48 overflow-hidden">
                 <img
-                    src="<%= post.cover || '../image/post_cover.png' %>"
+                    data-src="<%= post.cover || '../image/post_cover.png' %>"
                     alt="<%= post.title %>"
-                    class="w-full h-full object-cover" />
+                    class="w-full h-full object-cover lazyload" />
             </figure>
             <div class="card-body">
                 <h2 class="card-title text-2xl"><%= post.title %></h2>

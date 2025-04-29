@@ -26,12 +26,12 @@
 <body class="flex flex-col h-screen">
     <!-- Path: nav.ejs -->
 
-<div class="drawer" style="z-index: 9999">
+<div class="drawer fixed" style="z-index: 9999;">
   <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
   <div class="drawer-content flex flex-col">
     <!-- Navbar -->
     <div class="navbar bg-base-100">
-      <div class="flex-none lg:hidden">
+      <div class="flex-n</div>one lg:hidden">
         <label
           for="my-drawer-3"
           aria-label="open sidebar"
@@ -83,7 +83,11 @@
     
 
 
-	<div class="container mx-auto px-4 m-8 max-w-screen-xl flex-grow">
+
+
+
+
+	<div class="container mx-auto px-4 py-20 m-8 max-w-screen-xl flex-grow">
     <h1 class="text-5xl mb-5 text-center">政策<br><small class="text-base-content/30">Policies</small></h1>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         
@@ -92,17 +96,7 @@
                 <h2 class="card-title text-2xl">火石卡索隐私政策</h2>
                 <p>火石产品卡索的隐私政策。</p>
                 <div class="card-actions justify-end">
-                    <a class="btn btn-primary" href="/castle_policy/index.html" target="_blank">查看详情</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="card bg-base-100 shadow-lg">
-            <div class="card-body">
-                <h2 class="card-title text-2xl">火石用户隐私政策</h2>
-                <p>这是适用于大部分用户的隐私政策，该政策明确指出用户对个人信息的权利和义务。</p>
-                <div class="card-actions justify-end">
-                    <a class="btn btn-primary" href="/user_policy/index.html" target="_blank">查看详情</a>
+                    <a class="btn btn-neutral" href="/castle_policy/index.html" target="_blank">查看详情</a>
                 </div>
             </div>
         </div>
@@ -112,15 +106,23 @@
                 <h2 class="card-title text-2xl">火石未成年人隐私政策</h2>
                 <p>这是专适用于未成年人用户的隐私政策，该政策明确指出家长对未成年人用户的相关的权利和义务。</p>
                 <div class="card-actions justify-end">
-                    <a class="btn btn-primary" href="/children_policy/index.html" target="_blank">查看详情</a>
+                    <a class="btn btn-neutral" href="/children_policy/index.html" target="_blank">查看详情</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card bg-base-100 shadow-lg">
+            <div class="card-body">
+                <h2 class="card-title text-2xl">火石用户隐私政策</h2>
+                <p>这是适用于大部分用户的隐私政策，该政策明确指出用户对个人信息的权利和义务。</p>
+                <div class="card-actions justify-end">
+                    <a class="btn btn-neutral" href="/user_policy/index.html" target="_blank">查看详情</a>
                 </div>
             </div>
         </div>
         
     </div>
 </div>
-
-
 
 
 

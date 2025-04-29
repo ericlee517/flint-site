@@ -1,7 +1,7 @@
 ---
-layout: policies
+layout: policy
 title:  火石卡索隐私政策
-type: policies
+type: policy
 excerpt: 火石产品卡索的隐私政策。
 ---
 

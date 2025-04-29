@@ -1,10 +1,18 @@
-<article class="container mx-auto px-4 py-8">
-    <h1 class="text-5xl font-bold break-words text-center mb-4">
-        <%- page.title %>
-    </h1>
-    <div class="container lg:px-40 sm:px-4 md:px-4">
-        <div class="post_img text-xl the-post-content">
-            <%- page.content %>  
+<div class="container mx-auto px-4 py-20 m-8 max-w-screen-xl flex-grow">
+    <h1 class="text-5xl mb-5 text-center">政策<br><small class="text-base-content/30">Policies</small></h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <% site.pages.filter(page => page.type && page.type.includes('policy')).forEach(policy => { %>
+        <div class="card bg-base-100 shadow-lg">
+            <div class="card-body">
+                <h2 class="card-title text-2xl"><%= policy.title %></h2>
+                <p><%= policy.excerpt || '暂无内容' %></p>
+                <div class="card-actions justify-end">
+                    <a class="btn btn-neutral" href="<%= url_for(policy.path) %>" target="_blank">查看详情</a>
+                </div>
+            </div>
         </div>
+        <% }) %>
     </div>
-</article>
+</div>
+
+
