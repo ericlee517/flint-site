@@ -1,44 +1,84 @@
 <!DOCTYPE html>
 <html lang="zh-CN" data-theme="corporate">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:image" content=""<%- url_for('image/logos/logo_nav.png') %>">
-<meta property="og:url" content="https://turboflint.cn/">
-<meta name="description" content="涡轮火石是一个致力于创作和开发创意的团队，旨在创造出更多有新意的小说宇宙。">
-<% if (page.title) { %>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:image" content=""<%- url_for('image/logos/logo_nav.png')
+    %>">
+    <meta property="og:url" content="https://turboflint.cn/" />
+    <meta
+      name="description"
+      content="涡轮火石是一个致力于创作和开发创意的团队，旨在创造出更多有新意的小说宇宙。"
+    />
+    <% if (page.title) { %>
     <title><%= page.title %> - Turbo Flint 官方网站</title>
-<% } else { %>
+    <% } else { %>
     <title><%= config.title %></title>
-<% } %>
-   <link rel="icon" type="icon/png" href="<%- url_for('image/logos/logo_black.png') %>">
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <% } %>
+    <link
+      rel="icon"
+      type="icon/png"
+      href="<%- url_for('image/logos/logo_black.png') %>"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <%- css('css/style.css') %>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://widgets.kinde.com/v1/css/subscribe.css">
 
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-</head>
-<body class="flex flex-col h-screen">
+  </head>
+  <body class="flex flex-col h-screen">
     <%- include('nav.ejs') %>
-    <%- body %>
-    <%- partial('_partial/footer') %>
-    <%- js('js/script.js') %>
-    <%- js('js/lazysizes.min.js') %>
-    <%- js('js/waterfall.min.js') %>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var elem = document.querySelector('.masonry');
-            var msnry = new Masonry( elem, {
-                columnWidth: '.item',
-                itemSelector: '.item',
-                percentPosition: true
-            });
-        });
-    </script>
-</body>
+     <%- body %>
+<!-- 悬浮固定的问号按钮 -->
+<div class="fixed bottom-4 top-215 right-6 z-50">
+  
+  <div class="tooltip" id="tooltip">
+    <div class="tooltip-content">
+      <div class="text-lg font-black text-pink-400">需要帮助？</div>
+    </div>
+    <button class="btn btn-circle btn-xl btn-neutral" onclick="need_help.showModal()">
+      <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#e3e3e3"><path d="M440-120v-80h320v-284q0-117-81.5-198.5T480-764q-117 0-198.5 81.5T200-484v244h-40q-33 0-56.5-23.5T80-320v-80q0-21 10.5-39.5T120-469l3-53q8-68 39.5-126t79-101q47.5-43 109-67T480-840q68 0 129 24t109 66.5Q766-707 797-649t40 126l3 52q19 9 29.5 27t10.5 38v92q0 20-10.5 38T840-249v49q0 33-23.5 56.5T760-120H440Zm-80-280q-17 0-28.5-11.5T320-440q0-17 11.5-28.5T360-480q17 0 28.5 11.5T400-440q0 17-11.5 28.5T360-400Zm240 0q-17 0-28.5-11.5T560-440q0-17 11.5-28.5T600-480q17 0 28.5 11.5T640-440q0 17-11.5 28.5T600-400Zm-359-62q-7-106 64-182t177-76q89 0 156.5 56.5T720-519q-91-1-167.5-49T435-698q-16 80-67.5 142.5T241-462Z"/></svg>
+    </button>
+  </div>
+</div>
+
+<dialog id="need_help" class="modal">
+  <div class="modal-box">
+    <h3 class="text-lg font-bold">需要帮助？</h3>
+    <br>
+    <ul class="menu menu-lg rounded-box w-56">
+      <li><a target="_blank">AI 客服</a></li>
+      <li><a href="https://docs.turboflint.cn" target="_blank">产品手册</a></li>
+    </ul>
+    <div class="modal-action">
+      <form method="dialog">
+        <button class="btn">关闭</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+      <%- partial('_partial/footer') %>
+     <%- js('js/script.js') %>
+      <%- js('js/lazysizes.min.js') %>
+      <script src="https://widgets.kinde.com/v1/js/subscribe.js"></script>
+  </body>
 </html>

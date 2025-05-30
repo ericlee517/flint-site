@@ -14,6 +14,25 @@ project-card:
     description: 以跃进机作为中心，探索未知的世界。
     status: 敬请期待
 
+works:
+  - title: 流浪虚无
+    image: https://static.turboflint.cn/image/wandering-nothingness.png
+    description: 破碎宇宙首部实验性概念小说，讲述了虚无之子和友人流浪宇宙，最终找到了心中的归属。
+    category: BROKEN
+    url: https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2Njg5NTM1MA==&action=getalbum&album_id=3525729119851872258&scene=126#wechat_redirect
+  - title: 第二者
+    image: https://static.turboflint.cn/image/the_second_one_cover.png
+    description: 背叛亦或者是逃离？一对伴侣新婚后，却有一方发现了秘密。最后，是毁灭，还是原谅？
+    category: BROKEN
+  - title: 杀手查莉
+    image: https://static.turboflint.cn/image/killer_charlie.png
+    description: 一名职业杀手，为了逃离家族的掌控，从而踏上了没有归途的逃亡之旅。
+    category: BROKEN
+  - title: 灿阳之下
+    image: https://static.turboflint.cn/image/under_the_shining_sun.png
+    description: 在灿阳之下，有着一个中二少年和一个体育生的小小世界。他们将讲述之间的小故事。
+    category: NOLINE
+
 team-members:
   - name: 李野树
     avatar: image/wild_tree.jpg
