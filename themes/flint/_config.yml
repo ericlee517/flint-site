@@ -37,6 +37,9 @@ team-members:
   - name: 李野树
     avatar: image/wild_tree.jpg
     description: 内容创作者
+  - name: Rebecca
+    avatar: https://static.turboflint.cn/image/rebecca.jpg
+    description: 内容创作者
 
 footer:
   links:
