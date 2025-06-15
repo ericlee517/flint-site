@@ -58,52 +58,72 @@
     </div>
   </div>
 
+<div class="container mx-auto px-4 py-8">
+  <h2 class="text-4xl font-bold mb-4 mt-25">
+    代表作<br /><small class="text-base-content/30">Masterpieces</small>
+  </h2>
+  <!-- 添加 justify-items-center 类使卡片水平居中 -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center">
+    <% if (Array.isArray(theme['works'])) { %> <%
+    theme['works'].forEach(function(work) { %>
+    <div class="card shadow-xl w-80 px-2 py-3 flex mt-4 flex-col justify-between items-center">
+      <span class="overflow-hidden m-2 flex items-center">
+        <img
+          src="<%= work.image %>"
+          alt="海报"
+          class="rounded-md mx-auto items-center"
+          style="
+            height: 300px;
+          "
+        />
+      </span>
+      <div class="mt-3 flex flex-col items-center text-center">
+        <div class="flex flex-col items-center">
+          <h3 class="text-2xl font-bold"><%= work.title %></h3>
+        </div>
+        <p class="mt-2 px-2 text-base-content/50"><%= work.description %></p>
+      </div>
+      <a
+        href="<%= work.url %>"
+        class="btn btn-neutral btn-wide text-lg mt-2 mb-2"
+        >立即阅读</a>
+    </div>
+    <% }); %> <% } else { %>
+    <p class="text-center">暂无作品。</p>
+    <% } %>
+  </div>
+</div>
+
   <div class="container mx-auto px-4 py-8">
-    <h2 class="text-4xl font-bold mb-4 mt-25">
-      代表作<br /><small class="text-base-content/30">Masterpieces</small>
-    </h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
-      <% if (Array.isArray(theme['works'])) { %> <%
-      theme['works'].forEach(function(work) { %>
-      <div class="card shadow-2xl w-74 px-2 py-3 flex">
+    <h2 class="text-4xl font-bold mb-4 mt-25">音乐专辑<br /><small class="text-base-content/30">Music Albums</small></h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center">
+      <% if (Array.isArray(theme['albums'])) { %> <%
+      theme['albums'].forEach(function(album) { %>
+      <div class="card shadow-xl w-80 p-2 flex mt-4 flex-col items-center justify-between"> <!-- 添加 justify-between 使内容分布在卡片两端 -->
         <span class="overflow-hidden m-2 flex items-center">
           <img
-            src="<%= work.image %>"
-            alt="海报"
+            src="<%= album.image %>"
+            alt="专辑封面"
             class="rounded-md mx-auto items-center"
-            style="
-              height: 450px;
-              width: 350px;
-              object-fit: cover;
-              display: block;
-            "
+            style="width: 300px; height: 300px; object-fit: cover;"
           />
         </span>
-        <div class="ml-3 mt-3 flex flex-col">
-          <div class="flex items-start">
-            <div class="flex-grow">
-              <h3 class="text-2xl font-bold"><%= work.title %></h3>
+        <div class="mt-2 flex flex-col items-center text-center w-full">
+          <div class="flex items-start justify-center w-full">
+            <div class="flex-grow text-center">
+              <h3 class="text-xl font-bold"><%= album.title %></h3>
             </div>
-            <% if (work.category === 'NOLINE') { %>
-            <span
-              class="badge text-white"
-              style="background-color: rgb(253, 119, 141)"
-              ><%= work.category %></span
-            >
-            <% } else { %>
-            <span class="badge badge-neutral"><%= work.category %></span>
-            <% } %>
           </div>
-          <p class="mt-2 text-base-content/50"><%= work.description %></p>
-          <a
-            href="<%= work.url %>"
-            class="btn btn-neutral btn-wide text-lg mt-2"
-            >立即阅读</a
-          >
+          <!-- 修正拼写错误 text-base-conntent 为 text-base-content -->
+          <p class="mt-2 text-base-content/70"><%= album.publish %></p>
+          <p class="mt-2 text-base-content/50 px-2"><%= album.description %></p>
         </div>
+        <a
+          href="<%= album.url %>"
+          class="btn btn-neutral btn-wide text-lg mt-2 mx-auto mb-2">立即收听</a>
       </div>
       <% }); %> <% } else { %>
-      <p>暂无作品。</p>
+      <p class="text-center">暂无作品。</p>
       <% } %>
     </div>
   </div>

@@ -11,7 +11,7 @@ project-card:
     status: 已推出
   - title: Leaping Universe
     image: https://static.turboflint.cn/image/blog/leaping_900*383.png
-    description: 以跃进机作为中心，探索未知的世界。
+    description: 整个跃进小说宇宙，将以跃进机作为中心开展一个未知的故事，以它索取资源，是否是正确的？
     status: 敬请期待
 
 works:
@@ -24,15 +24,29 @@ works:
     image: https://static.turboflint.cn/image/the_second_one_cover.png
     description: 背叛亦或者是逃离？一对伴侣新婚后，却有一方发现了秘密。最后，是毁灭，还是原谅？
     category: BROKEN
+    url: https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2Njg5NTM1MA==&action=getalbum&album_id=3517284581697224706&scene=126&sessionid=1749952626215#wechat_redirect
   - title: 杀手查莉
     image: https://static.turboflint.cn/image/killer_charlie.png
     description: 一名职业杀手，为了逃离家族的掌控，从而踏上了没有归途的逃亡之旅。
     category: BROKEN
+    url: https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2Njg5NTM1MA==&action=getalbum&album_id=4011422921838264328&scene=126&sessionid=1749952626215#wechat_redirect
   - title: 灿阳之下
     image: https://static.turboflint.cn/image/under_the_shining_sun.png
     description: 在灿阳之下，有着一个中二少年和一个体育生的小小世界。他们将讲述之间的小故事。
     category: NOLINE
+    url: https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2Njg5NTM1MA==&action=getalbum&album_id=3915731644849815560&scene=126&sessionid=1749952626215#wechat_redirect
 
+albums:
+  - title: Wandering Nothingness (More Ver)
+    image: https://static.turboflint.cn/image/wans_more_ver_album.jpg
+    publish: 2025/05/05
+    description: 新陆地首张正式专辑，特别新增七首单曲，借助Incredibox以及AI制曲工具完成，真正体现了虚无的恐惧和黑暗。
+    url: https://music.163.com/#/album?id=270484994
+  - title: The Flower Of Death
+    image: https://static.turboflint.cn/image/the_flower_of_death_album.png
+    publish: 2025/01/09
+    description: 以神秘的“死亡之花”为名，从此开始慢慢揭晓着虚无背后的秘密和真相。作为新陆地的首张EP专辑，包含了三首单曲，每一首无不让人感受到无尽的平静。
+    url: https://music.163.com/#/album?id=259069654
 team-members:
   - name: 李野树
     avatar: image/wild_tree.jpg

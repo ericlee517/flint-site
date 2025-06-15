@@ -53,7 +53,7 @@
   
   <div class="tooltip" id="tooltip">
     <div class="tooltip-content">
-      <div class="text-lg font-black text-pink-400">需要帮助？</div>
+      <div class="text-base font-black">需要帮助？</div>
     </div>
     <button class="btn btn-circle btn-xl btn-neutral" onclick="need_help.showModal()">
       <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#e3e3e3"><path d="M440-120v-80h320v-284q0-117-81.5-198.5T480-764q-117 0-198.5 81.5T200-484v244h-40q-33 0-56.5-23.5T80-320v-80q0-21 10.5-39.5T120-469l3-53q8-68 39.5-126t79-101q47.5-43 109-67T480-840q68 0 129 24t109 66.5Q766-707 797-649t40 126l3 52q19 9 29.5 27t10.5 38v92q0 20-10.5 38T840-249v49q0 33-23.5 56.5T760-120H440Zm-80-280q-17 0-28.5-11.5T320-440q0-17 11.5-28.5T360-480q17 0 28.5 11.5T400-440q0 17-11.5 28.5T360-400Zm240 0q-17 0-28.5-11.5T560-440q0-17 11.5-28.5T600-480q17 0 28.5 11.5T640-440q0 17-11.5 28.5T600-400Zm-359-62q-7-106 64-182t177-76q89 0 156.5 56.5T720-519q-91-1-167.5-49T435-698q-16 80-67.5 142.5T241-462Z"/></svg>
@@ -65,10 +65,25 @@
   <div class="modal-box">
     <h3 class="text-lg font-bold">需要帮助？</h3>
     <br>
-    <ul class="menu menu-lg rounded-box w-56">
-      <li><a target="_blank">AI 客服</a></li>
-      <li><a href="https://docs.turboflint.cn" target="_blank">产品手册</a></li>
-    </ul>
+    <div class="join join-vertical bg-base-100">
+    <div class="collapse collapse-arrow join-item border-base-300 border">
+      <input type="radio" name="my-accordion-4" />
+      <div class="collapse-title font-semibold">客服小火</div>
+      <div class="collapse-content text-sm">
+        需要帮助吗?你可以与我们的AI客服小火进行对话，以获得帮助（内测期间可能需要登录炽焰账户后使用。）
+        <br><br>
+        <a href="#" class="text-base-content/30">内测中，暂未开放。</a>
+      </div>
+    </div>
+    <div class="collapse collapse-arrow join-item border-base-300 border">
+      <input type="radio" name="my-accordion-4" />
+      <div class="collapse-title font-semibold">产品手册</div>
+      <div class="collapse-content text-sm">
+        你也可以前往产品手册，自行寻找问题的答案。<br><br>
+        <a href="https://docs.turboflint.cn" target="_blank" class="btn btn-neutral">产品手册</a>
+      </div>
+    </div>
+  </div>
     <div class="modal-action">
       <form method="dialog">
         <button class="btn">关闭</button>
