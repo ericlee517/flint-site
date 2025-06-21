@@ -21,3 +21,7 @@
 <% if (is_page() && page.type === '404') { %>
 	<%- partial('_partial/404') %>
 <% } %>
+
+<% if (is_page() && page.type === 'wechat') { %>
+	<%- partial('_partial/wechat') %>
+<% } %>

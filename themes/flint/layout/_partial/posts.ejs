@@ -1,23 +1,59 @@
 <div class="container mx-auto px-4 py-20 m-8 max-w-screen-xl flex-grow">
     <h1 class="text-5xl mb-5 text-center">文章<br><small class="text-base-content/30">Articles</small></h1>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols- gap-20 justify-center">
+    <!-- name of each tab group should be unique -->
+    <!-- 使用 flex 布局并结合 justify-center 类实现水平居中 -->
+    <div class="flex justify-center mb-5">
+        <div class="tabs tabs-box w-fit">
+            <input type="radio" name="my_tabs_1" class="tab" aria-label="所有文章" checked="checked" data-category="all" />
+            <% var allCategories = []; %>
+            <% site.posts.each(function(post) { %>
+                <% if (post.categories && post.categories.length > 0) { %>
+                    <% post.categories.forEach(function(category) { %>
+                        <% if (allCategories.indexOf(category.name) === -1) { %>
+                            <% allCategories.push(category.name); %>
+                            <input type="radio" name="my_tabs_1" class="tab" aria-label="<%= category.name %>" data-category="<%= category.name %>" />
+                        <% } %>
+                    <% }); %>
+                <% } %>
+            <% }); %>
+        </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-20 justify-center">
         <% site.posts.sort('-date').each(function(post) { %>
-        <div class="card bg-base-100 shadow-lg">
-            <figure class="relative w-full h-48 overflow-hidden">
-                <img
-                    data-src="<%= post.cover || '../image/post_cover.png' %>"
-                    alt="<%= post.title %>"
-                    class="w-full h-full object-cover lazyload" />
-            </figure>
-            <div class="card-body">
-                <h2 class="card-title text-2xl"><%= post.title %></h2>
-<p><span class="badge badge-neutral"><%- date(post.date, "YYYY-MM-DD") %></span> <% if (post.categories && post.categories.length > 0) { %><% post.categories.forEach(function(category) { %><span class="badge badge-outline badge-secondary"><%= category.name %></span><% }); %><% } else { %><span class="badge badge-outline badge-secondary">暂无分类</span><% } %></p>
-                <p><%= post.excerpt || post.description || '此文章还没有简介。' %></p>
-                <div class="card-actions justify-end">
-                    <a href="../<%= post.path %>" target="_blank" class="btn btn-neutral">阅读</a>
+            <% var postCategories = post.categories.map(function(category) { return category.name; }); %>
+            <div class="card bg-base-100 shadow-lg" data-categories="<%= postCategories.join(' ') %>">
+                <figure class="relative w-full h-48 overflow-hidden">
+                    <img
+                        data-src="<%= post.cover || '../image/post_cover.png' %>"
+                        alt="<%= post.title %>"
+                        class="w-full h-full object-cover lazyload" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title text-2xl"><%= post.title %></h2>
+                    <p><span class="badge badge-neutral"><%- date(post.date, "YYYY-MM-DD") %></span> <% if (post.categories && post.categories.length > 0) { %><% post.categories.forEach(function(category) { %><span class="badge badge-outline badge-secondary"><%= category.name %></span><% }); %><% } else { %><span class="badge badge-outline badge-secondary">暂无分类</span><% } %></p>
+                    <p><%= post.excerpt || post.description || '此文章还没有简介。' %></p>
+                    <div class="card-actions justify-end">
+                        <a href="../<%= post.path %>" target="_blank" class="btn btn-neutral">阅读</a>
+                    </div>
                 </div>
             </div>
-        </div>
         <% }); %>
     </div>
 </div>
+<script>
+    const tabs = document.querySelectorAll('input[name="my_tabs_1"]');
+    const cards = document.querySelectorAll('.card');
+    tabs.forEach(tab => {
+        tab.addEventListener('change', function() {
+            const selectedCategory = this.dataset.category;
+            cards.forEach(card => {
+                const cardCategories = card.dataset.categories.split(' ');
+                if (selectedCategory === 'all' || cardCategories.includes(selectedCategory)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+</script>

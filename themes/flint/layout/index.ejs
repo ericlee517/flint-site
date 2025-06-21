@@ -24,7 +24,8 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       <% if (Array.isArray(theme['project-card'])) { %> <%
       theme['project-card'].forEach(project => { %>
-      <div class="card bg-base-100 shadow-lg">
+      <!-- 添加鼠标浮动效果类 -->
+      <div class="card bg-base-100 shadow-md hover:scale-105 hover:shadow-2xl transition-all duration-450">
         <figure>
           <% if (project.image) { %>
           <img
@@ -66,7 +67,8 @@
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center">
     <% if (Array.isArray(theme['works'])) { %> <%
     theme['works'].forEach(function(work) { %>
-    <div class="card shadow-xl w-80 px-2 py-3 flex mt-4 flex-col justify-between items-center">
+    <!-- 添加鼠标浮动效果类 -->
+    <div class="card w-80 px-2 py-3 flex mt-4 flex-col justify-between items-center shadow-md hover:scale-105 hover:shadow-2xl transition-all duration-450">
       <span class="overflow-hidden m-2 flex items-center">
         <img
           src="<%= work.image %>"
@@ -99,7 +101,8 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center">
       <% if (Array.isArray(theme['albums'])) { %> <%
       theme['albums'].forEach(function(album) { %>
-      <div class="card shadow-xl w-80 p-2 flex mt-4 flex-col items-center justify-between"> <!-- 添加 justify-between 使内容分布在卡片两端 -->
+      <!-- 添加鼠标浮动效果类 -->
+      <div class="card shadow-md w-80 p-2 flex mt-4 flex-col items-center justify-between hover:scale-105 hover:shadow-2xl transition-all duration-450">
         <span class="overflow-hidden m-2 flex items-center">
           <img
             src="<%= album.image %>"
@@ -135,6 +138,7 @@
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
       <% if (Array.isArray(theme['team-members'])) { %> <%
       theme['team-members'].forEach(member => { %>
+      <!-- 添加鼠标浮动效果类 -->
       <div class="team-member">
         <img
           data-src="<%= member.avatar %>"

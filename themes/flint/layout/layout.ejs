@@ -8,8 +8,9 @@
     <meta property="og:url" content="https://turboflint.cn/" />
     <meta
       name="description"
-      content="涡轮火石是一个致力于创作和开发创意的团队，旨在创造出更多有新意的小说宇宙。"
+      content="涡轮火石是一个致力于创作和开发创意的团队，旨在创造出更多有新意的小说宇宙。我们正在尝试更好更多的创新方式，以此为更多的读者带来更好的阅读体验。无论是哪一位角色，哪一个故事背景，他们都有着自己的特色和独特的魅力。我们期待着与更多的创作者和读者一起，共同探索这个充满可能性的小说宇宙。"
     />
+    <meta name="keywords" content="turboflint, Turbo Flint, 涡轮火石, 火石, 小说宇宙, 破碎宇宙, 破碎, BroKen, broken, broken universe">
     <% if (page.title) { %>
     <title><%= page.title %> - Turbo Flint 官方网站</title>
     <% } else { %>
@@ -17,7 +18,6 @@
     <% } %>
     <link
       rel="icon"
-      type="icon/png"
       href="<%- url_for('image/logos/logo_black.png') %>"
     />
     <link
@@ -43,7 +43,14 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://widgets.kinde.com/v1/css/subscribe.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PK0TRMF667"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-PK0TRMF667');
+</script>
   </head>
   <body class="flex flex-col h-screen">
     <%- include('nav.ejs') %>

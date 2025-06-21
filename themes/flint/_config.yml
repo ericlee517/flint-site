@@ -59,12 +59,10 @@ footer:
   links:
     - title: 破碎宇宙项目
       url: https://broken.turboflint.cn
-    - title: No Line 宇宙项目
+    - title: 无界宇宙项目
       url: https://noline.turboflint.cn
-    - title: Tailwindcss
-      url: https://tailwindcss.com
-    - title: Daisyui
-      url: https://daisyui.com
+    - title: 厚浪云
+      url: https://hlyun.org
   document:
     - title: 产品文档
       url: https://docs.turboflint.cn/
@@ -74,7 +72,7 @@ footer:
    - title: GitHub
      url: https://github.com/ericlee517
    - title: Email
-     url: mailto:ericlee517@outlook.com
+     url: mailto:nathan@hlyun.org
    - title: 微信公众号
      url: ../wechat
     
