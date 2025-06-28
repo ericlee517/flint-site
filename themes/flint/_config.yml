@@ -1,3 +1,16 @@
+news:
+  - title: 短片《第七分钟》预告
+    description: 李海和林晓悦的故事正在上演，敬请期待。
+    date: 2025年6月28日
+    type: video
+    video_code: //player.bilibili.com/player.html?isOutside=true&aid=114759361892136&bvid=BV1AhKyzaEKJ&cid=30738287608&p=1&autoplay=0
+    url: https://www.bilibili.com/video/BV1AhKyzaEKJ/?vd_source=4f08982e03626b75df3c4a65bbac88a7#reply114759361892136
+  - title: 《流浪虚无：重影》发布倒计时
+    description: 流浪虚无：重影即将发布，倒计时已开启！
+    date: 2025-06-30T12:00:00
+    type: timer
+    image: https://static.turboflint.cn/image/wans_2_pure.png
+
 project-card:
   - title: BROKEN Universe
     image: image/broken.png
