@@ -15,7 +15,7 @@ body {
 }
 
 .hero {
-  background: linear-gradient(to bottom, #ffe5ec, #ffffff);
+  background: linear-gradient(to bottom, #ffffff, #ffffff);
   text-align: left;
 }
 
@@ -32,7 +32,7 @@ body {
 }
 
 .pink-from-bottom-to-top {
-  background: linear-gradient(to top, #fff4f7, #ffffff);
+  background: linear-gradient(to top, #ffffff, #ffffff);
 }
 
 @keyframes meteor-fly {
