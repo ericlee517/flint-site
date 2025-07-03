@@ -38,84 +38,14 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-PK0TRMF667');
 </script>
 <%- js('js/countdown.min.js') %>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const timeElement = document.querySelector('[data-time]');
-      const targetDate = timeElement ? new Date(timeElement.getAttribute('data-time')) : new Date('2025-12-31T23:59:59');
-      
-      const updateCountdown = function() {
-        const timespan = countdown(new Date(), targetDate, countdown.DAYS | countdown.HOURS | countdown.MINUTES | countdown.SECONDS);
-        const daysElement = document.getElementById('countdown-days');
-        const hoursElement = document.getElementById('countdown-hours');
-        const minutesElement = document.getElementById('countdown-minutes');
-        const secondsElement = document.getElementById('countdown-seconds');
-        
-        if (daysElement && hoursElement && minutesElement && secondsElement) {
-          daysElement.textContent = timespan.days;
-          hoursElement.textContent = timespan.hours;
-          minutesElement.textContent = timespan.minutes;
-          secondsElement.textContent = timespan.seconds;
-        }
-      };
-      
-      // 初始更新
-      updateCountdown();
-      // 每秒更新一次
-      setInterval(updateCountdown, 1000);
-    });
-  </script>
   </head>
   <body >
-    <body class="flex flex-col h-screen" leftmargin=0 topmargin=0 oncontextmenu='return false' ondragstart='return false' onselectstart ='return false' onselect='document.selection.empty()' oncopy='document.selection.empty()' onbeforecopy='return false' onmouseup='document.selection.empty()'>
+    <body class="flex flex-col h-screen" leftmargin=0 topmargin=0></body>
     <%- include('nav.ejs') %>
      <%- body %>
-<!-- 悬浮固定的问号按钮 -->
-<div class="fixed bottom-4 top-215 right-6 z-50">
-  
-  <div class="tooltip" id="tooltip">
-    <div class="tooltip-content">
-      <div class="text-base font-black">需要帮助？</div>
-    </div>
-    <button class="btn btn-circle btn-xl btn-neutral" onclick="need_help.showModal()">
-      <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#e3e3e3"><path d="M440-120v-80h320v-284q0-117-81.5-198.5T480-764q-117 0-198.5 81.5T200-484v244h-40q-33 0-56.5-23.5T80-320v-80q0-21 10.5-39.5T120-469l3-53q8-68 39.5-126t79-101q47.5-43 109-67T480-840q68 0 129 24t109 66.5Q766-707 797-649t40 126l3 52q19 9 29.5 27t10.5 38v92q0 20-10.5 38T840-249v49q0 33-23.5 56.5T760-120H440Zm-80-280q-17 0-28.5-11.5T320-440q0-17 11.5-28.5T360-480q17 0 28.5 11.5T400-440q0 17-11.5 28.5T360-400Zm240 0q-17 0-28.5-11.5T560-440q0-17 11.5-28.5T600-480q17 0 28.5 11.5T640-440q0 17-11.5 28.5T600-400Zm-359-62q-7-106 64-182t177-76q89 0 156.5 56.5T720-519q-91-1-167.5-49T435-698q-16 80-67.5 142.5T241-462Z"/></svg>
-    </button>
-  </div>
-</div>
-
-<dialog id="need_help" class="modal">
-  <div class="modal-box">
-    <h3 class="text-lg font-bold">需要帮助？</h3>
-    <br>
-    <div class="join join-vertical bg-base-100">
-    <div class="collapse collapse-arrow join-item border-base-300 border">
-      <input type="radio" name="my-accordion-4" />
-      <div class="collapse-title font-semibold">客服小火</div>
-      <div class="collapse-content text-sm">
-        需要帮助吗?你可以与我们的AI客服小火进行对话，以获得帮助（内测期间可能需要登录炽焰账户后使用。）
-        <br><br>
-        <a href="#" class="text-base-content/30">内测中，暂未开放。</a>
-      </div>
-    </div>
-    <div class="collapse collapse-arrow join-item border-base-300 border">
-      <input type="radio" name="my-accordion-4" />
-      <div class="collapse-title font-semibold">产品手册</div>
-      <div class="collapse-content text-sm">
-        你也可以前往产品手册，自行寻找问题的答案。<br><br>
-        <a href="https://docs.turboflint.cn" target="_blank" class="btn btn-neutral">产品手册</a>
-      </div>
-    </div>
-  </div>
-    <div class="modal-action">
-      <form method="dialog">
-        <button class="btn">关闭</button>
-      </form>
-    </div>
-  </div>
-</dialog>
       <%- partial('_partial/footer') %>
      <%- js('js/script.js') %>
       <%- js('js/lazysizes.min.js') %>

@@ -7,7 +7,7 @@ news:
     url: https://www.bilibili.com/video/BV1AhKyzaEKJ/?vd_source=4f08982e03626b75df3c4a65bbac88a7#reply114759361892136
   - title: 《流浪虚无：重影》发布倒计时
     description: 流浪虚无：重影即将发布，倒计时已开启！
-    date: 2025-06-30T12:00:00
+    date: 2025-06-30-12:00
     type: timer
     image: https://static.turboflint.cn/image/wans_2_pure.png
 
@@ -29,7 +29,7 @@ project-card:
 
 works:
   - title: 流浪虚无
-    image: https://static.turboflint.cn/image/wandering-nothingness.png
+    image: https://picbox.rutno.com/uploads/68648fdd53676.png
     description: 破碎宇宙首部实验性概念小说，讲述了虚无之子和友人流浪宇宙，最终找到了心中的归属。
     category: BROKEN
     url: https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2Njg5NTM1MA==&action=getalbum&album_id=3525729119851872258&scene=126#wechat_redirect
@@ -39,25 +39,20 @@ works:
     category: BROKEN
     url: https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2Njg5NTM1MA==&action=getalbum&album_id=3517284581697224706&scene=126&sessionid=1749952626215#wechat_redirect
   - title: 杀手查莉
-    image: https://static.turboflint.cn/image/killer_charlie.png
+    image: https://picbox.rutno.com/uploads/68648f05cfd55.png
     description: 一名职业杀手，为了逃离家族的掌控，从而踏上了没有归途的逃亡之旅。
     category: BROKEN
     url: https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2Njg5NTM1MA==&action=getalbum&album_id=4011422921838264328&scene=126&sessionid=1749952626215#wechat_redirect
   - title: 灿阳之下
-    image: https://static.turboflint.cn/image/under_the_shining_sun.png
+    image: https://picbox.rutno.com/uploads/68648eecc4591.png
     description: 在灿阳之下，有着一个中二少年和一个体育生的小小世界。他们将讲述之间的小故事。
     category: NOLINE
     url: https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2Njg5NTM1MA==&action=getalbum&album_id=3915731644849815560&scene=126&sessionid=1749952626215#wechat_redirect
 
 albums:
-  - title: Wandering Nothingness (More Ver)
-    image: https://static.turboflint.cn/image/wans_more_ver_album.jpg
-    publish: 2025/05/05
-    description: 新陆地首张正式专辑，特别新增七首单曲，借助Incredibox以及AI制曲工具完成，真正体现了虚无的恐惧和黑暗。
-    url: https://music.163.com/#/album?id=270484994
   - title: The Flower Of Death
     image: https://static.turboflint.cn/image/the_flower_of_death_album.png
-    publish: 2025/01/09
+    publish: 2025 / 01 / 09
     description: 以神秘的“死亡之花”为名，从此开始慢慢揭晓着虚无背后的秘密和真相。作为新陆地的首张EP专辑，包含了三首单曲，每一首无不让人感受到无尽的平静。
     url: https://music.163.com/#/album?id=259069654
 
@@ -66,7 +61,7 @@ short-videos:
     image: https://tc.z.wiki/autoupload/IZvKf6tCzvpWiDXBzSuNnRpBIOp5o6HqxC0LQ26D7SWyl5f0KlZfm6UsKj-HyTuv/20250629/klsc/3840X2160/6%E6%9C%8828%E6%97%A5-%E5%89%AF%E6%9C%AC-%E5%B0%81%E9%9D%A2.jpg
     description: 火石首部短片作品，一个既温暖，又短暂的爱情故事。
     type: preview
-    publish: 预计八月中旬上线
+    publish: 敬请期待
     url:
 
 team-members:
@@ -98,4 +93,4 @@ footer:
    - title: 微信公众号
      url: ../wechat
     
-    
+about-us: 涡轮火石于2023年正式成立，是一个专注于故事创意创作的团队。我们的创意无限，为读者的体验服务。目前，我们的代表作“破碎宇宙”已发布多篇衍生小说以及多个概念内容。此外，涡轮火石还为开发者提供开发工具，帮助前端或其他开发者在开发时能够更加便捷。
