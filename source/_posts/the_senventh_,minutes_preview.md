@@ -4,7 +4,7 @@ date: 2025-06-28
 categories:
 - 新闻资讯
 description: 火石全新探索路径短片《第七分钟》预告已全网发布。
-cover: https://tc.z.wiki/autoupload/IZvKf6tCzvpWiDXBzSuNnRpBIOp5o6HqxC0LQ26D7SWyl5f0KlZfm6UsKj-HyTuv/20250629/klsc/3840X2160/6%E6%9C%8828%E6%97%A5-%E5%89%AF%E6%9C%AC-%E5%B0%81%E9%9D%A2.jpg
+cover: https://static.turboflint.cn/image/the_seventh_minute_banner.png_compress
 ---
 
 《第七分钟》是由火石指导制作的一个全新独立短片，不属于任何小说宇宙。短片讲述了少年和少女的相识，互相喜欢的故事。

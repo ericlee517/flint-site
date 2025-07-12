@@ -7,9 +7,9 @@ news:
     url: https://www.bilibili.com/video/BV1AhKyzaEKJ/?vd_source=4f08982e03626b75df3c4a65bbac88a7#reply114759361892136
   - title: 《第七分钟》发布倒计时
     description: 第七分钟即将发布，倒计时已开启！
-    date: 2025-08-01-12:00
+    date: 2025-08-01-11:30:00
     type: timer
-    image: https://picbox.rutno.com/uploads/6871b296bde4f.png
+    image: https://static.turboflint.cn/image/the_seventh_minute_background.png_blur
 
 project-card:
   - title: BROKEN Universe
@@ -23,42 +23,42 @@ project-card:
     url: https://noline.turboflint.cn
     status: 已推出
   - title: Leaping Universe
-    image: https://static.turboflint.cn/image/blog/leaping_900*383.png
+    image: https://static.turboflint.cn/image/blog/leaping_900*383.png_compress
     description: 整个跃进小说宇宙，将以跃进机作为中心开展一个未知的故事，以它索取资源，是否是正确的？
     status: 敬请期待
 
 works:
   - title: 流浪虚无
-    image: https://picbox.rutno.com/uploads/68648fdd53676.png
+    image: https://static.turboflint.cn/image/wans_post.png_compress
     description: 破碎宇宙首部实验性概念小说，讲述了虚无之子和友人流浪宇宙，最终找到了心中的归属。
     category: BROKEN
     url: https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2Njg5NTM1MA==&action=getalbum&album_id=3525729119851872258&scene=126#wechat_redirect
   - title: 第二者
-    image: https://static.turboflint.cn/image/the_second_one_cover.png
+    image: https://static.turboflint.cn/image/the_second_one_cover.png_compress
     description: 背叛亦或者是逃离？一对伴侣新婚后，却有一方发现了秘密。最后，是毁灭，还是原谅？
     category: BROKEN
     url: https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2Njg5NTM1MA==&action=getalbum&album_id=3517284581697224706&scene=126&sessionid=1749952626215#wechat_redirect
   - title: 杀手查莉
-    image: https://picbox.rutno.com/uploads/68648f05cfd55.png
+    image: https://static.turboflint.cn/image/killer_charlie_post.png_compress
     description: 一名职业杀手，为了逃离家族的掌控，从而踏上了没有归途的逃亡之旅。
     category: BROKEN
     url: https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2Njg5NTM1MA==&action=getalbum&album_id=4011422921838264328&scene=126&sessionid=1749952626215#wechat_redirect
   - title: 灿阳之下
-    image: https://picbox.rutno.com/uploads/68648eecc4591.png
+    image: https://static.turboflint.cn/image/under_the_sunset_post.png_compress
     description: 在灿阳之下，有着一个中二少年和一个体育生的小小世界。他们将讲述之间的小故事。
     category: NOLINE
     url: https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2Njg5NTM1MA==&action=getalbum&album_id=3915731644849815560&scene=126&sessionid=1749952626215#wechat_redirect
 
 albums:
   - title: The Flower Of Death
-    image: https://static.turboflint.cn/image/the_flower_of_death_album.png
+    image: https://static.turboflint.cn/image/the_flower_of_death_album.png_compress
     publish: 2025 / 01 / 09
     description: 以神秘的“死亡之花”为名，从此开始慢慢揭晓着虚无背后的秘密和真相。作为新陆地的首张EP专辑，包含了三首单曲，每一首无不让人感受到无尽的平静。
     url: https://music.163.com/#/album?id=259069654
 
 short-videos:
   - title: 第七分钟
-    image: https://picbox.rutno.com/uploads/6871b0f590856.png
+    image: https://static.turboflint.cn/image/the_seventh_minute_banner.png_compress
     description: 火石首部短片作品，一个既温暖，又短暂的爱情故事。
     type: preview
     publish: 2025 / 08 / 01
@@ -69,7 +69,7 @@ team-members:
     avatar: image/wild_tree.jpg
     description: 内容创作者
   - name: Rebecca
-    avatar: https://static.turboflint.cn/image/rebecca.jpg
+    avatar: https://static.turboflint.cn/image/rebecca.jpg_compress
     description: 内容创作者
 
 footer:

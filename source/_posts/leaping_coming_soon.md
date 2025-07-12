@@ -4,7 +4,7 @@ date: 2025-04-21
 categories:
 - 新闻资讯
 description: 初代概念性“跃进”宇宙于近期宣布回归。这个奠基了破碎宇宙的初代实验性内容的回归，将带来全新的故事和全新的内容。
-cover: https://static.turboflint.cn/image/blog/leaping.jpg
+cover: https://static.turboflint.cn/image/blog/leaping.jpg_compress
 ---
 
 初代概念性“跃进”宇宙于今日宣布将于近期回归。这个奠基了破碎宇宙的初代实验性内容的回归，将带来全新的故事和全新的内容。
