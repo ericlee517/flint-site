@@ -5,11 +5,11 @@ news:
     type: video
     video_code: //player.bilibili.com/player.html?isOutside=true&aid=114759361892136&bvid=BV1AhKyzaEKJ&cid=30738287608&p=1&autoplay=0
     url: https://www.bilibili.com/video/BV1AhKyzaEKJ/?vd_source=4f08982e03626b75df3c4a65bbac88a7#reply114759361892136
-  - title: 《流浪虚无：重影》发布倒计时
-    description: 流浪虚无：重影即将发布，倒计时已开启！
+  - title: 《第七分钟》发布倒计时
+    description: 第七分钟即将发布，倒计时已开启！
     date: 2025-06-30-12:00
     type: timer
-    image: https://static.turboflint.cn/image/wans_2_pure.png
+    image: https://picbox.rutno.com/uploads/6871b0f590856.png
 
 project-card:
   - title: BROKEN Universe
@@ -58,10 +58,10 @@ albums:
 
 short-videos:
   - title: 第七分钟
-    image: https://tc.z.wiki/autoupload/IZvKf6tCzvpWiDXBzSuNnRpBIOp5o6HqxC0LQ26D7SWyl5f0KlZfm6UsKj-HyTuv/20250629/klsc/3840X2160/6%E6%9C%8828%E6%97%A5-%E5%89%AF%E6%9C%AC-%E5%B0%81%E9%9D%A2.jpg
+    image: https://picbox.rutno.com/uploads/6871b0f590856.png
     description: 火石首部短片作品，一个既温暖，又短暂的爱情故事。
     type: preview
-    publish: 敬请期待
+    publish: 2025 / 08 / 01
     url:
 
 team-members:
