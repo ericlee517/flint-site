@@ -10,9 +10,46 @@
                 <p>
                     我们能够为您提供Hexo主题定制服务，帮助您创建个性化的博客主题，满足您的需求。
                 </p>
-                <a href="" class="btn btn-neutral">立即咨询</a>
+                <a href="#" class="btn btn-neutral" onclick="contact.showModal()">立即咨询</a>
+            </div>
+        </div>
+
+        <div class="card bg-base-100 shadow-md hover:shadow-lg transition-shadow duration-300">
+            <div class="card-body">
+                <h2 class="card-title text-3xl">
+                    静态网站定制
+                </h2>
+                <p>
+                    根据您的个人需求，为您定制静态网站搭建服务，包括全套的网站搭建、域名注册等。
+                </p>
+                <a href="#" class="btn btn-neutral" onclick="contact.showModal()">立即咨询</a>
+            </div>
+        </div>
+
+        <div class="card bg-base-100 shadow-md hover:shadow-lg transition-shadow duration-300">
+            <div class="card-body">
+                <h2 class="card-title text-3xl">
+                    编写故事创意
+                </h2>
+                <p>
+                    根据您的个人需求，为您编写您需要的故事剧情，能够为您定制一个庞大的世界观，同样支持加入已有的故事，为您的故事添砖加瓦。
+                </p>
+                <a href="#" class="btn btn-neutral" onclick="contact.showModal()">立即咨询</a>
             </div>
         </div>
         <!-- 卡片 2 -->
     </div>
 </div>
+
+<dialog id="contact" class="modal">
+    <div class="modal-box">
+      <h3 class="text-lg font-bold">咨询</h3>
+      <p class="py-4">如果您有相关需求，请直接添加微信，我将一对一为您提供服务。</p>
+      <img src="/image/service_qrcode.jpg" alt="微信二维码" class="w-72 mx-auto">
+      <div class="modal-action">
+        <form method="dialog">
+          <button class="btn">好的</button>
+        </form>
+      </div>
+    </div>
+  </dialog>

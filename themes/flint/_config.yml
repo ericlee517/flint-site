@@ -61,7 +61,8 @@ short-videos:
     image: https://static.turboflint.cn/image/the_seventh_minute_banner.png_compress
     description: 火石首部短片作品，一个既温暖，又短暂的爱情故事。
     type: preview
-    publish: 2025 / 08 / 01
+    publish: 2025/08/01
+    projecturl: /projects/the_seventh_minute
     url:
 
 team-members:
