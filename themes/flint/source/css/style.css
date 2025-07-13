@@ -14,27 +14,6 @@ body {
   font-style: normal;
 }
 
-.hero {
-  background: linear-gradient(to bottom, #ffffff, #ffffff);
-  text-align: left;
-}
-
-.navbar-to-hero {
-  background: linear-gradient(
-    to bottom,
-    #ffe5ec,
-    #ffffff
-  ); /* 这里使用和hero相同的渐变，可根据需求调整 */
-}
-
-.pink-from-top-to-bottom {
-  background: linear-gradient(to bottom, #fff7f9, #ffffff);
-}
-
-.pink-from-bottom-to-top {
-  background: linear-gradient(to top, #ffffff, #ffffff);
-}
-
 @keyframes meteor-fly {
   0% {
     right: -100px;
@@ -68,14 +47,6 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.navbar-to-hero {
-  background: linear-gradient(
-    to bottom,
-    #ffe5ec,
-    #ffffff
-  ); /* 这里使用和hero相同的渐变，可根据需求调整 */
 }
 
 /* 自定义图片样式 */
