@@ -1,13 +1,13 @@
 news:
-  - title: 短片《第七分钟》预告
-    description: 李海和林晓悦的故事正在上演，敬请期待。
-    date: 2025年6月28日
+  - title: 短片《第七分钟》已发布！
+    description: 李海和林晓悦的故事已经上演，推荐点击下方视频前往b站观看，最高支持4K30FPS画质。
+    date: 2025年07月30日
     type: video
-    video_code: //player.bilibili.com/player.html?isOutside=true&aid=114759361892136&bvid=BV1AhKyzaEKJ&cid=30738287608&p=1&autoplay=0
+    video_code: //player.bilibili.com/player.html?isOutside=true&aid=114917034168052&bvid=BV1m98pzzEmt&cid=31285840445&p=1&autoplay=0
     url: https://www.bilibili.com/video/BV1AhKyzaEKJ/?vd_source=4f08982e03626b75df3c4a65bbac88a7#reply114759361892136
   - title: 《第七分钟》发布倒计时
     description: 第七分钟即将发布，倒计时已开启！
-    date: 2025-08-01-11:30:00
+    date: 2025-07-30-20:10:00
     type: timer
     image: https://static.turboflint.cn/image/the_seventh_minute_background.png_blur
 

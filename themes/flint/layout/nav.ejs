@@ -1,11 +1,11 @@
 <!-- Path: nav.ejs -->
 
-<div class="drawer fixed" style="z-index: 9999;">
+<div class="drawer" style="z-index: 9999">
   <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
   <div class="drawer-content flex flex-col">
     <!-- Navbar -->
     <div class="navbar bg-base-100">
-      <div class="flex-n</div>one lg:hidden">
+      <div class="flex-none lg:hidden">
         <label
           for="my-drawer-3"
           aria-label="open sidebar"
@@ -32,7 +32,6 @@
         <ul class="menu menu-horizontal px-1 navbar-center text-lg">
           <li><a href="<%- url_for('policy') %>">政策</a></li>
           <li><a href="<%- url_for('posts') %>">文章</a></li>
-          <li><a href="<%- url_for('services') %>">服务</a></li>
           <li><a href="<%- url_for('contact') %>" target="_self">联系</a></li>
           <li><a href="<%- url_for('join_us') %>">加入我们</a></li>
         </ul>
@@ -49,7 +48,6 @@
       <!-- Sidebar content here -->
       <li><a href="<%- url_for('policy') %>">政策</a></li>
       <li><a href="<%- url_for('posts') %>">文章</a></li>
-      <li><a href="<%- url_for('services') %>">服务</a></li>
       <li><a href="<%- url_for('contact') %>">联系</a></li>
       <li><a href="<%- url_for('join_us') %>">加入我们</a></li>
     </ul>
