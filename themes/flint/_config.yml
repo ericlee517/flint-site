@@ -60,10 +60,10 @@ short-videos:
   - title: 第七分钟
     image: https://static.turboflint.cn/image/the_seventh_minute_banner.png_compress
     description: 火石首部短片作品，一个既温暖，又短暂的爱情故事。
-    type: preview
-    publish: 2025/08/01
+    type: online
+    publish: 2025/07/30
     projecturl: /projects/the_seventh_minute
-    url:
+    url: https://www.bilibili.com/video/BV1m98pzzEmt/
 
 team-members:
   - name: 李野树

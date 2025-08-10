@@ -3,7 +3,7 @@ layout: project
 title: 第七分钟
 author: 李野树
 type: project
-date: 2025-07-13
+date: 2025-08-10
 cover: https://static.turboflint.cn/image/the_seventh_minute_banner.png_compress
 ---
 
@@ -23,6 +23,12 @@ cover: https://static.turboflint.cn/image/the_seventh_minute_banner.png_compress
 她动了情，动了心，却没想到结局不是她想象中的那样。她也多么想要一段浪漫的爱情，十几年来没有几个好朋友，社交经历如此淡薄，却能够真正爱上一个人。
 
 但李海又是因为什么爱上了林晓悦？是因为她的内向吗？这我们就不得而知了。或许他另有目的，可惜我们再也得不出答案了。
+
+<center>
+
+![第七分钟 2](https://static.turboflint.cn/image/blog/unname-cover-of-the-seventh-minute.png/compress)
+
+</center>
 
 林晓悦最终没有收获自己想要的感情，也没有得到完美的结局。
 
@@ -45,3 +51,6 @@ cover: https://static.turboflint.cn/image/the_seventh_minute_banner.png_compress
 剧本 李野树/光晕心弦
 
 导演 李野树
+
+## 立即观看
+[第七分钟 哔哩哔哩](https://www.bilibili.com/video/BV1m98pzzEmt/)

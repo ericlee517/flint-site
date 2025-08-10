@@ -32,26 +32,13 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PK0TRMF667"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-PK0TRMF667');
-</script>
-<%- js('js/countdown.min.js') %>
   </head>
-  <body class="flex flex-col h-screen" leftmargin=0 topmargin=0>
-    <div role="alert" class="alert alert-info">
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="h-6 w-6 shrink-0 stroke-current">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-  </svg>
-  <span>由于 Daisyui 当前版本存在问题，使用Edge浏览器访问站点时可能会遇到部分功能失效的问题，已知<b>导航栏部分内容失效。</b>我们建议您使用其他浏览器访问本页面，或等待后续版本的更新。</span>
-</div>
+  <body class="flex flex-col h-screen">
     <%- include('nav.ejs') %>
-     <%- body %>
-      <%- partial('_partial/footer') %>
-     <%- js('js/script.js') %>
-      <%- js('js/lazysizes.min.js') %>
+    <%- body %>
+    <%- partial('_partial/footer') %>
+    <%- js('js/countdown.min.js') %>
+    <%- js('js/script.js') %>
+    <%- js('js/lazysizes.min.js') %>
   </body>
 </html>
