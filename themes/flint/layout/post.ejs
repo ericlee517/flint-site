@@ -6,14 +6,14 @@
     <%- page.title %>
   </h1>
   <div class="container">
-    <p class="text-base-content/50" style="font-size: 1rem; word-wrap: break-word;">
+    <p class="text-base-content/80" style="font-size: 1rem; word-wrap: break-word;">
       发表时间：<%- date(page.date, "YYYY-MM-DD") %> &nbsp;
       文章分类：<% if (page.categories && page.categories.length > 0) { %>
       <% page.categories.forEach(function(category) { %>
-        <span class="badge badge-soft badge-secondary"><%= category.name %></span>
+        <span class="badge badge-primary"><%= category.name %></span>
       <% }); %>
       <% } else { %>
-      <span class="badge badge-soft badge-secondary">暂无分类</span>
+      <span class="badge badge-primary">暂无分类</span>
       <% } %>
     </p>
     <br>

@@ -5,9 +5,124 @@
  * description: basic for the tags to comfirm with tailwindcss.
  */
 
+gsap.registerPlugin(SplitText, ScrollToPlugin);
+
+console.clear();
+
+document.fonts.ready.then(() => {
+  gsap.set(".hero-text-introduce", { opacity: 1 });
+
+  let split;
+  SplitText.create(".hero-text-introduce", {
+    type: "words,lines",
+    linesClass: "line",
+    autoSplit: true,
+    mask: "lines",
+    onSplit: (self) => {
+      split = gsap.from(self.lines, {
+        duration: 1.5,
+        yPercent: 100,
+        opacity: 0,
+        stagger: 0.1,
+        ease: "expo.out",
+      });
+      return split;
+    }
+  });
+
+  const btn = document.querySelector("button");
+  if (btn) {
+    btn.addEventListener("click", (e) => {
+      split.timeScale(0.2).play(0);
+    });
+  }
+});
+
+
+let textRevealRadius = 100;
+const textRevealPercent = 0.17; // percent of the viewport width, used to size textRevealRadius
+
+const randomTextEl = document.querySelector('.random-text');
+if (randomTextEl) {
+  const st = new SplitText(randomTextEl, { type: 'chars', charsClass: 'char' });
+  st.chars.forEach((char) => (char.orig = char.textContent));
+
+  const upperAndLowerCase = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+  const getRandomLetter = () =>
+    upperAndLowerCase[Math.round(upperAndLowerCase.length * Math.random())];
+
+  let pageX = 0;
+  let pageY = 0;
+  let scrollY = pageYOffset;
+  let scrollX = pageXOffset;
+
+  let charData;
+
+  function handleResize() {
+    textRevealRadius = innerWidth * textRevealPercent;
+    updateCharData();
+  }
+
+  function updateCharData() {
+    charData = st.chars.map(char => {
+      const bounds = char.getBoundingClientRect(); // this operation is expensive, so just do it when we need to
+      return {
+        el: char,
+        pageY: bounds.top + scrollY + bounds.height / 2,
+        pageX: bounds.left + pageXOffset + bounds.width / 2,
+        isVisible: false
+      }
+    });
+  }
+
+  function updateText(e) {
+    if ("pageY" in e) {
+      pageX = e.pageX;
+      pageY = e.pageY;
+    } else { // scrolling doesn't give us pageX/pageY, so we must calculate them based on the scroll delta
+      let scrollYDif = pageYOffset - scrollY;
+      let scrollXDif = pageXOffset - scrollX;
+      scrollY += scrollYDif;
+      scrollX += scrollXDif;
+      pageY += scrollYDif;
+      pageX += scrollXDif;
+    }
+    
+    charData.forEach((data) => {
+      const dx = pageX - data.pageX;
+      const dy = pageY - data.pageY;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      const isVisible = dist < textRevealRadius;
+      
+      if (isVisible !== data.isVisible || !isVisible) {
+        data.isVisible = isVisible;
+        gsap.to(data.el, {
+          overwrite: true,
+          duration: gsap.utils.clamp(0.5, 3, dist / textRevealRadius),
+          scrambleText: {
+            text: isVisible ? data.el.orig : getRandomLetter(),
+            chars: 'upperAndLowerCase'
+          }
+        });
+      }
+    });
+  };
+
+  function init() {
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('pointermove', updateText);
+    window.addEventListener('scroll', updateText);
+    
+    handleResize();
+    updateText({ pageX: 0, pageY: 0 });
+  }
+
+  init();
+}
+
+
 const headings = document.querySelectorAll(
-  "h1, h2, h3, h4, h5, h6, p, ul, li, table",
-  "a"
+  "h1, h2, h3, h4, h5, h6, p, ul, li, table, a"
 );
 const tailwindClasses = {
   h1: "text-4xl font-bold mt-10 mb-4",
@@ -19,7 +134,6 @@ const tailwindClasses = {
   p: "text-lg font-normal",
   ul: "list-disc ml-15 mb-6 font-normal text-lg",
   table: "table text-lg mb-6",
-  a: "text-4xl",
 };
 
 headings.forEach((heading) => {
@@ -31,10 +145,12 @@ headings.forEach((heading) => {
 
 window.addEventListener("load", function () {
   const tooltip = document.getElementById("tooltip");
-  tooltip.classList.add("tooltip-open");
-  setTimeout(() => {
-    tooltip.classList.remove("tooltip-open");
-  }, 7000);
+  if (tooltip) {
+    tooltip.classList.add("tooltip-open");
+    setTimeout(() => {
+      tooltip.classList.remove("tooltip-open");
+    }, 7000);
+  }
 
   window.loadTime = Date.now();
 });
@@ -93,3 +209,21 @@ document.addEventListener("DOMContentLoaded", function () {
   updateCountdown();
   setInterval(updateCountdown, 1000);
 });
+
+(function () {
+  const nav = document.getElementById('floatNav');
+  if (nav) {
+    let scrollTimer = null; // 用于记录滚动停止的计时器
+
+    window.addEventListener('scroll', function () {
+      // 只要滚动就立即隐藏
+      nav.style.opacity = '0';
+      // 每次滚动时清除之前的计时器
+      clearTimeout(scrollTimer);
+      // 滚动停止后 300ms 显示导航
+      scrollTimer = setTimeout(() => {
+        nav.style.opacity = '1';
+      }, 300);
+    });
+  }
+})();

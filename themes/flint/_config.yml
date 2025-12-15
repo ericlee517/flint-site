@@ -1,22 +1,17 @@
-news:
-  - title: 短片《第七分钟》已发布！
-    description: 李海和林晓悦的故事已经上演，推荐点击下方视频前往b站观看，最高支持4K30FPS画质。
-    date: 2025年07月30日
-    type: video
-    video_code: //player.bilibili.com/player.html?isOutside=true&aid=114917034168052&bvid=BV1m98pzzEmt&cid=31285840445&p=1&autoplay=0
-    url: https://www.bilibili.com/video/BV1AhKyzaEKJ/?vd_source=4f08982e03626b75df3c4a65bbac88a7#reply114759361892136
-  - title: 《第七分钟》发布倒计时
-    description: 第七分钟即将发布，倒计时已开启！
-    date: 2025-07-30-20:10:00
-    type: timer
-    image: https://static.turboflint.cn/image/the_seventh_minute_background.png_blur
+# news:
+#   - title: 短片《第七分钟》已发布！
+#     description: 李海和林晓悦的故事已经上演，推荐点击下方视频前往b站观看，最高支持4K30FPS画质。
+#     date: 2025年07月30日
+#     type: video
+#     video_code: //player.bilibili.com/player.html?isOutside=true&aid=114917034168052&bvid=BV1m98pzzEmt&cid=31285840445&p=1&autoplay=0
+#     url: https://www.bilibili.com/video/BV1AhKyzaEKJ/?vd_source=4f08982e03626b75df3c4a65bbac88a7#reply114759361892136
+#   - title: 《第七分钟》发布倒计时
+#     description: 第七分钟即将发布，倒计时已开启！
+#     date: 2025-07-30-20:10:00
+#     type: timer
+#     image: https://static.turboflint.cn/image/the_seventh_minute_background.png_blur
 
 project-card:
-  - title: BROKEN Universe
-    image: image/broken.png
-    description: 在这个神秘无限的宇宙中，每个人都有属于自己的故事。他们讲述着自己的成长经历，为了生活而战，为了自己的未来而战。
-    url: https://broken.turboflint.cn
-    status: 已推出
   - title: No Line Universe
     image: image/noline.jpg
     description: 一个专注于青春、艺术和文化的小说宇宙。在这个宇宙中，无论是谁，他们虽然有自己的故事，但又能互相相连起来。
@@ -28,21 +23,6 @@ project-card:
     status: 敬请期待
 
 works:
-  - title: 流浪虚无
-    image: https://static.turboflint.cn/image/wans_post.png_compress
-    description: 破碎宇宙首部实验性概念小说，讲述了虚无之子和友人流浪宇宙，最终找到了心中的归属。
-    category: BROKEN
-    url: https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2Njg5NTM1MA==&action=getalbum&album_id=3525729119851872258&scene=126#wechat_redirect
-  - title: 第二者
-    image: https://static.turboflint.cn/image/the_second_one_cover.png_compress
-    description: 背叛亦或者是逃离？一对伴侣新婚后，却有一方发现了秘密。最后，是毁灭，还是原谅？
-    category: BROKEN
-    url: https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2Njg5NTM1MA==&action=getalbum&album_id=3517284581697224706&scene=126&sessionid=1749952626215#wechat_redirect
-  - title: 杀手查莉
-    image: https://static.turboflint.cn/image/killer_charlie_post.png_compress
-    description: 一名职业杀手，为了逃离家族的掌控，从而踏上了没有归途的逃亡之旅。
-    category: BROKEN
-    url: https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2Njg5NTM1MA==&action=getalbum&album_id=4011422921838264328&scene=126&sessionid=1749952626215#wechat_redirect
   - title: 灿阳之下
     image: https://static.turboflint.cn/image/under_the_sunset_post.png_compress
     description: 在灿阳之下，有着一个中二少年和一个体育生的小小世界。他们将讲述之间的小故事。
@@ -51,9 +31,9 @@ works:
 
 albums:
   - title: The Flower Of Death
-    image: https://static.turboflint.cn/image/the_flower_of_death_album.png_compress
+    image: https://static.turboflint.cn/pico/5/1764382115461.png
     publish: 2025 / 01 / 09
-    description: 以神秘的“死亡之花”为名，从此开始慢慢揭晓着虚无背后的秘密和真相。作为新陆地的首张EP专辑，包含了三首单曲，每一首无不让人感受到无尽的平静。
+    description: 以神秘的“死亡之花”为名，从此开始慢慢揭晓着虚无背后的秘密和真相。作为新陆地的首张EP专辑，包含了三首单曲以及Rebeeca特别献唱，每一首无不让人感受到无尽的平静。
     url: https://music.163.com/#/album?id=259069654
 
 short-videos:
@@ -69,14 +49,9 @@ team-members:
   - name: 李野树
     avatar: image/wild_tree.jpg
     description: 内容创作者
-  - name: Rebecca
-    avatar: https://static.turboflint.cn/image/rebecca.jpg_compress
-    description: 内容创作者
 
 footer:
   links:
-    - title: 破碎宇宙项目
-      url: https://broken.turboflint.cn
     - title: 无界宇宙项目
       url: https://noline.turboflint.cn
     - title: 厚浪云
