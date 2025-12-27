@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="black">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      property="og:image"
+      content="<%- url_for('image/logos/logo_nav.png')%>"
+    />
+    <meta property="og:url" content="https://turboflint.cn/" />
+    <meta
+      name="description"
+      content="涡轮火石是一个致力于创作和开发创意的团队，旨在创造出更多有新意的小说宇宙。我们正在尝试更好更多的创新方式，以此为更多的读者带来更好的阅读体验。无论是哪一位角色，哪一个故事背景，他们都有着自己的特色和独特的魅力。我们期待着与更多的创作者和读者一起，共同探索这个充满可能性的小说宇宙。"
+    />
+    <meta
+      name="keywords"
+      content="turboflint, Turbo Flint, 涡轮火石, 火石, 小说宇宙, 破碎宇宙, 破碎, BroKen, broken, broken universe"
+    />
+    <% if (page.title) { %>
+    <title><%= page.title %> - 涡轮火石官方网站</title>
+    <% } else { %>
+    <title><%= config.title %></title>
+    <% } %>
+         <script src="https://cdn.bootcdn.net/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+         <script src="https://cdn.bootcdn.net/ajax/libs/gsap/3.13.0/SplitText.min.js"></script>
+         <script src="https://cdn.bootcdn.net/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+         <script src="https://cdn.bootcdn.net/ajax/libs/gsap/3.13.0/ScrollToPlugin.min.js"></script>
+         <script src="https://cdn.bootcdn.net/ajax/libs/gsap/3.13.0/ScrambleTextPlugin.min.js"></script>
+    <link rel="icon" href="<%- url_for('image/logos/logo_black.png') %>" />
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/daisyui/5.0.43/daisyui.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.bootcdn.net/ajax/libs/tailwindcss-browser/4.1.13/index.global.min.js"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/daisyui/5.0.43/themes.min.css"
+      rel="stylesheet"
+    />
+    <%- css('css/style.css') %>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.1/animate.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="flex flex-col h-screen">
+    <%- include('nav.ejs') %> 
+    <%- body %>
+     <%- partial('_partial/footer') %> 
+     <script>
+       // 延迟执行 script.js，确保 DOM 已渲染
+       document.addEventListener('DOMContentLoaded', function () {
+         const script = document.createElement('script');
+         script.src = '<%- url_for("js/countdown.min.js") %>';
+         document.body.appendChild(script);
+       });
+       document.addEventListener('DOMContentLoaded', function () {
+         const script = document.createElement('script');
+         script.src = '<%- url_for("js/lazysizes.min.js") %>';
+         document.body.appendChild(script);
+       });
+       document.addEventListener('DOMContentLoaded', function () {
+         const script = document.createElement('script');
+         script.src = '<%- url_for("js/script.js") %>';
+         document.body.appendChild(script);
+       });
+     </script>
+  </body>
+</html>

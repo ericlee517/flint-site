@@ -1,0 +1,72 @@
+# news:
+#   - title: 短片《第七分钟》已发布！
+#     description: 李海和林晓悦的故事已经上演，推荐点击下方视频前往b站观看，最高支持4K30FPS画质。
+#     date: 2025年07月30日
+#     type: video
+#     video_code: //player.bilibili.com/player.html?isOutside=true&aid=114917034168052&bvid=BV1m98pzzEmt&cid=31285840445&p=1&autoplay=0
+#     url: https://www.bilibili.com/video/BV1AhKyzaEKJ/?vd_source=4f08982e03626b75df3c4a65bbac88a7#reply114759361892136
+#   - title: 《第七分钟》发布倒计时
+#     description: 第七分钟即将发布，倒计时已开启！
+#     date: 2025-07-30-20:10:00
+#     type: timer
+#     image: https://static.turboflint.cn/image/the_seventh_minute_background.png_blur
+
+project-card:
+  - title: No Line Universe
+    image: image/noline.jpg
+    description: 一个专注于青春、艺术和文化的小说宇宙。在这个宇宙中，无论是谁，他们虽然有自己的故事，但又能互相相连起来。
+    url: https://noline.turboflint.cn
+    status: 已推出
+  - title: Leaping Universe
+    image: https://static.turboflint.cn/image/blog/leaping_900*383.png_compress
+    description: 整个跃进小说宇宙，将以跃进机作为中心开展一个未知的故事，以它索取资源，是否是正确的？
+    status: 敬请期待
+
+works:
+  - title: 灿阳之下
+    image: https://static.turboflint.cn/image/under_the_sunset_post.png_compress
+    description: 在灿阳之下，有着一个中二少年和一个体育生的小小世界。他们将讲述之间的小故事。
+    category: NOLINE
+    url: https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2Njg5NTM1MA==&action=getalbum&album_id=3915731644849815560&scene=126&sessionid=1749952626215#wechat_redirect
+
+albums:
+  - title: The Flower Of Death
+    image: https://static.turboflint.cn/pico/5/1764382115461.png
+    publish: 2025 / 01 / 09
+    description: 以神秘的“死亡之花”为名，从此开始慢慢揭晓着虚无背后的秘密和真相。作为新陆地的首张EP专辑，包含了三首单曲以及Rebeeca特别献唱，每一首无不让人感受到无尽的平静。
+    url: https://music.163.com/#/album?id=259069654
+
+short-videos:
+  - title: 第七分钟
+    image: https://static.turboflint.cn/image/the_seventh_minute_banner.png_compress
+    description: 火石首部短片作品，一个既温暖，又短暂的爱情故事。
+    type: online
+    publish: 2025/07/30
+    projecturl: /projects/the_seventh_minute
+    url: https://www.bilibili.com/video/BV1m98pzzEmt/
+
+team-members:
+  - name: 李野树
+    avatar: image/wild_tree.jpg
+    description: 内容创作者
+
+footer:
+  links:
+    - title: 无界宇宙项目
+      url: https://noline.turboflint.cn
+    - title: 厚浪云
+      url: https://hlyun.org
+  document:
+    - title: 产品文档
+      url: https://docs.turboflint.cn/
+    - title: Hexo主题文档
+      url: https://hexo-theme-docs.turboflint.cn/
+  contact:
+   - title: GitHub
+     url: https://github.com/ericlee517
+   - title: Email
+     url: mailto:nathan@hlyun.org
+   - title: 微信公众号
+     url: ../wechat
+    
+about-us: 涡轮火石于2023年正式成立，是一个专注于故事创意创作的团队。我们的创意无限，为读者的体验服务。目前，我们的代表作“破碎宇宙”已发布多篇衍生小说以及多个概念内容。此外，涡轮火石还为开发者提供开发工具，帮助前端或其他开发者在开发时能够更加便捷。

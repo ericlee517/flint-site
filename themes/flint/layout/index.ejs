@@ -1,0 +1,214 @@
+<div class="heros min-h-screen min-w-full">
+    <div class="hero-content text-center">
+      <div class="max-w-full hero-text-introduce">
+        <h1 class="text-5xl md:text-6xl lg:text-8xl font-bold hero-title leading-tight transition-transform duration-300 hover:-translate-y-2">
+          每个宇宙<br />都拥有无限可能
+        </h1>
+        <p class="mt-5 sm:py-1 md:py-1 text-base sm:text-lg md:text-xl lg:text-3xl hero-title leading-relaxed transition-transform duration-300 hover:-translate-y-2">
+          我们正在创造一个个<b class="gray-text">全新的</b> 富有创意的小说宇宙 每一位角色都有<b class="gray-text">无限的</b
+          >可能性 在这个时代的浪潮中 我们将为你带来最具<b class="gray-text"
+            >创新性</b
+          >的小说宇宙 
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="projects">
+<div class="flex-grow bg-base-100 mb-10 mt-20">
+  <div class="container mx-auto px-4 py-8 text-center" >
+    <h2 class="text-4xl font-bold mb-4">
+      项目<br /><small class="text-base-content/80">Projects</small>
+    </h2>
+</div>
+    <!-- 根据项目数量自动居中：1 个居中，2 个并排居中 -->
+    <div class="flex flex-wrap justify-center gap-4">
+      <% if (Array.isArray(theme['project-card'])) { %>
+        <% theme['project-card'].forEach(project => { %>
+          <div class="card bg-base-100 shadow-md hover:shadow-lg transition-shadow duration-300
+                      <% if (theme['project-card'].length === 1) { %>mx-auto<% } %>
+                      <% if (theme['project-card'].length === 2) { %>w-full max-w-md md:w-5/12<% } %>
+                      <% if (theme['project-card'].length >= 3) { %>w-full max-w-sm<% } %>">
+            <figure>
+              <% if (project.image) { %>
+                <img data-src="<%= project.image %>" alt="<%= project.title %>" class="lazyload" />
+              <% } %>
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title text-2xl">
+                <%= project.title %>
+                <% if (project.status) { %>
+                  <div class="badge badge-neutral w-22 text-center"><%= project.status %></div>
+                <% } %>
+              </h2>
+              <p><%= project.description || 'No description available.' %></p>
+              <div class="card-actions justify-end">
+                <% if (project.url) { %>
+                  <a class="btn btn-neutral" href="<%= project.url %>">查看详情</a>
+                <% } else { %>
+                  <span class="btn btn-disabled">敬请期待</span>
+                <% } %>
+              </div>
+            </div>
+          </div>
+        <% }); %>
+      <% } else { %>
+        <p class="text-center w-full">No projects available.</p>
+      <% } %>
+    </div>
+  </div>
+
+<!-- 代表作 -->
+<div class="container mx-auto px-4 py-8 text-center" id="works">
+  <h2 class="text-4xl font-bold mb-4 mt-25">
+    作品<br /><small class="text-base-content/80">Works</small>
+  </h2>
+  <!-- 根据作品数量自动居中：1 个居中，2 个并排居中 -->
+  <div class="flex flex-wrap justify-center gap-6">
+    <% if (Array.isArray(theme['works'])) { %>
+      <% theme['works'].forEach(function(work) { %>
+        <div class="card w-84 shadow-lg duration-300
+                    <% if (theme['works'].length === 1) { %>mx-auto<% } %>
+                    <% if (theme['works'].length === 2) { %>w-full max-w-md md:w-5/12<% } %>
+                    <% if (theme['works'].length >= 3) { %>w-full max-w-sm<% } %>">
+          <figure class="flex items-center justify-center">
+            <% if (work.image) { %>
+              <img data-src="<%= work.image %>" alt="<%= work.title %> - 小说封面" class="lazyload w-72 h-auto object-cover" />
+            <% } %>
+          </figure>
+          <div class="card-body p-6 text-center">
+            <h2 class="card-title text-3xl mb-2 justify-center">
+              <%= work.title %>
+            </h2>
+            <p class="text-base-content/80 mb-4 text-base"><%= work.description || '暂无简介' %></p>
+            <div class="card-actions justify-center">
+              <% if (work.url) { %>
+                <a class="btn btn-neutral px-6" href="<%= work.url %>">立即阅读</a>
+              <% } else { %>
+                <span class="btn btn-disabled rounded-full px-6">敬请期待</span>
+              <% } %>
+            </div>
+          </div>
+        </div>
+      <% }); %>
+    <% } else { %>
+      <p class="text-center w-full">暂无作品。</p>
+    <% } %>
+  </div>
+</div>
+
+<!-- 音乐专辑 -->
+<div class="container mx-auto px-4 py-8 text-center" id="albums">
+  <h2 class="text-4xl font-bold mb-4 mt-25">
+    音乐专辑<br /><small class="text-base-content/80">Music Albums</small>
+  </h2>
+  <!-- 根据专辑数量自动居中：1 个居中，2 个并排居中 -->
+  <div class="flex flex-wrap justify-center gap-4">
+    <% if (Array.isArray(theme['albums'])) { %>
+      <% theme['albums'].forEach(function(album) { %>
+        <div class="card w-84 transition-shadow duration-300
+                    <% if (theme['albums'].length === 1) { %>mx-auto<% } %>
+                    <% if (theme['albums'].length === 2) { %>w-full max-w-md md:w-5/12<% } %>
+                    <% if (theme['albums'].length >= 3) { %>w-full max-w-sm<% } %>">
+          <figure class="flex items-center justify-center">
+            <% if (album.image) { %>
+              <img data-src="<%= album.image %>" alt="<%= album.title %> - 专辑封面" class="lazyload w-72 h-auto object-cover" />
+            <% } %>
+          </figure>
+          <div class="card-body p-6 text-center">
+            <h2 class="card-title text-2xl justify-center">
+              <%= album.title %>
+            </h2>
+            <p class="text-base-content/80 mb-4 text-base"><%= album.description || '暂无简介' %></p>
+            <div class="card-actions justify-center">
+              <% if (album.url) { %>
+                <a class="btn btn-neutral px-6" href="<%= album.url %>">立即收听</a>
+              <% } else { %>
+                <span class="btn btn-disabled px-6">敬请期待</span>
+              <% } %>
+            </div>
+          </div>
+        </div>
+      <% }); %>
+    <% } else { %>
+      <p class="text-center w-full">暂无专辑。</p>
+    <% } %>
+  </div>
+</div>
+
+<!-- 短片 -->
+<div class="container mx-auto px-4 py-8 text-center" id="short-videos">
+  <h2 class="text-4xl font-bold mb-4 mt-25">
+    短片<br /><small class="text-base-content/80">Short Videos</small>
+  </h2>
+  <!-- 根据短片数量自动居中：1 个居中，2 个并排居中 -->
+  <div class="flex flex-wrap justify-center gap-4">
+    <% if (Array.isArray(theme['short-videos']) && theme['short-videos'].length) { %>
+      <% theme['short-videos'].forEach(function(video) { %>
+        <div class="card bg-base-100 shadow-md hover:shadow-lg transition-shadow duration-300
+                    <% if (theme['short-videos'].length === 1) { %>mx-auto<% } %>
+                    <% if (theme['short-videos'].length === 2) { %>w-full max-w-md md:w-5/12<% } %>
+                    <% if (theme['short-videos'].length >= 3) { %>w-full max-w-sm<% } %>">
+          <figure class="flex items-center justify-center">
+            <% if (video.image) { %>
+              <img data-src="<%= video.image %>" alt="<%= video.title %> 封面" class="lazyload w-96 h-auto object-cover" />
+            <% } %>
+          </figure>
+          <div class="card-body text-center">
+            <h2 class="card-title text-2xl justify-center">
+              <%= video.title %>
+            </h2>
+            <p><%= video.description || '暂无简介' %></p>
+            <div class="card-actions justify-center">
+              <% if (video.type === 'preview') { %>
+                <span class="btn btn-disabled">即将上线</span>
+              <% } else if (video.url) { %>
+                <a class="btn btn-neutral" href="<%= video.url %>">立即观看</a>
+              <% } %>
+              <% if (video.projecturl) { %>
+                <a class="btn bg-white text-black" href="<%= video.projecturl %>">短片介绍</a>
+              <% } %>
+            </div>
+          </div>
+        </div>
+      <% }); %>
+    <% } else { %>
+      <p class="text-center w-full">暂无短片。</p>
+    <% } %>
+  </div>
+</div>
+
+<!-- 团队成员 -->
+<div class="container mx-auto px-4 py-8 text-center" id="team-members">
+  <h2 class="text-4xl font-bold mb-4 mt-25">
+    团队成员<br /><small class="text-base-content/80">Team Members</small>
+  </h2>
+  <!-- 根据成员数量自动居中：1 个居中，2 个并排居中 -->
+  <div class="flex flex-wrap justify-center gap-4">
+    <% if (Array.isArray(theme['team-members'])) { %>
+      <% theme['team-members'].forEach(function(member) { %>
+        <div class="card bg-base-100 shadow-md hover:shadow-lg transition-shadow duration-300
+                    <% if (theme['team-members'].length === 1) { %>mx-auto<% } %>
+                    <% if (theme['team-members'].length === 2) { %>w-full max-w-md md:w-5/12<% } %>
+                    <% if (theme['team-members'].length >= 3) { %>w-full max-w-sm<% } %>">
+          <figure class="px-6 pt-6">
+            <% if (member.avatar) { %>
+              <img data-src="<%= member.avatar %>" alt="<%= member.name %> - 团队成员" class="lazyload w-32 h-32 object-cover" />
+            <% } %>
+          </figure>
+          <div class="card-body text-center">
+            <h2 class="card-title text-2xl justify-center">
+              <%= member.name %>
+              <% if (member.position) { %>
+                <div class="badge badge-neutral text-center"><%= member.position %></div>
+              <% } %>
+            </h2>
+            <p><%= member.description || '暂无简介' %></p>
+          </div>
+        </div>
+      <% }); %>
+    <% } else { %>
+      <p class="text-center w-full">暂无团队成员。</p>
+    <% } %>
+  </div>
+</div>

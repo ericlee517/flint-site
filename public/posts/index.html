@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="black">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      property="og:image"
+      content="/image/logos/logo_nav.png"
+    />
+    <meta property="og:url" content="https://turboflint.cn/" />
+    <meta
+      name="description"
+      content="涡轮火石是一个致力于创作和开发创意的团队，旨在创造出更多有新意的小说宇宙。我们正在尝试更好更多的创新方式，以此为更多的读者带来更好的阅读体验。无论是哪一位角色，哪一个故事背景，他们都有着自己的特色和独特的魅力。我们期待着与更多的创作者和读者一起，共同探索这个充满可能性的小说宇宙。"
+    />
+    <meta
+      name="keywords"
+      content="turboflint, Turbo Flint, 涡轮火石, 火石, 小说宇宙, 破碎宇宙, 破碎, BroKen, broken, broken universe"
+    />
+    
+    <title>文章 - 涡轮火石官方网站</title>
+    
+         <script src="https://cdn.bootcdn.net/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+         <script src="https://cdn.bootcdn.net/ajax/libs/gsap/3.13.0/SplitText.min.js"></script>
+         <script src="https://cdn.bootcdn.net/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+         <script src="https://cdn.bootcdn.net/ajax/libs/gsap/3.13.0/ScrollToPlugin.min.js"></script>
+         <script src="https://cdn.bootcdn.net/ajax/libs/gsap/3.13.0/ScrambleTextPlugin.min.js"></script>
+    <link rel="icon" href="/image/logos/logo_black.png" />
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/daisyui/5.0.43/daisyui.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.bootcdn.net/ajax/libs/tailwindcss-browser/4.1.13/index.global.min.js"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/daisyui/5.0.43/themes.min.css"
+      rel="stylesheet"
+    />
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.1/animate.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  <meta name="generator" content="Hexo 7.3.0"></head>
+  <body class="flex flex-col h-screen">
+    <!-- Path: nav.ejs -->
+
+
+<!-- 原有抽屉导航 -->
+<div class="drawer mb-20" style="z-index: 9999">
+  <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
+  <div class="drawer-content flex flex-col">
+    <!-- Navbar -->
+    <div class="navbar fixed top-0 left-0 w-full bg-black/50 backdrop-blur z-50">
+      <div class="flex-none lg:hidden">
+        <label
+          for="my-drawer-3"
+          aria-label="open sidebar"
+          class="btn btn-square btn-ghost"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h8m-8 6h16"
+            />
+          </svg>
+        </label>
+      </div>
+      <!-- logo 保留在左边 -->
+      <a class="btn btn-ghost text-xl text-white" href="/index">
+        <img src="/image/logos/logo_white.png" alt="logo" width="35px">
+        涡轮火石
+      </a>
+      <!-- 电脑端导航项居中 -->
+      <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1 navbar-center text-lg">
+          <li><a href="/policy" class="text-white">政策</a></li>
+          <li><a href="/posts" class="text-white">文章</a></li>
+          <li><a href="/contact" target="_self" class="text-white">联系</a></li>
+          <li><a href="/join_us" class="text-white">加入我们</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="drawer-side">
+    <label
+      for="my-drawer-3"
+      aria-label="close sidebar"
+      class="drawer-overlay"
+    ></label>
+    <ul class="menu bg-black min-h-full w-70 p-4 justify-center text-2xl">
+      <!-- Sidebar content here -->
+      <li><a href="/policy" class="text-white">政策</a></li>
+      <li><a href="/posts" class="text-white">文章</a></li>
+      <li><a href="/contact" class="text-white">联系</a></li>
+      <li><a href="/join_us" class="text-white">加入我们</a></li>
+    </ul>
+  </div>
+</div>
+ 
+    
+	<div class="container mx-auto px-4 m-8 max-w-screen-xl flex-grow">
+    <h1 class="text-5xl mb-5 text-center">文章<br><small class="text-base-content/30">Articles</small></h1>
+    <!-- name of each tab group should be unique -->
+    <!-- 使用 flex 布局并结合 justify-center 类实现水平居中 -->
+    <div class="flex justify-center mb-5">
+        <div class="tabs tabs-box w-fit">
+            <input type="radio" name="my_tabs_1" class="tab" aria-label="所有文章" checked="checked" data-category="all" />
+            
+            
+                
+                    
+                        
+                            
+                            <input type="radio" name="my_tabs_1" class="tab" aria-label="产品更新" data-category="产品更新" />
+                        
+                    
+                
+            
+                
+                    
+                        
+                            
+                            <input type="radio" name="my_tabs_1" class="tab" aria-label="新闻资讯" data-category="新闻资讯" />
+                        
+                    
+                
+            
+                
+                    
+                        
+                            
+                            <input type="radio" name="my_tabs_1" class="tab" aria-label="小说宇宙" data-category="小说宇宙" />
+                        
+                    
+                
+            
+                
+                    
+                        
+                    
+                
+            
+                
+                    
+                        
+                            
+                            <input type="radio" name="my_tabs_1" class="tab" aria-label="投稿" data-category="投稿" />
+                        
+                    
+                
+            
+                
+                    
+                        
+                    
+                
+            
+                
+                    
+                        
+                    
+                
+            
+        </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-20 justify-center">
+        
+            
+            <div class="card bg-base-100 shadow-lg" data-categories="新闻资讯">
+                <figure class="relative w-full h-48 overflow-hidden">
+                    <img
+                        data-src="../image/post_cover.png"
+                        alt="火石无限影像今日成立"
+                        class="w-full h-full object-cover lazyload" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title text-2xl">火石无限影像今日成立</h2>
+                    <p><span class="badge badge-primary">2025-08-30</span> <span class="badge badge-outline">新闻资讯</span></p>
+                    <p>初代概念性“跃进”宇宙于近期宣布回归。这个奠基了破碎宇宙的初代实验性内容的回归，将带来全新的故事和全新的内容。</p>
+                    <div class="card-actions justify-end">
+                        <a href="../2025/08/30/lnf/" target="_blank" class="btn btn-neutral">阅读</a>
+                    </div>
+                </div>
+            </div>
+        
+            
+            <div class="card bg-base-100 shadow-lg" data-categories="新闻资讯">
+                <figure class="relative w-full h-48 overflow-hidden">
+                    <img
+                        data-src="https://static.turboflint.cn/image/the_seventh_minute_banner.png_compress"
+                        alt="短片《第七分钟》预告已发布"
+                        class="w-full h-full object-cover lazyload" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title text-2xl">短片《第七分钟》预告已发布</h2>
+                    <p><span class="badge badge-primary">2025-06-28</span> <span class="badge badge-outline">新闻资讯</span></p>
+                    <p>火石全新探索路径短片《第七分钟》预告已全网发布。</p>
+                    <div class="card-actions justify-end">
+                        <a href="../2025/06/28/the_senventh_,minutes_preview/" target="_blank" class="btn btn-neutral">阅读</a>
+                    </div>
+                </div>
+            </div>
+        
+            
+            <div class="card bg-base-100 shadow-lg" data-categories="投稿">
+                <figure class="relative w-full h-48 overflow-hidden">
+                    <img
+                        data-src="../image/post_cover.png"
+                        alt="破碎投稿前须知"
+                        class="w-full h-full object-cover lazyload" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title text-2xl">破碎投稿前须知</h2>
+                    <p><span class="badge badge-primary">2025-06-13</span> <span class="badge badge-outline">投稿</span></p>
+                    <p>向我们投稿前，你需要知道一些必要的内容。</p>
+                    <div class="card-actions justify-end">
+                        <a href="../2025/06/13/broken_submit_a_contribution/" target="_blank" class="btn btn-neutral">阅读</a>
+                    </div>
+                </div>
+            </div>
+        
+            
+            <div class="card bg-base-100 shadow-lg" data-categories="小说宇宙">
+                <figure class="relative w-full h-48 overflow-hidden">
+                    <img
+                        data-src="../image/post_cover.png"
+                        alt="这个夏天，你不会失望！官宣定档的多部小说背后的故事"
+                        class="w-full h-full object-cover lazyload" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title text-2xl">这个夏天，你不会失望！官宣定档的多部小说背后的故事</h2>
+                    <p><span class="badge badge-primary">2025-05-30</span> <span class="badge badge-outline">小说宇宙</span></p>
+                    <p>近日，火石官宣定档了多部概念小说，其背后的故事是什么？</p>
+                    <div class="card-actions justify-end">
+                        <a href="../2025/05/30/2025_summer_novels/" target="_blank" class="btn btn-neutral">阅读</a>
+                    </div>
+                </div>
+            </div>
+        
+            
+            <div class="card bg-base-100 shadow-lg" data-categories="产品更新">
+                <figure class="relative w-full h-48 overflow-hidden">
+                    <img
+                        data-src="../image/post_cover.png"
+                        alt="破碎小说宇宙维基（WIKI）已上线"
+                        class="w-full h-full object-cover lazyload" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title text-2xl">破碎小说宇宙维基（WIKI）已上线</h2>
+                    <p><span class="badge badge-primary">2025-05-20</span> <span class="badge badge-outline">产品更新</span></p>
+                    <p>破碎小说宇宙维基已在 Fandom 上线，你现在可以直接前往维基搜寻你想要的内容。</p>
+                    <div class="card-actions justify-end">
+                        <a href="../2025/05/20/broken_wiki_online/" target="_blank" class="btn btn-neutral">阅读</a>
+                    </div>
+                </div>
+            </div>
+        
+            
+            <div class="card bg-base-100 shadow-lg" data-categories="产品更新">
+                <figure class="relative w-full h-48 overflow-hidden">
+                    <img
+                        data-src="https://static.turboflint.cn/image/almas-salakhov-c7k6Z8T9sfM-unsplash.jpg_compress"
+                        alt="Turbo Flint V5.0 全新版本的官网正式上线"
+                        class="w-full h-full object-cover lazyload" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title text-2xl">Turbo Flint V5.0 全新版本的官网正式上线</h2>
+                    <p><span class="badge badge-primary">2025-04-23</span> <span class="badge badge-outline">产品更新</span></p>
+                    <p>涡轮火石官网近期升级到了V5.0版本，全新的设计和功能，让您的体验更加流畅和便捷。</p>
+                    <div class="card-actions justify-end">
+                        <a href="../2025/04/23/20250423/" target="_blank" class="btn btn-neutral">阅读</a>
+                    </div>
+                </div>
+            </div>
+        
+            
+            <div class="card bg-base-100 shadow-lg" data-categories="新闻资讯">
+                <figure class="relative w-full h-48 overflow-hidden">
+                    <img
+                        data-src="https://static.turboflint.cn/image/blog/leaping.jpg_compress"
+                        alt="概念实验性宇宙“跃进”即将回归"
+                        class="w-full h-full object-cover lazyload" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title text-2xl">概念实验性宇宙“跃进”即将回归</h2>
+                    <p><span class="badge badge-primary">2025-04-21</span> <span class="badge badge-outline">新闻资讯</span></p>
+                    <p>初代概念性“跃进”宇宙于近期宣布回归。这个奠基了破碎宇宙的初代实验性内容的回归，将带来全新的故事和全新的内容。</p>
+                    <div class="card-actions justify-end">
+                        <a href="../2025/04/21/leaping_coming_soon/" target="_blank" class="btn btn-neutral">阅读</a>
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+</div>
+<script>
+    const tabs = document.querySelectorAll('input[name="my_tabs_1"]');
+    const cards = document.querySelectorAll('.card');
+    tabs.forEach(tab => {
+        tab.addEventListener('change', function() {
+            const selectedCategory = this.dataset.category;
+            cards.forEach(card => {
+                const cardCategories = card.dataset.categories.split(' ');
+                if (selectedCategory === 'all' || cardCategories.includes(selectedCategory)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <footer class="bg-dark text-white py-12">
+    <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-4 gap-8 mb-8">
+            <div>
+                <div class="flex items-center space-x-3 mb-4">
+                    <div class="w-10 h-10 bg-gradient-to-r from-primary to-accent rounded-lg flex items-center justify-center">
+                        <img src="/image/logos/logo.png" alt="logo" width="35px">
+                    </div>
+                    <span class="text-2xl font-bold gradient-text">涡轮火石</span>
+                </div>
+                <p class="text-gray-400 mb-4">每个宇宙都拥有无限可能</p>
+                <div class="flex space-x-4">
+                    
+                        
+                            <a target="_blank" rel="noopener" href="https://github.com/ericlee517" class="text-gray-400 hover:text-white transition-colors" title="GitHub">
+                                
+                                    <i class="fa fa-github text-xl"></i>
+                                
+                            </a>
+                        
+                            <a href="mailto:nathan@hlyun.org" class="text-gray-400 hover:text-white transition-colors" title="Email">
+                                
+                                    <i class="fa fa-envelope text-xl"></i>
+                                
+                            </a>
+                        
+                            <a href="../wechat" class="text-gray-400 hover:text-white transition-colors" title="微信公众号">
+                                
+                                    <i class="fa fa-wechat text-xl"></i>
+                                
+                            </a>
+                        
+                    
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="text-lg font-bold mb-4">更多相关</h4>
+                <ul class="space-y-2">
+                    
+                        
+                            <li><a target="_blank" rel="noopener" href="https://noline.turboflint.cn" class="text-gray-400 hover:text-white transition-colors">无界宇宙项目</a></li>
+                        
+                            <li><a target="_blank" rel="noopener" href="https://hlyun.org" class="text-gray-400 hover:text-white transition-colors">厚浪云</a></li>
+                        
+                    
+                </ul>
+            </div>
+            
+            <div>
+                <h4 class="text-lg font-bold mb-4">产品文档</h4>
+                <ul class="space-y-2">
+                    
+                        
+                            <li><a target="_blank" rel="noopener" href="https://docs.turboflint.cn/" class="text-gray-400 hover:text-white transition-colors">产品文档</a></li>
+                        
+                            <li><a target="_blank" rel="noopener" href="https://hexo-theme-docs.turboflint.cn/" class="text-gray-400 hover:text-white transition-colors">Hexo主题文档</a></li>
+                        
+                    
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">联系我们</h4>
+                <ul class="space-y-2">
+                    
+                        
+                            <li><a target="_blank" rel="noopener" href="https://github.com/ericlee517" class="text-gray-400 hover:text-white transition-colors">GitHub</a></li>
+                        
+                            <li><a href="mailto:nathan@hlyun.org" class="text-gray-400 hover:text-white transition-colors">Email</a></li>
+                        
+                            <li><a href="../wechat" class="text-gray-400 hover:text-white transition-colors">微信公众号</a></li>
+                        
+                    
+                </ul>
+            </div>
+        </div>
+        
+        <div class="border-t border-gray-800 pt-8 text-center">
+            <p class="text-gray-400">
+                Copyright © 2023 - 2025 涡轮火石. All rights reserved.
+            </p>
+            <p class="text-gray-500 text-sm mt-2">
+                每个宇宙 都拥有无限可能
+            </p>
+        </div>
+    </div>
+</footer>
+ 
+     <script>
+       // 延迟执行 script.js，确保 DOM 已渲染
+       document.addEventListener('DOMContentLoaded', function () {
+         const script = document.createElement('script');
+         script.src = '/js/countdown.min.js';
+         document.body.appendChild(script);
+       });
+       document.addEventListener('DOMContentLoaded', function () {
+         const script = document.createElement('script');
+         script.src = '/js/lazysizes.min.js';
+         document.body.appendChild(script);
+       });
+       document.addEventListener('DOMContentLoaded', function () {
+         const script = document.createElement('script');
+         script.src = '/js/script.js';
+         document.body.appendChild(script);
+       });
+     </script>
+  </body>
+</html>

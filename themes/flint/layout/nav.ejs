@@ -1,0 +1,73 @@
+<!-- Path: nav.ejs -->
+<% if (page.path === 'index.html') { %>
+<!-- 新增：悬浮首页导航（电脑端和手机端一致） -->
+<div id="floatNav" class="fixed top-2 left-1/2 -translate-x-1/2 z-40 mt-20 transition-opacity duration-300">
+  <nav class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-gray-900/70 backdrop-blur text-white border border-gray-400">
+    <a href="#projects" class="text-sm sm:text-base hover:text-gray-300">项目</a>
+    <a href="#works" class="text-sm sm:text-base hover:text-gray-300">作品</a>
+    <a href="#albums" class="text-sm sm:text-base hover:text-gray-300">专辑</a>
+    <a href="#short-videos" class="text-sm sm:text-base hover:text-gray-300">短片</a>
+    <a href="#team-members" class="text-sm sm:text-base hover:text-gray-300">团队</a>
+  </nav>
+</div>
+<% } %>
+
+<!-- 原有抽屉导航 -->
+<div class="drawer mb-20" style="z-index: 9999">
+  <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
+  <div class="drawer-content flex flex-col">
+    <!-- Navbar -->
+    <div class="navbar fixed top-0 left-0 w-full bg-black/50 backdrop-blur z-50">
+      <div class="flex-none lg:hidden">
+        <label
+          for="my-drawer-3"
+          aria-label="open sidebar"
+          class="btn btn-square btn-ghost"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h8m-8 6h16"
+            />
+          </svg>
+        </label>
+      </div>
+      <!-- logo 保留在左边 -->
+      <a class="btn btn-ghost text-xl text-white" href="<%- url_for('index') %>">
+        <img src="<%- url_for('image/logos/logo_white.png') %>" alt="logo" width="35px">
+        涡轮火石
+      </a>
+      <!-- 电脑端导航项居中 -->
+      <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1 navbar-center text-lg">
+          <li><a href="<%- url_for('policy') %>" class="text-white">政策</a></li>
+          <li><a href="<%- url_for('posts') %>" class="text-white">文章</a></li>
+          <li><a href="<%- url_for('contact') %>" target="_self" class="text-white">联系</a></li>
+          <li><a href="<%- url_for('join_us') %>" class="text-white">加入我们</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="drawer-side">
+    <label
+      for="my-drawer-3"
+      aria-label="close sidebar"
+      class="drawer-overlay"
+    ></label>
+    <ul class="menu bg-black min-h-full w-70 p-4 justify-center text-2xl">
+      <!-- Sidebar content here -->
+      <li><a href="<%- url_for('policy') %>" class="text-white">政策</a></li>
+      <li><a href="<%- url_for('posts') %>" class="text-white">文章</a></li>
+      <li><a href="<%- url_for('contact') %>" class="text-white">联系</a></li>
+      <li><a href="<%- url_for('join_us') %>" class="text-white">加入我们</a></li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<article class="container mx-auto px-4 lg:px-75">
+  <% if (page.cover) { %>
+    <img src="<%= page.cover %>" alt="<%= page.title %>" class="w-full md:h-96 lg:h-96 object-cover mb-4" />
+  <% } %>
+  <h1 class="text-5xl mb-3 mt-10" style="font-weight: bold; word-wrap: break-word;">
+    <%- page.title %>
+  </h1>
+  <div class="container">
+    <p class="text-base-content/80" style="font-size: 1rem; word-wrap: break-word;">
+      发表时间：<%- date(page.date, "YYYY-MM-DD") %> &nbsp;
+      文章分类：<% if (page.categories && page.categories.length > 0) { %>
+      <% page.categories.forEach(function(category) { %>
+        <span class="badge badge-primary"><%= category.name %></span>
+      <% }); %>
+      <% } else { %>
+      <span class="badge badge-primary">暂无分类</span>
+      <% } %>
+    </p>
+    <br>
+    <div class="post_img text-xl the-post-content">
+      <%- page.content %>  
+    </div>
+  </div>
+</article>
