@@ -1,53 +1,57 @@
-<div class="heros min-h-screen min-w-full">
-    <div class="hero-content text-center">
-      <div class="max-w-full hero-text-introduce">
-        <h1 class="text-5xl md:text-6xl lg:text-8xl font-bold hero-title leading-tight transition-transform duration-300 hover:-translate-y-2">
-          每个宇宙<br />都拥有无限可能
-        </h1>
-        <p class="mt-5 sm:py-1 md:py-1 text-base sm:text-lg md:text-xl lg:text-3xl hero-title leading-relaxed transition-transform duration-300 hover:-translate-y-2">
-          我们正在创造一个个<b class="gray-text">全新的</b> 富有创意的小说宇宙 每一位角色都有<b class="gray-text">无限的</b
-          >可能性 在这个时代的浪潮中 我们将为你带来最具<b class="gray-text"
-            >创新性</b
-          >的小说宇宙 
-        </p>
-      </div>
+<!-- Hero Section -->
+<div class="heros min-h-screen min-w-full flex items-center justify-center">
+  <div class="hero-content text-center px-4">
+    <div class="max-w-5xl hero-text-introduce">
+      <h1 class="text-5xl md:text-6xl lg:text-8xl font-bold hero-title leading-tight transition-transform duration-300 hover:-translate-y-2">
+        每个宇宙<br />都拥有无限可能
+      </h1>
+      <p class="mt-8 text-base sm:text-lg md:text-xl lg:text-3xl hero-title leading-relaxed transition-transform duration-300 hover:-translate-y-2">
+        我们正在创造一个个<b class="gray-text">全新的</b> 富有创意的小说宇宙 每一位角色都有<b class="gray-text">无限的</b
+        >可能性 在这个时代的浪潮中 我们将为你带来最具<b class="gray-text"
+          >创新性</b
+        >的小说宇宙 
+      </p>
     </div>
   </div>
 </div>
-<div id="projects">
-<div class="flex-grow bg-base-100 mb-10 mt-20">
-  <div class="container mx-auto px-4 py-8 text-center" >
-    <h2 class="text-4xl font-bold mb-4">
-      项目<br /><small class="text-base-content/80">Projects</small>
-    </h2>
-</div>
+
+<!-- Projects Section -->
+<div id="projects" class="py-16 bg-base-100">
+  <div class="container mx-auto px-4 max-w-7xl">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold mb-4 mt-25">
+    项目<br /><small class="text-base-content/80">Projects</small>
+  </h2>
+    </div>
     <!-- 根据项目数量自动居中：1 个居中，2 个并排居中 -->
-    <div class="flex flex-wrap justify-center gap-4">
+    <div class="flex flex-wrap justify-center gap-6">
       <% if (Array.isArray(theme['project-card'])) { %>
         <% theme['project-card'].forEach(project => { %>
           <div class="card bg-base-100 shadow-md hover:shadow-lg transition-shadow duration-300
                       <% if (theme['project-card'].length === 1) { %>mx-auto<% } %>
                       <% if (theme['project-card'].length === 2) { %>w-full max-w-md md:w-5/12<% } %>
                       <% if (theme['project-card'].length >= 3) { %>w-full max-w-sm<% } %>">
-            <figure>
+            <figure class="flex items-center justify-center">
               <% if (project.image) { %>
-                <img data-src="<%= project.image %>" alt="<%= project.title %>" class="lazyload" />
+                <img data-src="<%= project.image %>" alt="<%= project.title %>" class="lazyload w-96 h-auto object-cover" />
               <% } %>
             </figure>
-            <div class="card-body">
-              <h2 class="card-title text-2xl">
-                <%= project.title %>
-                <% if (project.status) { %>
-                  <div class="badge badge-neutral w-22 text-center"><%= project.status %></div>
-                <% } %>
-              </h2>
-              <p><%= project.description || 'No description available.' %></p>
-              <div class="card-actions justify-end">
-                <% if (project.url) { %>
-                  <a class="btn btn-neutral" href="<%= project.url %>">查看详情</a>
-                <% } else { %>
-                  <span class="btn btn-disabled">敬请期待</span>
-                <% } %>
+            <div class="card-body text-center flex flex-col items-center">
+              <div class="w-96">
+                <h2 class="card-title text-2xl justify-center">
+                  <%= project.title %>
+                  <% if (project.status) { %>
+                    <div class="badge badge-neutral w-22 text-center"><%= project.status %></div>
+                  <% } %>
+                </h2>
+                <p class="text-center text-base mb-4"><%= project.description || 'No description available.' %></p>
+                <div class="card-actions justify-center">
+                  <% if (project.url) { %>
+                    <a class="btn btn-neutral" href="<%= project.url %>">查看详情</a>
+                  <% } else { %>
+                    <span class="btn btn-disabled">敬请期待</span>
+                  <% } %>
+                </div>
               </div>
             </div>
           </div>
@@ -59,40 +63,42 @@
   </div>
 
 <!-- 代表作 -->
-<div class="container mx-auto px-4 py-8 text-center" id="works">
+<div class="container mx-auto px-4 py-8 text-center" id="products">
   <h2 class="text-4xl font-bold mb-4 mt-25">
-    作品<br /><small class="text-base-content/80">Works</small>
+    产品<br /><small class="text-base-content/80">Products</small>
   </h2>
   <!-- 根据作品数量自动居中：1 个居中，2 个并排居中 -->
   <div class="flex flex-wrap justify-center gap-6">
-    <% if (Array.isArray(theme['works'])) { %>
-      <% theme['works'].forEach(function(work) { %>
-        <div class="card w-84 shadow-lg duration-300
-                    <% if (theme['works'].length === 1) { %>mx-auto<% } %>
-                    <% if (theme['works'].length === 2) { %>w-full max-w-md md:w-5/12<% } %>
-                    <% if (theme['works'].length >= 3) { %>w-full max-w-sm<% } %>">
+    <% if (Array.isArray(theme['products'])) { %>
+      <% theme['products'].forEach(function(product) { %>
+        <div class="card bg-base-100 shadow-xl hover:shadow-2xl
+                    <% if (theme['products'].length === 1) { %>w-full max-w-2xl mx-auto<% } %>
+                    <% if (theme['products'].length === 2) { %>w-full max-w-md<% } %>
+                    <% if (theme['products'].length >= 3) { %>w-full max-w-sm<% } %>">
           <figure class="flex items-center justify-center">
-            <% if (work.image) { %>
-              <img data-src="<%= work.image %>" alt="<%= work.title %> - 小说封面" class="lazyload w-72 h-auto object-cover" />
+            <% if (product.image) { %>
+              <img data-src="<%= product.image %>" alt="<%= product.title %>" class="lazyload w-96 h-auto object-cover" />
             <% } %>
           </figure>
-          <div class="card-body p-6 text-center">
-            <h2 class="card-title text-3xl mb-2 justify-center">
-              <%= work.title %>
-            </h2>
-            <p class="text-base-content/80 mb-4 text-base"><%= work.description || '暂无简介' %></p>
-            <div class="card-actions justify-center">
-              <% if (work.url) { %>
-                <a class="btn btn-neutral px-6" href="<%= work.url %>">立即阅读</a>
-              <% } else { %>
-                <span class="btn btn-disabled rounded-full px-6">敬请期待</span>
-              <% } %>
+          <div class="card-body text-center flex flex-col items-center">
+            <div class="w-96">
+              <h2 class="card-title text-2xl justify-center">
+                <%= product.title %>
+              </h2>
+              <p class="text-base-content/80 text-center text-base"><%= product.description || '暂无简介' %></p>
+              <div class="card-actions justify-center mt-4">
+                <% if (product.url) { %>
+                  <a class="btn btn-neutral text-right" href="<%= product.url %>">立即查看</a>
+                <% } else { %>
+                  <span class="btn btn-disabled">敬请期待</span>
+                <% } %>
+              </div>
             </div>
           </div>
         </div>
       <% }); %>
     <% } else { %>
-      <p class="text-center w-full">暂无作品。</p>
+      <p class="text-center w-full text-base-content/60">暂无任何产品信息</p>
     <% } %>
   </div>
 </div>
@@ -154,20 +160,22 @@
               <img data-src="<%= video.image %>" alt="<%= video.title %> 封面" class="lazyload w-96 h-auto object-cover" />
             <% } %>
           </figure>
-          <div class="card-body text-center">
-            <h2 class="card-title text-2xl justify-center">
-              <%= video.title %>
-            </h2>
-            <p><%= video.description || '暂无简介' %></p>
-            <div class="card-actions justify-center">
-              <% if (video.type === 'preview') { %>
-                <span class="btn btn-disabled">即将上线</span>
-              <% } else if (video.url) { %>
-                <a class="btn btn-neutral" href="<%= video.url %>">立即观看</a>
-              <% } %>
-              <% if (video.projecturl) { %>
-                <a class="btn bg-white text-black" href="<%= video.projecturl %>">短片介绍</a>
-              <% } %>
+          <div class="card-body text-center flex flex-col items-center">
+            <div class="w-96">
+              <h2 class="card-title text-2xl justify-center">
+                <%= video.title %>
+              </h2>
+              <p class="text-center text-base mb-4"><%= video.description || '暂无简介' %></p>
+              <div class="card-actions justify-center">
+                <% if (video.type === 'preview') { %>
+                  <span class="btn btn-disabled">即将上线</span>
+                <% } else if (video.url) { %>
+                  <a class="btn btn-neutral" href="<%= video.url %>">立即观看</a>
+                <% } %>
+                <% if (video.projecturl) { %>
+                  <a class="btn bg-white text-black" href="<%= video.projecturl %>">短片介绍</a>
+                <% } %>
+              </div>
             </div>
           </div>
         </div>
@@ -203,7 +211,7 @@
                 <div class="badge badge-neutral text-center"><%= member.position %></div>
               <% } %>
             </h2>
-            <p><%= member.description || '暂无简介' %></p>
+            <p class="text-center"><%= member.description || '暂无简介' %></p>
           </div>
         </div>
       <% }); %>

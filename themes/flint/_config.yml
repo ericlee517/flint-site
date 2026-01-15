@@ -17,17 +17,12 @@ project-card:
     description: 一个专注于青春、艺术和文化的小说宇宙。在这个宇宙中，无论是谁，他们虽然有自己的故事，但又能互相相连起来。
     url: https://noline.turboflint.cn
     status: 已推出
-  - title: Leaping Universe
-    image: https://static.turboflint.cn/image/blog/leaping_900*383.png_compress
-    description: 整个跃进小说宇宙，将以跃进机作为中心开展一个未知的故事，以它索取资源，是否是正确的？
-    status: 敬请期待
 
-works:
-  - title: 灿阳之下
-    image: https://static.turboflint.cn/image/under_the_sunset_post.png_compress
-    description: 在灿阳之下，有着一个中二少年和一个体育生的小小世界。他们将讲述之间的小故事。
-    category: NOLINE
-    url: https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2Njg5NTM1MA==&action=getalbum&album_id=3915731644849815560&scene=126&sessionid=1749952626215#wechat_redirect
+products:
+  - title: 燃愿
+    image: https://static.turboflint.cn//images/upload/unnamed_product.png_compress
+    description: 以实物为载体的虚拟礼物，为礼物增添色彩
+    url:                    
 
 albums:
   - title: The Flower Of Death
@@ -47,7 +42,10 @@ short-videos:
 
 team-members:
   - name: 李野树
-    avatar: image/wild_tree.jpg
+    avatar: https://static.turboflint.cn/image/ericlee.jpeg
+    description: 内容创作者
+  - name: 光晕心弦
+    avatar: https://static.turboflint.cn/image/light.jpg
     description: 内容创作者
 
 footer:

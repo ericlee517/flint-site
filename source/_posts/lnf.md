@@ -4,6 +4,7 @@ date: 2025-08-30
 categories:
 - 新闻资讯
 description: 初代概念性“跃进”宇宙于近期宣布回归。这个奠基了破碎宇宙的初代实验性内容的回归，将带来全新的故事和全新的内容。
+cover: https://flint-hk-1303000458.cos.ap-hongkong.myqcloud.com/image/inf-picture-banner.png
 ---
 
 今日（8月31日）起，临时成立的火石Picture小组将正式命名为火石无限影像！
