@@ -43,9 +43,11 @@
       rel="stylesheet"
     />
   </head>
-  <body class="flex flex-col h-screen">
+  <body class="flex flex-col min-h-screen">
     <%- include('nav.ejs') %> 
-    <%- body %>
+    <main class="flex-grow">
+      <%- body %>
+    </main>
      <%- partial('_partial/footer') %> 
      <script>
        // 延迟执行 script.js，确保 DOM 已渲染
