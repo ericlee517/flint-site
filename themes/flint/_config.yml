@@ -12,24 +12,24 @@
 #     image: https://static.turboflint.cn/image/the_seventh_minute_background.png_blur
 
 project-card:
-  - title: No Line Universe
-    image: image/noline.jpg
-    description: 一个专注于青春、艺术和文化的小说宇宙。在这个宇宙中，无论是谁，他们虽然有自己的故事，但又能互相相连起来。
-    url: https://noline.turboflint.cn
-    status: 已推出
+#   - title: No Line Universe
+#     image: image/noline.jpg
+#     description: 一个专注于青春、艺术和文化的小说宇宙。在这个宇宙中，无论是谁，他们虽然有自己的故事，但又能互相相连起来。
+#     url: https://noline.turboflint.cn
+#     status: 已推出
 
 products:
-  - title: 燃愿
-    image: https://static.turboflint.cn//images/upload/unnamed_product.png_compress
-    description: 以实物为载体的虚拟礼物，为礼物增添色彩
-    url:                    
+#  - title: 燃愿
+#    image: https://static.turboflint.cn//images/upload/unnamed_product.png_compress
+#    description: 以实物为载体的虚拟礼物，为礼物增添色彩
+#    url:                    
 
 albums:
-  - title: The Flower Of Death
-    image: https://static.turboflint.cn/pico/5/1764382115461.png
-    publish: 2025 / 01 / 09
-    description: 以神秘的“死亡之花”为名，从此开始慢慢揭晓着虚无背后的秘密和真相。作为新陆地的首张EP专辑，包含了三首单曲以及Rebeeca特别献唱，每一首无不让人感受到无尽的平静。
-    url: https://music.163.com/#/album?id=259069654
+#  - title: The Flower Of Death
+#    image: https://static.turboflint.cn/pico/5/1764382115461.png
+ #   publish: 2025 / 01 / 09
+ #   description: 以神秘的“死亡之花”为名，从此开始慢慢揭晓着虚无背后的秘密和真相。作为新陆地的首张EP专辑，包含了三首单曲以及Rebeeca特别献唱，每一首无不让人感受到无尽的平静。
+ #   url: https://music.163.com/#/album?id=259069654
 
 short-videos:
   - title: 第七分钟

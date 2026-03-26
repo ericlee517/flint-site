@@ -1,11 +1,12 @@
 <!-- Hero Section -->
-<div class="heros min-h-screen min-w-full flex items-center justify-center">
-  <div class="hero-content text-center px-4">
+<div class="heros min-h-screen min-w-full flex items-center justify-center relative">
+  <div class="glow-effect" id="floatingGlow"></div>
+  <div class="hero-content text-center">
     <div class="max-w-5xl hero-text-introduce">
-      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold hero-title leading-tight transition-transform duration-300 hover:-translate-y-2">
+      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold hero-title leading-tight">
         每个宇宙<br />都拥有无限可能
       </h1>
-      <p class="mt-6 sm:mt-8 text-sm sm:text-base md:text-xl lg:text-2xl hero-title leading-relaxed transition-transform duration-300 hover:-translate-y-2 px-4 sm:px-0 font-light text-base-content/80">
+      <p class="mt-6 sm:mt-8 text-sm sm:text-base md:text-xl lg:text-2xl hero-title leading-relaxed px-4 sm:px-0 font-light text-base-content/80">
         我们正在创造一个个<b class="gray-text">全新的</b> 富有创意的小说宇宙 每一位角色都有<b class="gray-text">无限的</b
         >可能性 在这个时代的浪潮中 我们将为你带来最具<b class="gray-text"
           >创新性</b
@@ -57,7 +58,7 @@
           </div>
         <% }); %>
       <% } else { %>
-        <p class="text-center w-full">No projects available.</p>
+        <p class="text-center w-full text-base-content/60">暂无内容</p>
       <% } %>
     </div>
   </div>
@@ -98,7 +99,7 @@
         </div>
       <% }); %>
     <% } else { %>
-      <p class="text-center w-full text-base-content/60">暂无任何产品信息</p>
+      <p class="text-center w-full text-base-content/60">暂无内容</p>
     <% } %>
   </div>
 </div>
@@ -108,7 +109,6 @@
   <h2 class="text-3xl sm:text-4xl font-bold mb-2 sm:mb-4 mt-16 sm:mt-25">
     音乐专辑<br /><small class="text-base-content/80 text-base sm:text-lg">Music Albums</small>
   </h2>
-  <!-- 根据专辑数量自动居中：1 个居中，2 个并排居中 -->
   <div class="flex flex-wrap justify-center gap-4">
     <% if (Array.isArray(theme['albums'])) { %>
       <% theme['albums'].forEach(function(album) { %>
@@ -137,7 +137,7 @@
         </div>
       <% }); %>
     <% } else { %>
-      <p class="text-center w-full">暂无专辑。</p>
+      <p class="text-center w-full text-base-content/60">暂无内容</p>
     <% } %>
   </div>
 </div>
@@ -147,7 +147,6 @@
   <h2 class="text-3xl sm:text-4xl font-bold mb-2 sm:mb-4 mt-16 sm:mt-25">
     短片<br /><small class="text-base-content/80 text-base sm:text-lg">Short Videos</small>
   </h2>
-  <!-- 根据短片数量自动居中：1 个居中，2 个并排居中 -->
   <div class="flex flex-wrap justify-center gap-4">
     <% if (Array.isArray(theme['short-videos']) && theme['short-videos'].length) { %>
       <% theme['short-videos'].forEach(function(video) { %>
@@ -191,7 +190,6 @@
   <h2 class="text-3xl sm:text-4xl font-bold mb-2 sm:mb-4 mt-16 sm:mt-25">
     团队成员<br /><small class="text-base-content/80 text-base sm:text-lg">Team Members</small>
   </h2>
-  <!-- 根据成员数量自动居中：1 个居中，2 个并排居中 -->
   <div class="flex flex-wrap justify-center gap-4">
     <% if (Array.isArray(theme['team-members'])) { %>
       <% theme['team-members'].forEach(function(member) { %>

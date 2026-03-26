@@ -1,16 +1,16 @@
 ## 涡轮火石官方网站
 
-基于Hexo + TailwindCSS + DaisyUI搭建的静态站点，主题暂未开发社区版。
+基于 Hexo + TailwindCSS + DaisyUI 构建的现代化静态站点，采用响应式设计，主题暂未发布社区版本。
 
-## 如何部署
-请安装hexo cli后直接运行`hexo server`命令即可。
+## 快速开始
 
-## 如何贡献
-请fork本仓库，然后提交PR。
+### 环境要求
+- Node.js 16+ 或更高版本
+- Hexo CLI 5.0+
 
-## 使用的开源项目
+### 本地部署
 
-- [Hexo](https://hexo.io/)
-- [tailwindcss](https://tailwindcss.com)
-- [daisyui](https://daisyui.com)
-- [Google Icons](https://fonts.google.com/icons)
+1. 克隆项目到本地
+2. 安装依赖：`npm install`
+3. 启动开发服务器：`hexo server`
+4. 访问 http://localhost:4000

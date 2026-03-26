@@ -227,3 +227,34 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 })();
+
+// Floating Glow Effect
+const glowElement = document.getElementById('floatingGlow');
+glowElement.classList.add('active');
+
+function getRandomPosition() {
+  const hero = document.querySelector('.heros');
+  
+  // Use offsetWidth/offsetHeight for more reliable dimensions
+  const width = hero.offsetWidth;
+  const height = hero.offsetHeight;
+  
+  // Ensure glow stays fully within bounds
+  const x = Math.random() * (width - 200);
+  const y = Math.random() * (height - 200);
+  
+  return { x, y };
+}
+
+function moveGlow() {
+  const { x, y } = getRandomPosition();
+  
+  glowElement.style.transition = `top ${Math.random() * 3 + 2}s ease-in-out, left ${Math.random() * 3 + 2}s ease-in-out`;
+  glowElement.style.top = `${y}px`;
+  glowElement.style.left = `${x}px`;
+  
+  setTimeout(moveGlow, Math.random() * 2000 + 3000);
+}
+
+// Start the animation
+moveGlow();

@@ -28,15 +28,7 @@
          <script src="https://cdn.bootcdn.net/ajax/libs/gsap/3.13.0/ScrollToPlugin.min.js"></script>
          <script src="https://cdn.bootcdn.net/ajax/libs/gsap/3.13.0/ScrambleTextPlugin.min.js"></script>
     <link rel="icon" href="<%- url_for('image/logos/logo_black.png') %>" />
-    <link
-      href="https://cdn.bootcdn.net/ajax/libs/daisyui/5.0.43/daisyui.css"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.bootcdn.net/ajax/libs/tailwindcss-browser/4.1.13/index.global.min.js"></script>
-    <link
-      href="https://cdn.bootcdn.net/ajax/libs/daisyui/5.0.43/themes.min.css"
-      rel="stylesheet"
-    />
+        <%- css(['css/main.css']) %>
     <%- css('css/style.css') %>
     <link
       href="https://cdn.bootcdn.net/ajax/libs/remixicon/4.6.0/remixicon.min.css"
@@ -50,7 +42,6 @@
     </main>
      <%- partial('_partial/footer') %> 
      <script>
-       // 延迟执行 script.js，确保 DOM 已渲染
        document.addEventListener('DOMContentLoaded', function () {
          const script = document.createElement('script');
          script.src = '<%- url_for("js/countdown.min.js") %>';

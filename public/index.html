@@ -26,50 +26,40 @@
          <script src="https://cdn.bootcdn.net/ajax/libs/gsap/3.13.0/ScrollToPlugin.min.js"></script>
          <script src="https://cdn.bootcdn.net/ajax/libs/gsap/3.13.0/ScrambleTextPlugin.min.js"></script>
     <link rel="icon" href="/image/logos/logo_black.png" />
-    <link
-      href="https://cdn.bootcdn.net/ajax/libs/daisyui/5.0.43/daisyui.css"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.bootcdn.net/ajax/libs/tailwindcss-browser/4.1.13/index.global.min.js"></script>
-    <link
-      href="https://cdn.bootcdn.net/ajax/libs/daisyui/5.0.43/themes.min.css"
-      rel="stylesheet"
-    />
+        
+<link rel="stylesheet" href="/css/main.css">
+
     
 <link rel="stylesheet" href="/css/style.css">
 
     <link
-      href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.1/animate.min.css"
-      rel="stylesheet"
-    />
-    <link
       href="https://cdn.bootcdn.net/ajax/libs/remixicon/4.6.0/remixicon.min.css"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
   <meta name="generator" content="Hexo 7.3.0"></head>
-  <body class="flex flex-col h-screen">
+  <body class="flex flex-col min-h-screen">
     <!-- Path: nav.ejs -->
 
-<!-- 新增：悬浮首页导航（电脑端和手机端一致） -->
 <div id="floatNav" class="fixed top-2 left-1/2 -translate-x-1/2 z-40 mt-20 transition-opacity duration-300">
   <nav class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-gray-900/70 backdrop-blur text-white border border-gray-400">
     <a href="#projects" class="text-sm sm:text-base hover:text-gray-300">项目</a>
-    <a href="#works" class="text-sm sm:text-base hover:text-gray-300">作品</a>
+    <a href="#products" class="text-sm sm:text-base hover:text-gray-300">产品</a>
     <a href="#albums" class="text-sm sm:text-base hover:text-gray-300">专辑</a>
     <a href="#short-videos" class="text-sm sm:text-base hover:text-gray-300">短片</a>
     <a href="#team-members" class="text-sm sm:text-base hover:text-gray-300">团队</a>
   </nav>
 </div>
 
+<!-- Announcement Bar -->
+<div class="flex justify-center mt-32 mb-8">
+  <div class="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gray-900/70 backdrop-blur text-white border border-gray-400">
+    <span class="text-sm sm:text-base">🎉 欢迎访问涡轮火石，我们正在构建全新的小说宇宙！</span>
+  </div>
+</div>
+
 
 <!-- 原有抽屉导航 -->
-<div class="drawer mb-20" style="z-index: 9999">
+<div class="drawer mb-10" style="z-index: 9999">
   <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
   <div class="drawer-content flex flex-col">
     <!-- Navbar -->
@@ -128,161 +118,71 @@
   </div>
 </div>
  
-    <div class="heros min-h-screen min-w-full">
-    <div class="hero-content text-center">
-      <div class="max-w-full hero-text-introduce">
-        <h1 class="text-5xl md:text-6xl lg:text-8xl font-bold hero-title leading-tight transition-transform duration-300 hover:-translate-y-2">
-          每个宇宙<br />都拥有无限可能
-        </h1>
-        <p class="mt-5 sm:py-1 md:py-1 text-base sm:text-lg md:text-xl lg:text-3xl hero-title leading-relaxed transition-transform duration-300 hover:-translate-y-2">
-          我们正在创造一个个<b class="gray-text">全新的</b> 富有创意的小说宇宙 每一位角色都有<b class="gray-text">无限的</b
-          >可能性 在这个时代的浪潮中 我们将为你带来最具<b class="gray-text"
-            >创新性</b
-          >的小说宇宙 
-        </p>
-      </div>
+    <main class="flex-grow">
+      <!-- Hero Section -->
+<div class="heros min-h-screen min-w-full flex items-center justify-center relative">
+  <div class="glow-effect" id="floatingGlow"></div>
+  <div class="hero-content text-center">
+    <div class="max-w-5xl hero-text-introduce">
+      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold hero-title leading-tight">
+        每个宇宙<br />都拥有无限可能
+      </h1>
+      <p class="mt-6 sm:mt-8 text-sm sm:text-base md:text-xl lg:text-2xl hero-title leading-relaxed px-4 sm:px-0 font-light text-base-content/80">
+        我们正在创造一个个<b class="gray-text">全新的</b> 富有创意的小说宇宙 每一位角色都有<b class="gray-text">无限的</b
+        >可能性 在这个时代的浪潮中 我们将为你带来最具<b class="gray-text"
+          >创新性</b
+        >的小说宇宙 
+      </p>
     </div>
   </div>
 </div>
-<div id="projects">
-<div class="flex-grow bg-base-100 mb-10 mt-20">
-  <div class="container mx-auto px-4 py-8 text-center" >
-    <h2 class="text-4xl font-bold mb-4">
-      项目<br /><small class="text-base-content/80">Projects</small>
-    </h2>
-</div>
+
+<!-- Projects Section -->
+<div id="projects" class="py-16 bg-base-100">
+  <div class="container mx-auto px-4 max-w-7xl">
+    <div class="text-center mb-8 sm:mb-12">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-2 sm:mb-4 mt-16 sm:mt-25">
+    项目<br /><small class="text-base-content/80 text-base sm:text-lg">Projects</small>
+  </h2>
+    </div>
     <!-- 根据项目数量自动居中：1 个居中，2 个并排居中 -->
-    <div class="flex flex-wrap justify-center gap-4">
+    <div class="flex flex-wrap justify-center gap-6">
       
-        
-          <div class="card bg-base-100 shadow-md hover:shadow-lg transition-shadow duration-300
-                      
-                      w-full max-w-md md:w-5/12
-                      ">
-            <figure>
-              
-                <img data-src="image/noline.jpg" alt="No Line Universe" class="lazyload" />
-              
-            </figure>
-            <div class="card-body">
-              <h2 class="card-title text-2xl">
-                No Line Universe
-                
-                  <div class="badge badge-neutral w-22 text-center">已推出</div>
-                
-              </h2>
-              <p>一个专注于青春、艺术和文化的小说宇宙。在这个宇宙中，无论是谁，他们虽然有自己的故事，但又能互相相连起来。</p>
-              <div class="card-actions justify-end">
-                
-                  <a class="btn btn-neutral" target="_blank" rel="noopener" href="https://noline.turboflint.cn">查看详情</a>
-                
-              </div>
-            </div>
-          </div>
-        
-          <div class="card bg-base-100 shadow-md hover:shadow-lg transition-shadow duration-300
-                      
-                      w-full max-w-md md:w-5/12
-                      ">
-            <figure>
-              
-                <img data-src="https://static.turboflint.cn/image/blog/leaping_900*383.png_compress" alt="Leaping Universe" class="lazyload" />
-              
-            </figure>
-            <div class="card-body">
-              <h2 class="card-title text-2xl">
-                Leaping Universe
-                
-                  <div class="badge badge-neutral w-22 text-center">敬请期待</div>
-                
-              </h2>
-              <p>整个跃进小说宇宙，将以跃进机作为中心开展一个未知的故事，以它索取资源，是否是正确的？</p>
-              <div class="card-actions justify-end">
-                
-                  <span class="btn btn-disabled">敬请期待</span>
-                
-              </div>
-            </div>
-          </div>
-        
+        <p class="text-center w-full text-base-content/60">暂无内容</p>
       
     </div>
   </div>
 
 <!-- 代表作 -->
-<div class="container mx-auto px-4 py-8 text-center" id="works">
-  <h2 class="text-4xl font-bold mb-4 mt-25">
-    作品<br /><small class="text-base-content/80">Works</small>
+<div class="container mx-auto px-4 py-8 text-center" id="products">
+  <h2 class="text-3xl sm:text-4xl font-bold mb-2 sm:mb-4 mt-16 sm:mt-25">
+    产品<br /><small class="text-base-content/80 text-base sm:text-lg">Products</small>
   </h2>
   <!-- 根据作品数量自动居中：1 个居中，2 个并排居中 -->
   <div class="flex flex-wrap justify-center gap-6">
     
-      
-        <div class="card w-84 shadow-lg duration-300
-                    mx-auto
-                    
-                    ">
-          <figure class="flex items-center justify-center">
-            
-              <img data-src="https://static.turboflint.cn/image/under_the_sunset_post.png_compress" alt="灿阳之下 - 小说封面" class="lazyload w-72 h-auto object-cover" />
-            
-          </figure>
-          <div class="card-body p-6 text-center">
-            <h2 class="card-title text-3xl mb-2 justify-center">
-              灿阳之下
-            </h2>
-            <p class="text-base-content/80 mb-4 text-base">在灿阳之下，有着一个中二少年和一个体育生的小小世界。他们将讲述之间的小故事。</p>
-            <div class="card-actions justify-center">
-              
-                <a class="btn btn-neutral px-6" target="_blank" rel="noopener" href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2Njg5NTM1MA==&amp;action=getalbum&amp;album_id=3915731644849815560&amp;scene=126&amp;sessionid=1749952626215#wechat_redirect">立即阅读</a>
-              
-            </div>
-          </div>
-        </div>
-      
+      <p class="text-center w-full text-base-content/60">暂无内容</p>
     
   </div>
 </div>
 
 <!-- 音乐专辑 -->
 <div class="container mx-auto px-4 py-8 text-center" id="albums">
-  <h2 class="text-4xl font-bold mb-4 mt-25">
-    音乐专辑<br /><small class="text-base-content/80">Music Albums</small>
+  <h2 class="text-3xl sm:text-4xl font-bold mb-2 sm:mb-4 mt-16 sm:mt-25">
+    音乐专辑<br /><small class="text-base-content/80 text-base sm:text-lg">Music Albums</small>
   </h2>
   <!-- 根据专辑数量自动居中：1 个居中，2 个并排居中 -->
   <div class="flex flex-wrap justify-center gap-4">
     
-      
-        <div class="card w-84 transition-shadow duration-300
-                    mx-auto
-                    
-                    ">
-          <figure class="flex items-center justify-center">
-            
-              <img data-src="https://static.turboflint.cn/pico/5/1764382115461.png" alt="The Flower Of Death - 专辑封面" class="lazyload w-72 h-auto object-cover" />
-            
-          </figure>
-          <div class="card-body p-6 text-center">
-            <h2 class="card-title text-2xl justify-center">
-              The Flower Of Death
-            </h2>
-            <p class="text-base-content/80 mb-4 text-base">以神秘的“死亡之花”为名，从此开始慢慢揭晓着虚无背后的秘密和真相。作为新陆地的首张EP专辑，包含了三首单曲以及Rebeeca特别献唱，每一首无不让人感受到无尽的平静。</p>
-            <div class="card-actions justify-center">
-              
-                <a class="btn btn-neutral px-6" target="_blank" rel="noopener" href="https://music.163.com/#/album?id=259069654">立即收听</a>
-              
-            </div>
-          </div>
-        </div>
-      
+      <p class="text-center w-full text-base-content/60">暂无内容</p>
     
   </div>
 </div>
 
 <!-- 短片 -->
 <div class="container mx-auto px-4 py-8 text-center" id="short-videos">
-  <h2 class="text-4xl font-bold mb-4 mt-25">
-    短片<br /><small class="text-base-content/80">Short Videos</small>
+  <h2 class="text-3xl sm:text-4xl font-bold mb-2 sm:mb-4 mt-16 sm:mt-25">
+    短片<br /><small class="text-base-content/80 text-base sm:text-lg">Short Videos</small>
   </h2>
   <!-- 根据短片数量自动居中：1 个居中，2 个并排居中 -->
   <div class="flex flex-wrap justify-center gap-4">
@@ -292,23 +192,25 @@
                     mx-auto
                     
                     ">
-          <figure class="flex items-center justify-center">
+          <figure class="flex items-center justify-center px-4 sm:px-0">
             
-              <img data-src="https://static.turboflint.cn/image/the_seventh_minute_banner.png_compress" alt="第七分钟 封面" class="lazyload w-96 h-auto object-cover" />
+              <img data-src="https://static.turboflint.cn/image/the_seventh_minute_banner.png_compress" alt="第七分钟 封面" class="lazyload w-full sm:w-96 h-auto object-cover" />
             
           </figure>
-          <div class="card-body text-center">
-            <h2 class="card-title text-2xl justify-center">
-              第七分钟
-            </h2>
-            <p>火石首部短片作品，一个既温暖，又短暂的爱情故事。</p>
-            <div class="card-actions justify-center">
-              
-                <a class="btn btn-neutral" target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1m98pzzEmt/">立即观看</a>
-              
-              
-                <a class="btn bg-white text-black" href="/projects/the_seventh_minute">短片介绍</a>
-              
+          <div class="card-body text-center flex flex-col items-center px-4 sm:px-6">
+            <div class="w-full sm:w-96">
+              <h2 class="card-title text-xl sm:text-2xl justify-center font-semibold mb-3">
+                第七分钟
+              </h2>
+              <p class="text-center text-sm sm:text-base mb-4 leading-relaxed text-base-content/70">火石首部短片作品，一个既温暖，又短暂的爱情故事。</p>
+              <div class="card-actions justify-center flex-wrap gap-2">
+                
+                  <a class="btn btn-neutral btn-sm sm:btn-md" target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1m98pzzEmt/">立即观看</a>
+                
+                
+                  <a class="btn bg-white text-black btn-sm sm:btn-md" href="/projects/the_seventh_minute">短片介绍</a>
+                
+              </div>
             </div>
           </div>
         </div>
@@ -319,28 +221,46 @@
 
 <!-- 团队成员 -->
 <div class="container mx-auto px-4 py-8 text-center" id="team-members">
-  <h2 class="text-4xl font-bold mb-4 mt-25">
-    团队成员<br /><small class="text-base-content/80">Team Members</small>
+  <h2 class="text-3xl sm:text-4xl font-bold mb-2 sm:mb-4 mt-16 sm:mt-25">
+    团队成员<br /><small class="text-base-content/80 text-base sm:text-lg">Team Members</small>
   </h2>
   <!-- 根据成员数量自动居中：1 个居中，2 个并排居中 -->
   <div class="flex flex-wrap justify-center gap-4">
     
       
         <div class="card bg-base-100 shadow-md hover:shadow-lg transition-shadow duration-300
-                    mx-auto
                     
+                    w-full max-w-md md:w-5/12
                     ">
-          <figure class="px-6 pt-6">
+          <figure class="px-4 pt-4 sm:px-6 sm:pt-6 flex justify-center">
             
-              <img data-src="image/wild_tree.jpg" alt="李野树 - 团队成员" class="lazyload w-32 h-32 object-cover" />
+              <img data-src="https://static.turboflint.cn/image/ericlee.jpeg" alt="李野树 - 团队成员" class="lazyload w-24 h-24 sm:w-32 sm:h-32 object-cover rounded-full" />
             
           </figure>
-          <div class="card-body text-center">
-            <h2 class="card-title text-2xl justify-center">
+          <div class="card-body text-center p-4 sm:p-6">
+            <h2 class="card-title text-lg sm:text-xl justify-center flex-col sm:flex-row font-semibold mb-3">
               李野树
               
             </h2>
-            <p>内容创作者</p>
+            <p class="text-center text-sm sm:text-base leading-relaxed text-base-content/70">内容创作者</p>
+          </div>
+        </div>
+      
+        <div class="card bg-base-100 shadow-md hover:shadow-lg transition-shadow duration-300
+                    
+                    w-full max-w-md md:w-5/12
+                    ">
+          <figure class="px-4 pt-4 sm:px-6 sm:pt-6 flex justify-center">
+            
+              <img data-src="https://static.turboflint.cn/image/light.jpg" alt="光晕心弦 - 团队成员" class="lazyload w-24 h-24 sm:w-32 sm:h-32 object-cover rounded-full" />
+            
+          </figure>
+          <div class="card-body text-center p-4 sm:p-6">
+            <h2 class="card-title text-lg sm:text-xl justify-center flex-col sm:flex-row font-semibold mb-3">
+              光晕心弦
+              
+            </h2>
+            <p class="text-center text-sm sm:text-base leading-relaxed text-base-content/70">内容创作者</p>
           </div>
         </div>
       
@@ -348,12 +268,13 @@
   </div>
 </div>
 
+    </main>
      <footer class="bg-dark text-white py-12">
     <div class="container mx-auto px-6">
         <div class="grid md:grid-cols-4 gap-8 mb-8">
             <div>
                 <div class="flex items-center space-x-3 mb-4">
-                    <div class="w-10 h-10 bg-gradient-to-r from-primary to-accent rounded-lg flex items-center justify-center">
+                    <div class="w-10 h-10 rounded-lg flex items-center justify-center">
                         <img src="/image/logos/logo.png" alt="logo" width="35px">
                     </div>
                     <span class="text-2xl font-bold gradient-text">涡轮火石</span>
@@ -428,7 +349,7 @@
         
         <div class="border-t border-gray-800 pt-8 text-center">
             <p class="text-gray-400">
-                Copyright © 2023 - 2025 涡轮火石. All rights reserved.
+                Copyright © 2023 - 2026 涡轮火石. All rights reserved.
             </p>
             <p class="text-gray-500 text-sm mt-2">
                 每个宇宙 都拥有无限可能
