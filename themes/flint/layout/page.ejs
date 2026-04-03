@@ -30,6 +30,10 @@
 	<%- partial('_partial/services') %>
 <% } %>
 
+<% if (is_page() && page.type === 'design') { %>
+	<%- partial('_partial/design') %>
+<% } %>
+
 <% if (is_page() && page.type === 'project') { %>
 	<%- partial('_partial/project') %>
 <% } %>

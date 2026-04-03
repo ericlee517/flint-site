@@ -1,46 +1,73 @@
-# news:
-#   - title: 短片《第七分钟》已发布！
-#     description: 李海和林晓悦的故事已经上演，推荐点击下方视频前往b站观看，最高支持4K30FPS画质。
-#     date: 2025年07月30日
-#     type: video
-#     video_code: //player.bilibili.com/player.html?isOutside=true&aid=114917034168052&bvid=BV1m98pzzEmt&cid=31285840445&p=1&autoplay=0
-#     url: https://www.bilibili.com/video/BV1AhKyzaEKJ/?vd_source=4f08982e03626b75df3c4a65bbac88a7#reply114759361892136
-#   - title: 《第七分钟》发布倒计时
-#     description: 第七分钟即将发布，倒计时已开启！
-#     date: 2025-07-30-20:10:00
-#     type: timer
-#     image: https://static.turboflint.cn/image/the_seventh_minute_background.png_blur
+# 主题仍在测试阶段，正在进一步完善，请在使用前先确认主题是否符合您的需求。
+# v0.1
 
-project-card:
-#   - title: No Line Universe
-#     image: image/noline.jpg
-#     description: 一个专注于青春、艺术和文化的小说宇宙。在这个宇宙中，无论是谁，他们虽然有自己的故事，但又能互相相连起来。
-#     url: https://noline.turboflint.cn
-#     status: 已推出
+# Hero 
+turbo-hero:
+  title: 每个宇宙都拥有无限可能 # 标题
+  description: 我们正在创造一个个全新的富有创意的小说宇宙，每一位角色都有无限的可能性，在这个时代的浪潮中，我们将为你带来最具创新性的小说宇宙 # 描述
 
-products:
-#  - title: 燃愿
-#    image: https://static.turboflint.cn//images/upload/unnamed_product.png_compress
-#    description: 以实物为载体的虚拟礼物，为礼物增添色彩
-#    url:                    
+# Navigation
+navigation:
+  float-nav: # Floating Navigation For Index
+    - name: 项目
+      href: '#projects'
+    - name: 产品
+      href: '#products'
+    - name: 专辑
+      href: '#albums'
+    - name: 短片
+      href: '#short-videos'
+    - name: 团队
+      href: '#team-members'
+  main-nav:
+    - name: 政策
+      href: '/policy'
+    - name: 设计
+      href: '/design'
+    - name: 文章
+      href: '/posts'
+    - name: 联系
+      href: '/contact'
+    - name: 加入我们
+      href: '/join_us'
 
-albums:
-#  - title: The Flower Of Death
-#    image: https://static.turboflint.cn/pico/5/1764382115461.png
- #   publish: 2025 / 01 / 09
- #   description: 以神秘的“死亡之花”为名，从此开始慢慢揭晓着虚无背后的秘密和真相。作为新陆地的首张EP专辑，包含了三首单曲以及Rebeeca特别献唱，每一首无不让人感受到无尽的平静。
- #   url: https://music.163.com/#/album?id=259069654
+# Project Card
+project-card: 
+  - title: 无界宇宙
+    show-title: false
+    image: https://static.turboflint.cn/images/upload/noline-universe-banner.png
+    description: 一个专注于青春、艺术和文化的小说宇宙。在这个宇宙中，无论是谁，他们虽然有自己的故事，但又能互相相连起来。
+    url: https://noline.turboflint.cn
+    status: 已推出
 
-short-videos:
+# Products
+# products: 
+#   - title: 燃愿
+#     image: https://images.unsplash.com/photo-1745613998978-fae3bf6308fa?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+#     description: 以实物为载体的虚拟礼物，为礼物增添色彩
+#     url: #
+# Albums
+albums: 
+  - title: The Flower Of Death
+    show-title: false
+    image: https://static.turboflint.cn/pico/5/1764382115461.png
+    publish: 2025 / 01 / 09
+    description: 以神秘的"死亡之花"为名，从此开始慢慢揭晓着虚无背后的秘密和真相。作为新陆地的首张EP专辑，包含了三首单曲以及Rebeeca特别献唱，每一首无不让人感受到无尽的平静。
+    url: https://music.163.com/#/album?id=259069654
+
+# Short Videos
+short-videos: 
   - title: 第七分钟
+    show-title: false
     image: https://static.turboflint.cn/image/the_seventh_minute_banner.png_compress
     description: 火石首部短片作品，一个既温暖，又短暂的爱情故事。
     type: online
     publish: 2025/07/30
     projecturl: /projects/the_seventh_minute
     url: https://www.bilibili.com/video/BV1m98pzzEmt/
-
-team-members:
+    
+# Team Members
+team-members: 
   - name: 李野树
     avatar: https://static.turboflint.cn/image/ericlee.jpeg
     description: 内容创作者
@@ -48,7 +75,12 @@ team-members:
     avatar: https://static.turboflint.cn/image/light.jpg
     description: 内容创作者
 
-footer:
+# Footer
+footer: 
+  brand:
+    name: 涡轮火石
+    slogan: 每个宇宙都拥有无限可能
+    logo: image/logos/logo.png
   links:
     - title: 无界宇宙项目
       url: https://noline.turboflint.cn
@@ -66,5 +98,8 @@ footer:
      url: mailto:nathan@hlyun.org
    - title: 微信公众号
      url: ../wechat
-    
+  copyright: 涡轮火石
+  bottom-slogan: 每个宇宙 都拥有无限可能
+
+# About Us
 about-us: 涡轮火石于2023年正式成立，是一个专注于故事创意创作的团队。我们的创意无限，为读者的体验服务。目前，我们的代表作“破碎宇宙”已发布多篇衍生小说以及多个概念内容。此外，涡轮火石还为开发者提供开发工具，帮助前端或其他开发者在开发时能够更加便捷。

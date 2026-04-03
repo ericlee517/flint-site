@@ -4,11 +4,11 @@
             <div>
                 <div class="flex items-center space-x-3 mb-4">
                     <div class="w-10 h-10 rounded-lg flex items-center justify-center">
-                        <img src="<%- url_for('image/logos/logo.png') %>" alt="logo" width="35px">
+                        <img src="<%= theme.footer.brand.logo ? url_for(theme.footer.brand.logo) : url_for('image/logos/logo.png') %>" alt="logo" width="35px">
                     </div>
-                    <span class="text-2xl font-bold gradient-text">涡轮火石</span>
+                    <span class="text-2xl font-bold gradient-text"><%= theme.footer.brand.name || '涡轮火石' %></span>
                 </div>
-                <p class="text-gray-400 mb-4">每个宇宙都拥有无限可能</p>
+                <p class="text-gray-400 mb-4"><%= theme.footer.brand.slogan || '每个宇宙都拥有无限可能' %></p>
                 <div class="flex space-x-4">
                     <% if (theme.footer && theme.footer.contact) { %>
                         <% theme.footer.contact.forEach(item => { %>
@@ -64,10 +64,10 @@
         
         <div class="border-t border-gray-800 pt-8 text-center">
             <p class="text-gray-400">
-                Copyright © 2023 - <%= new Date().getFullYear() %> 涡轮火石. All rights reserved.
+                Copyright © 2023 - <%= new Date().getFullYear() %> <%= theme.footer.copyright || '涡轮火石' %>. All rights reserved.
             </p>
             <p class="text-gray-500 text-sm mt-2">
-                每个宇宙 都拥有无限可能
+                <%= theme.footer['bottom-slogan'] || '每个宇宙 都拥有无限可能' %>
             </p>
         </div>
     </div>

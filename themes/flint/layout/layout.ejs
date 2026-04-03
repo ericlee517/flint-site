@@ -4,23 +4,38 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="涡轮火石" />
+    <meta name="google-site-verification" content="" />
+    <meta name="bing-site-verification" content="" />
     <meta
       property="og:image"
       content="<%- url_for('image/logos/logo_nav.png')%>"
     />
     <meta property="og:url" content="https://turboflint.cn/" />
+    <meta property="og:title" content="<%= config.title %>" />
+    <meta property="og:description" content="涡轮火石是一个致力于创作和开发创意的团队，旨在创造出更多有新意的小说宇宙。我们正在尝试更好更多的创新方式，以此为更多的读者带来更好的阅读体验。无论是哪一位角色，哪一个故事背景，他们都有着自己的特色和独特的魅力。我们期待着与更多的创作者和读者一起，共同探索这个充满可能性的小说宇宙。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="<%= config.title %>" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@turboflint" />
+    <meta name="twitter:title" content="<%= config.title %>" />
+    <meta name="twitter:description" content="涡轮火石是一个致力于创作和开发创意的团队，旨在创造出更多有新意的小说宇宙。我们正在尝试更好更多的创新方式，以此为更多的读者带来更好的阅读体验。无论是哪一位角色，哪一个故事背景，他们都有着自己的特色和独特的魅力。我们期待着与更多的创作者和读者一起，共同探索这个充满可能性的小说宇宙。" />
+    <meta name="twitter:image" content="<%- url_for('image/logos/logo_nav.png')%>" />
     <meta
       name="description"
       content="涡轮火石是一个致力于创作和开发创意的团队，旨在创造出更多有新意的小说宇宙。我们正在尝试更好更多的创新方式，以此为更多的读者带来更好的阅读体验。无论是哪一位角色，哪一个故事背景，他们都有着自己的特色和独特的魅力。我们期待着与更多的创作者和读者一起，共同探索这个充满可能性的小说宇宙。"
     />
     <meta
       name="keywords"
-      content="turboflint, Turbo Flint, 涡轮火石, 火石, 小说宇宙, 破碎宇宙, 破碎, BroKen, broken, broken universe"
+      content="turboflint, Turbo Flint, 涡轮火石, 火石, 小说宇宙, 破碎宇宙, 破碎, BroKen, broken, broken universe, 创意创作, 小说开发, 故事宇宙, 角色设计, 世界观构建"
     />
+    <link rel="canonical" href="https://turboflint.cn/" />
+    <link rel="alternate" hreflang="zh-CN" href="https://turboflint.cn/" />
     <% if (page.title) { %>
     <title><%= page.title %> - 涡轮火石官方网站</title>
     <% } else { %>
-    <title><%= config.title %></title>
+    <title><%= config.title %> - 创意小说宇宙开发团队</title>
     <% } %>
          <script src="https://cdn.bootcdn.net/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
          <script src="https://cdn.bootcdn.net/ajax/libs/gsap/3.13.0/SplitText.min.js"></script>

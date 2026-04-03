@@ -4,19 +4,34 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="涡轮火石" />
+    <meta name="google-site-verification" content="" />
+    <meta name="bing-site-verification" content="" />
     <meta
       property="og:image"
       content="/image/logos/logo_nav.png"
     />
     <meta property="og:url" content="https://turboflint.cn/" />
+    <meta property="og:title" content="每个宇宙都拥有无限可能 - 涡轮火石官方网站" />
+    <meta property="og:description" content="涡轮火石是一个致力于创作和开发创意的团队，旨在创造出更多有新意的小说宇宙。我们正在尝试更好更多的创新方式，以此为更多的读者带来更好的阅读体验。无论是哪一位角色，哪一个故事背景，他们都有着自己的特色和独特的魅力。我们期待着与更多的创作者和读者一起，共同探索这个充满可能性的小说宇宙。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="每个宇宙都拥有无限可能 - 涡轮火石官方网站" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@turboflint" />
+    <meta name="twitter:title" content="每个宇宙都拥有无限可能 - 涡轮火石官方网站" />
+    <meta name="twitter:description" content="涡轮火石是一个致力于创作和开发创意的团队，旨在创造出更多有新意的小说宇宙。我们正在尝试更好更多的创新方式，以此为更多的读者带来更好的阅读体验。无论是哪一位角色，哪一个故事背景，他们都有着自己的特色和独特的魅力。我们期待着与更多的创作者和读者一起，共同探索这个充满可能性的小说宇宙。" />
+    <meta name="twitter:image" content="/image/logos/logo_nav.png" />
     <meta
       name="description"
       content="涡轮火石是一个致力于创作和开发创意的团队，旨在创造出更多有新意的小说宇宙。我们正在尝试更好更多的创新方式，以此为更多的读者带来更好的阅读体验。无论是哪一位角色，哪一个故事背景，他们都有着自己的特色和独特的魅力。我们期待着与更多的创作者和读者一起，共同探索这个充满可能性的小说宇宙。"
     />
     <meta
       name="keywords"
-      content="turboflint, Turbo Flint, 涡轮火石, 火石, 小说宇宙, 破碎宇宙, 破碎, BroKen, broken, broken universe"
+      content="turboflint, Turbo Flint, 涡轮火石, 火石, 小说宇宙, 破碎宇宙, 破碎, BroKen, broken, broken universe, 创意创作, 小说开发, 故事宇宙, 角色设计, 世界观构建"
     />
+    <link rel="canonical" href="https://turboflint.cn/" />
+    <link rel="alternate" hreflang="zh-CN" href="https://turboflint.cn/" />
     
     <title>404 Not Found - 涡轮火石官方网站</title>
     
@@ -40,12 +55,9 @@
   <body class="flex flex-col min-h-screen">
     <!-- Path: nav.ejs -->
 
-
-<!-- 原有抽屉导航 -->
-<div class="drawer mb-10" style="z-index: 9999">
+<div class="drawer mb-20" style="z-index: 9999">
   <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
   <div class="drawer-content flex flex-col">
-    <!-- Navbar -->
     <div class="navbar fixed top-0 left-0 w-full bg-black/50 backdrop-blur z-50">
       <div class="flex-none lg:hidden">
         <label
@@ -69,15 +81,14 @@
           </svg>
         </label>
       </div>
-      <!-- logo 保留在左边 -->
       <a class="btn btn-ghost text-xl text-white" href="/index">
         <img src="/image/logos/logo_white.png" alt="logo" width="35px">
         涡轮火石
       </a>
-      <!-- 电脑端导航项居中 -->
       <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1 navbar-center text-lg">
           <li><a href="/policy" class="text-white">政策</a></li>
+          <li><a href="/design" class="text-white">设计</a></li>
           <li><a href="/posts" class="text-white">文章</a></li>
           <li><a href="/contact" target="_self" class="text-white">联系</a></li>
           <li><a href="/join_us" class="text-white">加入我们</a></li>
@@ -92,7 +103,6 @@
       class="drawer-overlay"
     ></label>
     <ul class="menu bg-black min-h-full w-70 p-4 justify-center text-2xl">
-      <!-- Sidebar content here -->
       <li><a href="/policy" class="text-white">政策</a></li>
       <li><a href="/posts" class="text-white">文章</a></li>
       <li><a href="/contact" class="text-white">联系</a></li>
@@ -114,9 +124,11 @@
 
 
 	<div class="container mx-auto px-4 py-50 m-8 max-w-screen-xl flex-grow text-center">
-    <h1 class="text-6xl">404</h1>
-    <p>抱歉，您访问的页面不存在。</p>
+    <h1 class="text-6xl mb-4">404</h1>
+    <p>抱歉，您尝试访问的页面不存在。</p>
 </div>
+
+
 
 
 
@@ -215,7 +227,6 @@
 </footer>
  
      <script>
-       // 延迟执行 script.js，确保 DOM 已渲染
        document.addEventListener('DOMContentLoaded', function () {
          const script = document.createElement('script');
          script.src = '/js/countdown.min.js';

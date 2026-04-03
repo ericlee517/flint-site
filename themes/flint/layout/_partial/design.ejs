@@ -1,0 +1,61 @@
+<div class="container mx-auto px-4 m-8 max-w-screen-xl flex-grow">
+    <h1 class="text-5xl mb-5 text-center">设计<br><small class="text-base-content/30">Designs</small></h1>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center mt-8">
+        <div class="group relative overflow-hidden bg-base-100 border border-base-100/30 hover:border-base-200/50 transition-all duration-700">
+            <div class="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+            <div class="relative h-full">
+                 <div class="aspect-[16/9] overflow-hidden bg-base-200/20 flex items-center justify-center">
+                    <img src="https://static.turboflint.cn/images/upload/turboflint-banner.png_compress" alt="第七分钟素材" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <h2 class="text-2xl sm:text-3xl font-bold mb-2">
+                        品牌设计资源
+                    </h2>
+                    <p class="text-base-content/80 text-sm sm:text-base mb-4 line-clamp-2">
+                        火石品牌设计资源
+                    </p>
+                    <div class="flex flex-col gap-3">
+                        <button class="px-4 py-2 bg-white text-black text-sm sm:text-base font-semibold rounded-full w-fit" onclick="document.getElementById('modal-ready').showModal()">
+                            立即下载
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="group relative overflow-hidden bg-base-100 border border-base-100/30 hover:border-base-200/50 transition-all duration-700">
+            <div class="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+            <div class="relative h-full">
+                <div class="aspect-[16/9] overflow-hidden bg-base-200/20 flex items-center justify-center">
+                    <img src="https://static.turboflint.cn/image/the_seventh_minute_banner.png_compress" alt="第七分钟素材" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <h2 class="text-2xl sm:text-3xl font-bold mb-2">
+                        《第七分钟》素材
+                    </h2>
+                    <p class="text-base-content/80 text-sm sm:text-base mb-4 line-clamp-2">
+                        第七分钟短片素材
+                    </p>
+                    <div class="flex flex-col gap-3">
+                        <button class="px-4 py-2 bg-white text-black text-sm sm:text-base font-semibold rounded-full w-fit" onclick="document.getElementById('modal-ready').showModal()">
+                            立即下载
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 品牌设计资源弹窗 -->
+<dialog id="modal-ready" class="modal">
+    <div class="modal-box">
+        <h3 class="font-bold text-lg">内容准备中</h3>
+        <p class="py-4">设计资源准备中</p>
+        <div class="modal-action">
+            <form method="dialog">
+                <button class="btn">关闭</button>
+            </form>
+        </div>
+    </div>
+</dialog>
