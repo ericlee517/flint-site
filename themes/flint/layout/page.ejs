@@ -37,3 +37,7 @@
 <% if (is_page() && page.type === 'project') { %>
 	<%- partial('_partial/project') %>
 <% } %>
+
+<% if (is_page() && page.path === 'story/index.html') { %>
+	<%- partial('_partial/story') %>
+<% } %>

@@ -1,4 +1,15 @@
-* {
+/* 保留其他元素的选择禁止，只允许文本内容选择 */
+body, p, h1, h2, h3, h4, h5, h6, span, div, a {
+  -moz-user-select: text;
+  -o-user-select: text;
+  -khtml-user-select: text;
+  -webkit-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+/* 对于非文本元素保持禁止选择 */
+img, button, input, select, textarea, .menu-button, .menu-background {
   -moz-user-select: none;
   -o-user-select: none;
   -khtml-user-select: none;

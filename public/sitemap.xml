@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://turboflint.cn/story/index.html</loc>
+    
+    <lastmod>2026-04-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://turboflint.cn/design/index.html</loc>
     
     <lastmod>2026-04-03</lastmod>
@@ -157,7 +166,7 @@
 
   <url>
     <loc>https://turboflint.cn/</loc>
-    <lastmod>2026-04-03</lastmod>
+    <lastmod>2026-04-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -167,14 +176,14 @@
   
   <url>
     <loc>https://turboflint.cn/categories/%E4%BA%A7%E5%93%81%E6%9B%B4%E6%96%B0/</loc>
-    <lastmod>2026-04-03</lastmod>
+    <lastmod>2026-04-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://turboflint.cn/categories/%E6%96%B0%E9%97%BB%E8%B5%84%E8%AE%AF/</loc>
-    <lastmod>2026-04-03</lastmod>
+    <lastmod>2026-04-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

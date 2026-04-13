@@ -57,15 +57,13 @@
     </div>
   </div>
 
-<!-- 代表作 -->
-<div id="products" class="py-20 bg-base-100">
+<!-- <div id="products" class="py-20 bg-base-100">
   <div class="container mx-auto px-4 max-w-7xl">
     <div class="text-center mb-12">
       <h2 class="text-4xl sm:text-5xl font-bold mb-4 mt-20">
         产品<br /><small class="text-base-content/60 text-lg sm:text-xl">Products</small>
       </h2>
     </div>
-    <!-- 大胆的瀑布流布局 -->
     <div class="<%= Array.isArray(theme['products']) && theme['products'].length <= 2 ? 'flex justify-center gap-12' : 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' %>">
       <% if (Array.isArray(theme['products'])) { %>
         <% theme['products'].forEach((product, index) => { %>
@@ -99,7 +97,7 @@
       <% } %>
     </div>
   </div>
-</div>
+</div> -->
 
 <!-- 音乐专辑 -->
 <div class="container mx-auto px-4 py-20 text-center" id="albums">
@@ -219,5 +217,21 @@
     <% } else { %>
       <p class="text-center w-full text-base-content/60 col-span-full">暂无团队成员。</p>
     <% } %>
+  </div>
+</div>
+
+<!-- 关于我们的故事 -->
+<div class="bg-base-100 py-20" id="our-story">
+  <div class="container mx-auto px-4 max-w-7xl">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl sm:text-5xl font-bold mb-4 mt-20">
+        关于我们的故事<br /><small class="text-base-content/60 text-lg sm:text-xl">Our Story</small>
+      </h2>
+    </div>
+    <div class="text-center">
+      <a href="/story/" class="inline-block px-8 py-3 bg-black text-white text-lg font-semibold rounded-full hover:bg-white hover:text-black transition-all duration-300">
+        探索我们的故事
+      </a>
+    </div>
   </div>
 </div>

@@ -18,10 +18,13 @@
             <% }); %>
         </div>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-20 justify-center">
-        <% site.posts.sort('-date').each(function(post) { %>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-20 justify-center" id="posts-container">
+        <% var postsPerPage = 8; %>
+        <% var sortedPosts = site.posts.sort('-date').toArray(); %>
+        <% sortedPosts.forEach(function(post, index) { %>
             <% var postCategories = post.categories.map(function(category) { return category.name; }); %>
-            <div class="card bg-base-100 shadow-lg" data-categories="<%= postCategories.join(' ') %>">
+            <% var pageNum = Math.floor(index / postsPerPage) + 1; %>
+            <div class="card bg-base-100 shadow-lg" data-categories="<%= postCategories.join(' ') %>" data-page="<%= pageNum %>">
                 <figure class="relative w-full h-48 overflow-hidden">
                     <img
                         data-src="<%= post.cover || '../image/post_cover.png' %>"
@@ -39,21 +42,83 @@
             </div>
         <% }); %>
     </div>
+    <!-- 分页按钮 -->
+    <div class="flex justify-center mt-8" id="pagination-container">
+        <div class="join" id="pagination-buttons"></div>
+    </div>
 </div>
 <script>
     const tabs = document.querySelectorAll('input[name="my_tabs_1"]');
-    const cards = document.querySelectorAll('.card');
+    const allCards = document.querySelectorAll('.card');
+    const paginationButtons = document.getElementById('pagination-buttons');
+    const postsPerPage = 8;
+    let currentCategory = 'all';
+    let currentPage = 1;
+
+    // 获取当前分类下的可见卡片
+    function getVisibleCards() {
+        return Array.from(allCards).filter(card => {
+            const cardCategories = card.dataset.categories.split(' ');
+            return currentCategory === 'all' || cardCategories.includes(currentCategory);
+        });
+    }
+
+    // 渲染分页按钮
+    function renderPagination() {
+        const visibleCards = getVisibleCards();
+        const totalPages = Math.ceil(visibleCards.length / postsPerPage) || 1;
+        
+        let html = '';
+        // 上一页按钮
+        html += `<button class="join-item btn ${currentPage === 1 ? 'btn-disabled' : ''}" onclick="goToPage(${currentPage - 1})">«</button>`;
+        
+        // 页码按钮
+        for (let i = 1; i <= totalPages; i++) {
+            html += `<button class="join-item btn ${currentPage === i ? 'btn-active' : ''}" onclick="goToPage(${i})">${i}</button>`;
+        }
+        
+        // 下一页按钮
+        html += `<button class="join-item btn ${currentPage === totalPages ? 'btn-disabled' : ''}" onclick="goToPage(${currentPage + 1})">»</button>`;
+        
+        paginationButtons.innerHTML = html;
+    }
+
+    // 显示当前页的内容
+    function showCurrentPage() {
+        const visibleCards = getVisibleCards();
+        const totalPages = Math.ceil(visibleCards.length / postsPerPage) || 1;
+        
+        // 确保当前页在有效范围内
+        if (currentPage > totalPages) currentPage = totalPages;
+        if (currentPage < 1) currentPage = 1;
+        
+        // 隐藏所有卡片
+        allCards.forEach(card => card.style.display = 'none');
+        
+        // 显示当前页的卡片
+        const startIndex = (currentPage - 1) * postsPerPage;
+        const endIndex = startIndex + postsPerPage;
+        const cardsToShow = visibleCards.slice(startIndex, endIndex);
+        cardsToShow.forEach(card => card.style.display = 'block');
+        
+        renderPagination();
+    }
+
+    // 跳转到指定页
+    function goToPage(page) {
+        currentPage = page;
+        showCurrentPage();
+    }
+
+    // 标签切换事件
     tabs.forEach(tab => {
         tab.addEventListener('change', function() {
-            const selectedCategory = this.dataset.category;
-            cards.forEach(card => {
-                const cardCategories = card.dataset.categories.split(' ');
-                if (selectedCategory === 'all' || cardCategories.includes(selectedCategory)) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
+            currentCategory = this.dataset.category;
+            currentPage = 1; // 切换分类时重置到第一页
+            showCurrentPage();
         });
     });
+
+    // 初始化
+    showCurrentPage();
 </script>
