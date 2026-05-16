@@ -13,6 +13,57 @@
   </div>
 </div>
 
+<!-- Announcement Popup -->
+<% if (theme.announcement && theme.announcement.enabled) { %>
+<div id="announcement-modal" class="modal fixed inset-0 z-50 flex items-center justify-center">
+  <div class="modal-box bg-base-100 border-base-200/50 max-w-lg w-full mx-4">
+    <div class="flex justify-between items-center mb-4">
+      <h3 class="text-xl font-bold text-base-content"><%= theme.announcement.title %></h3>
+      <button onclick="closeAnnouncement()" class="btn btn-ghost btn-sm">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6L18 18" />
+        </svg>
+      </button>
+    </div>
+    <p class="text-base-content/80 mb-6"><%= theme.announcement.content %></p>
+    <div class="flex justify-end gap-3">
+      <button onclick="closeAnnouncement()" class="btn btn-outline">
+        关闭
+      </button>
+      <a href="<%= theme.announcement.link %>" onclick="closeAnnouncement()" class="btn btn-primary">
+        <%= theme.announcement['link-text'] %>
+      </a>
+    </div>
+  </div>
+  <div class="modal-backdrop" onclick="closeAnnouncement()"></div>
+</div>
+<% } %>
+
+<script>
+  // Announcement Popup Logic
+  function initAnnouncement() {
+    const modal = document.getElementById('announcement-modal');
+    if (!modal) return;
+    
+    const hasSeen = localStorage.getItem('announcement_seen');
+    if (hasSeen) return;
+    
+    modal.classList.add('modal-open');
+  }
+  
+  function closeAnnouncement() {
+    const modal = document.getElementById('announcement-modal');
+    if (!modal) return;
+    
+    modal.classList.remove('modal-open');
+    
+    localStorage.setItem('announcement_seen', 'true');
+  }
+  
+  // Initialize on page load
+  document.addEventListener('DOMContentLoaded', initAnnouncement);
+</script>
+
 <!-- Projects Section -->
 <div id="projects" class="py-20 bg-base-100">
   <div class="container mx-auto px-4 max-w-7xl">
@@ -99,7 +150,7 @@
   </div>
 </div> -->
 
-<!-- 音乐专辑 -->
+<!-- 音乐专辑 
 <div class="container mx-auto px-4 py-20 text-center" id="albums">
   <h2 class="text-4xl sm:text-5xl font-bold mb-4 mt-20">
     音乐专辑<br /><small class="text-base-content/60 text-lg sm:text-xl">Music Albums</small>
@@ -138,6 +189,7 @@
     <% } %>
   </div>
 </div>
+-->
 
 <!-- 短片 -->
 <div class="container mx-auto px-4 py-20 text-center" id="short-videos">

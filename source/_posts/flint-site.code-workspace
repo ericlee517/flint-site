@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../hexo-theme-turbo"
+		},
+		{
+			"path": "../../../notebook"
+		},
+		{
+			"path": "../../../different"
+		},
+		{
+			"path": "../../../noline-universe"
+		},
+		{
+			"path": "../../../Cloudflare"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "noline-universe"
+	}
+}
