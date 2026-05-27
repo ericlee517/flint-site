@@ -28,16 +28,24 @@
     />
     <meta
       name="keywords"
-      content="turboflint, Turbo Flint, 涡轮火石, 火石, 小说宇宙, 破碎宇宙, 破碎, BroKen, broken, broken universe, 创意创作, 小说开发, 故事宇宙, 角色设计, 世界观构建"
+      content="turboflint, Turbo Flint, 涡轮火石，火石，小说宇宙，破碎宇宙，破碎，BroKen, broken, broken universe, 创意创作，小说开发，故事宇宙，角色设计，世界观构建"
     />
     <link rel="canonical" href="https://turboflint.cn/" />
     <link rel="alternate" hreflang="zh-CN" href="https://turboflint.cn/" />
-    <title><%= page.title ? page.title + ' - ' : '' %><%= config.title %></title>
+    <title>
+      <% if (page.path === 'index.html') { %>
+        每个宇宙都有无限可能 - 涡轮火石官方网站
+      <% } else { %>
+        <%- (page.title || '页面') + ' - 涡轮火石官方网站' %>
+      <% } %>
+    </title>
+    
     <script src="https://cdn.bootcdn.net/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/gsap/3.13.0/SplitText.min.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/gsap/3.13.0/ScrollToPlugin.min.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/gsap/3.13.0/ScrambleTextPlugin.min.js"></script>
+<link href="https://static.turboflint.cn/sources/fonts/NotoSansSC-VariableFont_wght.woff2" rel="stylesheet">
     <link rel="icon" href="<%- url_for('image/logos/logo_black.png') %>" />
     <%- css(['css/main.css']) %>
     <%- css('css/style.css') %>
@@ -52,23 +60,8 @@
       <%- body %>
     </main>
      <%- partial('_partial/footer') %> 
-     <script>
-       document.addEventListener('DOMContentLoaded', function () {
-         const script = document.createElement('script');
-         script.src = '<%- url_for("js/countdown.min.js") %>';
-         document.body.appendChild(script);
-       });
-       document.addEventListener('DOMContentLoaded', function () {
-         const script = document.createElement('script');
-         script.src = '<%- url_for("js/lazysizes.min.js") %>';
-         document.body.appendChild(script);
-       });
-       document.addEventListener('DOMContentLoaded', function () {
-         const script = document.createElement('script');
-         script.src = '<%- url_for("js/script.js") %>';
-         document.body.appendChild(script);
-       });
-     </script>
+     
+     <script src="<%- url_for('js/main.js') %>"></script>
   </body>
 </html>
 

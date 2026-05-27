@@ -4,16 +4,16 @@
   <nav class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-gray-900/70 backdrop-blur text-white border border-gray-400">
     <a href="#projects" class="text-sm sm:text-base hover:text-gray-300">项目</a>
     <!-- <a href="#products" class="text-sm sm:text-base hover:text-gray-300">产品</a> -->
-    <a href="#albums" class="text-sm sm:text-base hover:text-gray-300">专辑</a>
     <a href="#short-videos" class="text-sm sm:text-base hover:text-gray-300">短片</a>
     <a href="#team-members" class="text-sm sm:text-base hover:text-gray-300">团队</a>
   </nav>
 </div>
 <% } %>
+
 <div class="drawer mb-20" style="z-index: 9999">
   <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
   <div class="drawer-content flex flex-col">
-    <div class="navbar fixed top-0 left-0 w-full bg-black/50 backdrop-blur z-50">
+    <div class="navbar fixed top-0 left-0 w-full bg-black/50 backdrop-blur-md z-50">
       <div class="flex-none lg:hidden">
         <label
           for="my-drawer-3"
@@ -40,17 +40,19 @@
         <img src="<%- url_for('image/logos/logo_white.png') %>" alt="logo" width="35px">
         涡轮火石
       </a>
+      
       <div class="navbar-center hidden lg:flex">
-        <ul class="menu menu-horizontal px-1 navbar-center text-lg">
-          <li><a href="<%- url_for('policy') %>" class="text-white">政策</a></li>
-          <li><a href="<%- url_for('design') %>" class="text-white">设计</a></li>
-          <li><a href="<%- url_for('posts') %>" class="text-white">文章</a></li>
-          <li><a href="<%- url_for('contact') %>" target="_self" class="text-white">联系</a></li>
-          <li><a href="<%- url_for('join_us') %>" class="text-white">加入我们</a></li>
+        <ul class="menu menu-horizontal px-1 text-lg">
+          <li><a href="<%- url_for('policy') %>" class="text-white hover:text-gray-300 transition-colors">政策</a></li>
+          <li><a href="<%- url_for('design') %>" class="text-white hover:text-gray-300 transition-colors">设计</a></li>
+          <li><a href="<%- url_for('posts') %>" class="text-white hover:text-gray-300 transition-colors">文章</a></li>
+          <li><a href="<%- url_for('contact') %>" target="_self" class="text-white hover:text-gray-300 transition-colors">联系</a></li>
+          <li><a href="<%- url_for('join_us') %>" class="text-white hover:text-gray-300 transition-colors">加入我们</a></li>
         </ul>
       </div>
     </div>
   </div>
+  
   <div class="drawer-side">
     <label
       for="my-drawer-3"
@@ -58,11 +60,11 @@
       class="drawer-overlay"
     ></label>
     <ul class="menu bg-black min-h-full w-70 p-4 justify-center text-2xl">
-      <li><a href="<%- url_for('policy') %>" class="text-white">政策</a></li>
-       <li><a href="<%- url_for('design') %>" class="text-white">设计</a></li>
-      <li><a href="<%- url_for('posts') %>" class="text-white">文章</a></li>
-      <li><a href="<%- url_for('contact') %>" class="text-white">联系</a></li>
-      <li><a href="<%- url_for('join_us') %>" class="text-white">加入我们</a></li>
+      <li><a href="<%- url_for('policy') %>" class="text-white hover:text-gray-300 transition-colors">政策</a></li>
+      <li><a href="<%- url_for('design') %>" class="text-white hover:text-gray-300 transition-colors">设计</a></li>
+      <li><a href="<%- url_for('posts') %>" class="text-white hover:text-gray-300 transition-colors">文章</a></li>
+      <li><a href="<%- url_for('contact') %>" class="text-white hover:text-gray-300 transition-colors">联系</a></li>
+      <li><a href="<%- url_for('join_us') %>" class="text-white hover:text-gray-300 transition-colors">加入我们</a></li>
     </ul>
   </div>
 </div>

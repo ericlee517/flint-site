@@ -18,6 +18,13 @@ img, button, input, select, textarea, .menu-button, .menu-background {
   user-select: none;
 }
 
+
+* {
+  font-family: "Noto Sans SC", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
 body {
   font-optical-sizing: auto;
   font-weight: 500;

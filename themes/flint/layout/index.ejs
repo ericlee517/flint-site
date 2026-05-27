@@ -1,12 +1,15 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
 <!-- Hero Section -->
 <div class="heros min-h-screen min-w-full flex items-center justify-center relative">
   <div class="glow-effect" id="floatingGlow"></div>
   <div class="hero-content text-center">
     <div class="max-w-5xl hero-text-introduce">
-      <h1 class="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-bold hero-title leading-tight">
+      <h1 class="hero-title text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-bold leading-tight" data-hero-item>
         <%- theme['turbo-hero'].title %>
       </h1>
-      <p class="mt-6 sm:mt-8 text-sm sm:text-base md:text-xl lg:text-3xl hero-title leading-relaxed px-4 sm:px-0 font-light text-base-content/80">
+      <p class="hero-desc mt-6 sm:mt-8 text-sm sm:text-base md:text-xl lg:text-3xl leading-relaxed px-4 sm:px-0 font-light text-base-content/80" data-hero-item>
         <%- theme['turbo-hero'].description %>
       </p>
     </div>
@@ -65,7 +68,7 @@
 </script>
 
 <!-- Projects Section -->
-<div id="projects" class="py-20 bg-base-100">
+<div id="projects" class="py-20 bg-base-100 animate-section">
   <div class="container mx-auto px-4 max-w-7xl">
     <div class="text-center mb-12">
       <h2 class="text-4xl sm:text-5xl font-bold mb-4 mt-20">
@@ -76,28 +79,19 @@
     <div class="<%= theme['project-card'].length <= 2 ? 'flex justify-center gap-12' : 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' %>">
       <% if (Array.isArray(theme['project-card'])) { %>
         <% theme['project-card'].forEach((project, index) => { %>
-          <div class="group relative overflow-hidden bg-base-100 border border-base-100/30 hover:border-base-200/50 transition-all duration-700
+          <div class="card-item relative overflow-hidden bg-base-100 border border-base-100/30 hover:border-base-200/50 transition-all duration-700
                       <%= theme['project-card'].length <= 2 ? 'w-full max-w-xl' : '' %>
                       <%= theme['project-card'].length > 2 && index === 0 ? 'md:col-span-2' : '' %>">
-            <div class="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
             <div class="relative h-full">
               <div class="aspect-[16/9] overflow-hidden">
                 <% if (project.image) { %>
                   <img data-src="<%= project.image %>" alt="<%= project.title %>" class="lazyload w-full h-full object-cover" />
                 <% } %>
               </div>
-              <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
-                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2 group-hover:translate-y-0 translate-y-2 transition-transform duration-500">
-                  <%= project['show-title'] ? project.title : '' %>
-                </h2>
-                <p class="text-white/80 text-sm sm:text-base mb-4 line-clamp-2 group-hover:opacity-100 opacity-0 transition-opacity duration-500">
-                  <%= project.description || 'No description available.' %>
-                </p>
-                <div class="flex flex-col gap-3">      
-                  <% if (project.url) { %>
-                    <a class="px-4 py-2 bg-white text-black text-sm sm:text-base font-semibold rounded-full w-fit" href="<%= project.url %>">查看详情</a>
-                  <% } %>
-                </div>
+              <div class="absolute bottom-0 left-0 right-0 p-4 flex justify-center">
+                <% if (project.url) { %>
+                  <a class="px-6 py-2 bg-white/80 backdrop-blur-xl text-black text-sm sm:text-base font-medium rounded-full hover:bg-white/95 border border-white/50 transition-all duration-300" href="<%= project.url %>">查看详情</a>
+                <% } %>
               </div>
             </div>
           </div>
@@ -192,7 +186,7 @@
 -->
 
 <!-- 短片 -->
-<div class="container mx-auto px-4 py-20 text-center" id="short-videos">
+<div class="container mx-auto px-4 py-20 text-center animate-section" id="short-videos">
   <h2 class="text-4xl sm:text-5xl font-bold mb-4 mt-20">
     短片<br /><small class="text-base-content/60 text-lg sm:text-xl">Short Videos</small>
   </h2>
@@ -200,31 +194,24 @@
   <div class="<%= theme['short-videos'].length <= 2 ? 'flex justify-center gap-12' : 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' %>">
     <% if (Array.isArray(theme['short-videos']) && theme['short-videos'].length) { %>
       <% theme['short-videos'].forEach((video, index) => { %>
-        <div class="group relative overflow-hidden bg-base-100 border border-base-100/30 hover:border-base-200/50 transition-all duration-700
+        <div class="card-item relative overflow-hidden bg-base-100 border border-base-100/30 hover:border-base-200/50 transition-all duration-700
                     <%= theme['short-videos'].length <= 2 ? 'w-full max-w-xl' : '' %>
                     <%= theme['short-videos'].length > 2 && index === 0 ? 'md:col-span-2' : '' %>">
-          <div class="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
           <div class="relative h-full">
             <div class="aspect-video overflow-hidden">
               <% if (video.image) { %>
                 <img data-src="<%= video.image %>" alt="<%= video.title %> 封面" class="lazyload w-full h-full object-cover" />
               <% } %>
             </div>
-            <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
-              <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2 group-hover:translate-y-0 translate-y-2 transition-transform duration-500">
-                <%= video['show-title'] ? video.title : '' %>
-              </h2>
-              <p class="text-white/80 mb-4 text-sm sm:text-base line-clamp-2 group-hover:opacity-100 opacity-0 transition-opacity duration-500"><%= video.description || '暂无简介' %></p>
-              <div class="flex items-center gap-3 flex-wrap">
-                <% if (video.type === 'preview') { %>
-                  <span class="px-4 py-2 bg-white/20 backdrop-blur-sm text-white text-sm sm:text-base rounded-full border border-white/30">即将上线</span>
-                <% } else if (video.url) { %>
-                  <a class="px-4 py-2 bg-white text-black text-sm sm:text-base font-semibold rounded-full" href="<%= video.url %>">立即观看</a>
-                <% } %>
-                <% if (video.projecturl) { %>
-                  <a class="px-4 py-2 bg-white/20 backdrop-blur-sm text-white text-sm sm:text-base rounded-full border border-white/30 hover:bg-white/30 transition-colors duration-300" href="<%= video.projecturl %>">短片介绍</a>
-                <% } %>
-              </div>
+            <div class="absolute bottom-0 left-0 right-0 p-4 flex justify-center gap-2 flex-wrap">
+              <% if (video.type === 'preview') { %>
+                <span class="px-5 py-2 bg-white/80 backdrop-blur-xl text-black text-sm sm:text-base font-medium rounded-full border border-white/50">即将上线</span>
+              <% } else if (video.url) { %>
+                <a class="px-6 py-2 bg-white/80 backdrop-blur-xl text-black text-sm sm:text-base font-medium rounded-full hover:bg-white/95 border border-white/50 transition-all duration-300" href="<%= video.url %>">立即观看</a>
+              <% } %>
+              <% if (video.projecturl) { %>
+                <a class="px-5 py-2 bg-white/70 backdrop-blur-xl text-black text-sm sm:text-base font-medium rounded-full hover:bg-white/90 border border-white/40 transition-all duration-300" href="<%= video.projecturl %>">短片介绍</a>
+              <% } %>
             </div>
           </div>
         </div>
@@ -236,7 +223,7 @@
 </div>
 
 <!-- 团队成员 -->
-<div class="container mx-auto px-4 py-20 text-center" id="team-members">
+<div class="container mx-auto px-4 py-20 text-center animate-section" id="team-members">
   <h2 class="text-4xl sm:text-5xl font-bold mb-4 mt-20">
     团队成员<br /><small class="text-base-content/60 text-lg sm:text-xl">Team Members</small>
   </h2>
@@ -244,7 +231,7 @@
   <div class="<%= theme['team-members'].length <= 2 ? 'flex justify-center gap-12' : 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6' %>">
     <% if (Array.isArray(theme['team-members'])) { %>
       <% theme['team-members'].forEach((member, index) => { %>
-        <div class="group relative overflow-hidden bg-base-100 border border-base-100/30 hover:border-base-200/50 transition-all duration-700
+        <div class="card-item group relative overflow-hidden bg-base-100 border border-base-100/30 hover:border-base-200/50 transition-all duration-700
                     <%= theme['team-members'].length <= 2 ? 'w-full max-w-sm' : '' %>
                     <%= theme['team-members'].length > 2 && index === 0 ? 'md:col-span-2' : '' %>">
           <div class="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
@@ -254,14 +241,14 @@
                 <img data-src="<%= member.avatar %>" alt="<%= member.name %> - 团队成员" class="lazyload w-full h-full object-cover" />
               <% } %>
             </div>
-            <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
-              <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2 group-hover:translate-y-0 translate-y-2 transition-transform duration-500">
+            <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
+              <h2 class="text-xl font-bold text-white mb-1 translate-y-2 group-hover:translate-y-0 transition-transform duration-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <%= member.name %>
               </h2>
               <% if (member.position) { %>
-                <span class="inline-block px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs sm:text-sm rounded-full border border-white/30 mb-3"><%= member.position %></span>
+                <span class="inline-block px-2 py-0.5 bg-white/20 backdrop-blur-sm text-white text-xs rounded-full border border-white/30 mb-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500"><%= member.position %></span>
               <% } %>
-              <p class="text-white/80 text-sm sm:text-base line-clamp-2 group-hover:opacity-100 opacity-0 transition-opacity duration-500"><%= member.description || '暂无简介' %></p>
+              <p class="text-white/80 text-sm line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500"><%= member.description || '暂无简介' %></p>
             </div>
           </div>
         </div>
@@ -272,18 +259,139 @@
   </div>
 </div>
 
-<!-- 关于我们的故事 -->
-<div class="bg-base-100 py-20" id="our-story">
-  <div class="container mx-auto px-4 max-w-7xl">
-    <div class="text-center mb-12">
-      <h2 class="text-4xl sm:text-5xl font-bold mb-4 mt-20">
-        关于我们的故事<br /><small class="text-base-content/60 text-lg sm:text-xl">Our Story</small>
-      </h2>
-    </div>
-    <div class="text-center">
-      <a href="/story/" class="inline-block px-8 py-3 bg-black text-white text-lg font-semibold rounded-full hover:bg-white hover:text-black transition-all duration-300">
-        探索我们的故事
-      </a>
-    </div>
-  </div>
-</div>
+<script>
+  // GSAP Scroll Animation - Unified Premium Version
+  document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+      if (typeof gsap === 'undefined') {
+        console.error('GSAP is not loaded');
+        return;
+      }
+      
+      gsap.registerPlugin(ScrollTrigger);
+      
+      // 无障碍检测
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const motionDuration = prefersReducedMotion ? 0 : 1;
+      
+      // ============ HERO 区域动画 ============
+      const heroTimeline = gsap.timeline({ defaults: { ease: 'power3.out' } });
+      
+      // Hero 标题动画 - 从下方淡入上升
+      heroTimeline.fromTo('.hero-title', 
+        { opacity: 0, y: 80, scale: 0.95, rotationX: 15 },
+        { opacity: 1, y: 0, scale: 1, rotationX: 0, duration: motionDuration * 1.4, ease: 'expo.out' }
+      );
+      
+      // Hero 描述动画 - 延迟后淡入
+      heroTimeline.fromTo('.hero-desc',
+        { opacity: 0, y: 60, scale: 0.98 },
+        { opacity: 1, y: 0, scale: 1, duration: motionDuration * 1.2, ease: 'power3.out' },
+        '-=0.7'
+      );
+      
+      // Hero 光晕效果 - 轻微浮动
+      heroTimeline.fromTo('#floatingGlow',
+        { opacity: 0, scale: 0.8 },
+        { opacity: 0.6, scale: 1, duration: motionDuration * 1.8, ease: 'power2.inOut' },
+        '-=1'
+      );
+      
+      // ============ 统一滚动动画配置 ============
+      // 所有区域的统一入场动画参数
+      const sectionAnimation = {
+        opacity: 0,
+        y: 80,
+        scale: 0.96,
+        rotationX: 6,
+        duration: motionDuration * 1.1,
+        ease: 'power3.out'
+      };
+      
+      const sectionComplete = {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        rotationX: 0,
+        duration: motionDuration * 1.1,
+        ease: 'power3.out'
+      };
+      
+      // 卡片统一动画参数
+      const cardAnimation = {
+        opacity: 0,
+        y: 60,
+        scale: 0.94,
+        rotationX: 5,
+        duration: motionDuration * 0.9,
+        ease: 'back.out(1.2)'
+      };
+      
+      const cardComplete = {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        rotationX: 0,
+        duration: motionDuration * 0.9,
+        ease: 'back.out(1.2)'
+      };
+      
+      // ============ 区域动画 ============
+      document.querySelectorAll('.animate-section').forEach(function(section) {
+        // 区域标题入场
+        gsap.fromTo(section, sectionAnimation, {
+          ...sectionComplete,
+          scrollTrigger: {
+            trigger: section,
+            start: 'top 82%',
+            toggleActions: 'play none none none'
+          }
+        });
+        
+        // 区域内卡片波浪式展开
+        const cards = section.querySelectorAll('.card-item');
+        if (cards.length > 0) {
+          gsap.fromTo(cards, cardAnimation, {
+            ...cardComplete,
+            stagger: {
+              amount: 0.5,
+              from: 'start'
+            },
+            scrollTrigger: {
+              trigger: section,
+              start: 'top 72%',
+              toggleActions: 'play none none none'
+            }
+          });
+        }
+      });
+      
+      // ============ 统一悬浮微交互 ============
+      // 卡片悬浮效果
+      document.querySelectorAll('.card-item').forEach(function(card) {
+        card.addEventListener('mouseenter', function() {
+          if (prefersReducedMotion) return;
+          gsap.to(card, {
+            scale: 1.025,
+            y: -4,
+            duration: 0.4,
+            ease: 'power2.out',
+            boxShadow: '0 20px 40px rgba(0,0,0,0.15)'
+          });
+        });
+        
+        card.addEventListener('mouseleave', function() {
+          if (prefersReducedMotion) return;
+          gsap.to(card, {
+            scale: 1,
+            y: 0,
+            duration: 0.6,
+            ease: 'elastic.out(1, 0.6)',
+            boxShadow: '0 0px 0px rgba(0,0,0,0)'
+          });
+        });
+      });
+      
+    }, 100);
+  });
+</script>

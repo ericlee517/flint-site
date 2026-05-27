@@ -4,6 +4,7 @@ date: 2026-05-16
 categories:
 - 业务公告
 description: 火石近期关于对音乐版权进行了调整，现已对外公布相关详情。
+cover: http://static.turboflint.cn/images/upload/florian-klauer-mk7D-4UCfmg-unsplash.jpg
 ---
 
 基于创作者的强烈需求，我们近期对火石（AI）音乐的版权管理模式进行了重要调整。本次调整旨在更好地保障创作者权益，现将具体事项公告如下：

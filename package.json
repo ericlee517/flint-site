@@ -14,9 +14,11 @@
   "dependencies": {
     "@tailwindcss/postcss": "^4.2.2",
     "daisyui": "^5.5.19",
+    "gsap": "^3.15.0",
     "hexo": "^7.0.0",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
+    "hexo-generator-feed": "^4.0.0",
     "hexo-generator-index": "^3.0.0",
     "hexo-generator-sitemap": "^3.0.1",
     "hexo-generator-tag": "^2.0.0",
