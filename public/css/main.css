@@ -16,7 +16,6 @@
     --spacing: 0.25rem;
     --breakpoint-xl: 80rem;
     --container-sm: 24rem;
-    --container-lg: 32rem;
     --container-xl: 36rem;
     --container-2xl: 42rem;
     --container-4xl: 56rem;
@@ -1580,20 +1579,6 @@
       isolation: isolate;
     }
   }
-  .modal-backdrop {
-    @layer daisyui.l1.l2.l3 {
-      grid-column-start: 1;
-      grid-row-start: 1;
-      display: grid;
-      align-self: stretch;
-      justify-self: stretch;
-      color: transparent;
-      z-index: -1;
-      button {
-        cursor: pointer;
-      }
-    }
-  }
   .tabs-box {
     @layer daisyui.l1.l2 {
       background-color: var(--color-base-200);
@@ -1698,9 +1683,6 @@
   }
   .m-8 {
     margin: calc(var(--spacing) * 8);
-  }
-  .mx-4 {
-    margin-inline: calc(var(--spacing) * 4);
   }
   .mx-auto {
     margin-inline: auto;
@@ -2070,9 +2052,6 @@
   .max-w-7xl {
     max-width: var(--container-7xl);
   }
-  .max-w-lg {
-    max-width: var(--container-lg);
-  }
   .max-w-none {
     max-width: none;
   }
@@ -2105,6 +2084,9 @@
   .translate-y-2 {
     --tw-translate-y: calc(var(--spacing) * 2);
     translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .transform {
+    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
   .link {
     @layer daisyui.l1.l2.l3 {
@@ -2380,6 +2362,9 @@
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
   }
+  .py-3 {
+    padding-block: calc(var(--spacing) * 3);
+  }
   .py-4 {
     padding-block: calc(var(--spacing) * 4);
   }
@@ -2482,9 +2467,6 @@
   .break-words {
     overflow-wrap: break-word;
   }
-  .text-base-content {
-    color: var(--color-base-content);
-  }
   .text-base-content\/30 {
     color: var(--color-base-content);
     @supports (color: color-mix(in lab, red, red)) {
@@ -2522,6 +2504,9 @@
     & :where(a.btn:not(.btn-link)):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
       text-decoration-line: none;
     }
+  }
+  .underline {
+    text-decoration-line: underline;
   }
   .underline-offset-2 {
     text-underline-offset: 2px;
@@ -2627,33 +2612,6 @@
     --tw-ease: var(--ease-in-out);
     transition-timing-function: var(--ease-in-out);
   }
-  .btn-outline {
-    @layer daisyui.l1 {
-      &:not( .btn-active, :hover, :active:focus, :focus-visible, input:checked:not(.filter .btn), :disabled, [disabled], .btn-disabled ) {
-        --btn-shadow: "";
-        --btn-bg: #0000;
-        --btn-fg: var(--btn-color);
-        --btn-border: var(--btn-color);
-        --btn-noise: none;
-      }
-      @media (hover: none) {
-        &:not(.btn-active, :active, :focus-visible, input:checked:not(.filter .btn)):hover {
-          --btn-shadow: "";
-          --btn-bg: #0000;
-          --btn-fg: var(--btn-color);
-          --btn-border: var(--btn-color);
-          --btn-noise: none;
-        }
-      }
-    }
-  }
-  .btn-sm {
-    @layer daisyui.l1.l2 {
-      --fontsize: 0.75rem;
-      --btn-p: 0.75rem;
-      --size: calc(var(--size-field, 0.25rem) * 8);
-    }
-  }
   .badge-primary {
     @layer daisyui.l1.l2 {
       --badge-color: var(--color-primary);
@@ -2670,12 +2628,6 @@
     @layer daisyui.l1.l2.l3 {
       --btn-color: var(--color-neutral);
       --btn-fg: var(--color-neutral-content);
-    }
-  }
-  .btn-primary {
-    @layer daisyui.l1.l2.l3 {
-      --btn-color: var(--color-primary);
-      --btn-fg: var(--color-primary-content);
     }
   }
   .group-hover\:translate-y-0 {
@@ -3157,6 +3109,26 @@
   inherits: false;
   initial-value: 0;
 }
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-space-y-reverse {
   syntax: "*";
   inherits: false;
@@ -3351,6 +3323,11 @@
       --tw-translate-x: 0;
       --tw-translate-y: 0;
       --tw-translate-z: 0;
+      --tw-rotate-x: initial;
+      --tw-rotate-y: initial;
+      --tw-rotate-z: initial;
+      --tw-skew-x: initial;
+      --tw-skew-y: initial;
       --tw-space-y-reverse: 0;
       --tw-border-style: solid;
       --tw-gradient-position: initial;

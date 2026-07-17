@@ -39,7 +39,11 @@ project-card:
     description: 一个专注于青春、艺术和文化的小说宇宙。在这个宇宙中，无论是谁，他们虽然有自己的故事，但又能互相相连起来。
     url: https://noline.turboflint.cn
     status: 已推出
-
+  - title: Find Me
+    show-title: true
+    image: https://static.turboflint.cn/image/FindMe_Cover.png_compress
+    description: xxx
+    url: https://find-me.turboflint.cn
 # Products
 # products: 
 #   - title: 燃愿
@@ -59,11 +63,11 @@ albums:
 short-videos: 
   - title: 第七分钟
     show-title: false
-    image: https://static.turboflint.cn/image/the_seventh_minute_banner.png_compress
+    image: https://static.turboflint.cn/image/diqifenzhong_xiaoshuo.png_compress
     description: 火石首部短片作品，一个既温暖，又短暂的爱情故事。
-    type: online
-    publish: 2025/07/30
-    projecturl: /projects/the_seventh_minute
+    type: preview
+    publish: false
+    projecturl: false
     url: https://www.bilibili.com/video/BV1m98pzzEmt/
     
 # Team Members
@@ -75,32 +79,24 @@ team-members:
 footer: 
   brand:
     name: 涡轮火石
-    slogan: 每个宇宙都拥有无限可能
+    slogan: 无论是哪个宇宙，都拥有着超越无限的机遇和可能。
     logo: image/logos/logo.png
   links:
     - title: 无界宇宙项目
       url: https://noline.turboflint.cn
+    - title: Find Me 找到我文游
+      url: https://find-me.turboflint.cn
     - title: 厚浪云
       url: https://hlyun.org
   document:
-    - title: 产品文档
-      url: https://docs.turboflint.cn/
     - title: Hexo主题文档
       url: https://hexo-theme-docs.turboflint.cn/
   contact:
    - title: GitHub
      url: https://github.com/ericlee517
    - title: Email
-     url: mailto:nathan@hlyun.org
+     url: mailto:ericlee517@outlook.com
    - title: 微信公众号
      url: ../wechat
-  copyright: 涡轮火石
-  bottom-slogan: 每个宇宙 都拥有无限可能
-
-# Announcement Popup
-announcement:
-  enabled: false
-  title: 版权调整公告
-  content: 火石近期关于对音乐版权进行了调整，现已对外公布相关详情。
-  link: https://music.163.com.cn/
-  link-text: 立即查看
+  copyright: 李野树
+  bottom-slogan: 无论是哪个宇宙，都拥有着超越无限的机遇和可能。

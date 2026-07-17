@@ -148,33 +148,20 @@
   </div>
 </div>
 
-<!-- Announcement Popup -->
+<!-- Announcement Banner -->
 
+<div class="fixed top-0 left-0 right-0 z-50 bg-black text-white py-3 px-4 flex items-center justify-center gap-4">
+  <span class="text-sm sm:text-base font-medium">关于涡轮火石将停止运营的公告</span>
+  <a href="/2026/06/30/20260630_shutdown/" class="text-sm sm:text-base font-semibold underline hover:text-gray-300 transition-colors">
+    查看详情
+  </a>
+</div>
+<style>
+  body {
+    padding-top: 44px;
+  }
+</style>
 
-<script>
-  // Announcement Popup Logic
-  function initAnnouncement() {
-    const modal = document.getElementById('announcement-modal');
-    if (!modal) return;
-    
-    const hasSeen = localStorage.getItem('announcement_seen');
-    if (hasSeen) return;
-    
-    modal.classList.add('modal-open');
-  }
-  
-  function closeAnnouncement() {
-    const modal = document.getElementById('announcement-modal');
-    if (!modal) return;
-    
-    modal.classList.remove('modal-open');
-    
-    localStorage.setItem('announcement_seen', 'true');
-  }
-  
-  // Initialize on page load
-  document.addEventListener('DOMContentLoaded', initAnnouncement);
-</script>
 
 <!-- Projects Section -->
 <div id="projects" class="py-20 bg-base-100 animate-section">
