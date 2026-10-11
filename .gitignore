@@ -14,7 +14,7 @@ db.json
 .deploy_git/
 .public/
 .deploy/
-public/
+dist/
 
 # ---------------------------
 # IDE 和编辑器

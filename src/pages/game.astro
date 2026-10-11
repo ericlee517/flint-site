@@ -1,0 +1,131 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="黑白游戏" description="MEMORY 黑白记忆翻牌游戏">
+  <main class="game-page">
+    <div class="game-container">
+      <h1 class="game-title">MEMORY</h1>
+      <div class="score-panel">
+        <span>尝试: <span id="attempts">0</span></span>
+        <span>配对: <span id="matches">0</span></span>
+      </div>
+      <div class="board" id="board"></div>
+      <div class="message" id="message"></div>
+      <div class="controls">
+        <button id="new-game" type="button">新游戏</button>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<script>
+  const tiles = ['A', 'A', 'B', 'B', 'C', 'C', 'D', 'D', 'E', 'E', 'F', 'F', 'G', 'G', 'H', 'H'];
+  let board = [];
+  let flippedTiles = [];
+  let attempts = 0;
+  let matches = 0;
+  let isProcessing = false;
+
+  const boardElement = document.getElementById('board');
+  const attemptsElement = document.getElementById('attempts');
+  const matchesElement = document.getElementById('matches');
+  const messageElement = document.getElementById('message');
+
+  function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  }
+
+  function initGame() {
+    board = shuffle([...tiles]);
+    flippedTiles = [];
+    attempts = 0;
+    matches = 0;
+    isProcessing = false;
+
+    attemptsElement.textContent = attempts;
+    matchesElement.textContent = matches;
+    messageElement.textContent = '';
+    messageElement.className = 'message';
+
+    boardElement.innerHTML = '';
+
+    board.forEach((tile, index) => {
+      const tileElement = document.createElement('div');
+      tileElement.className = 'tile';
+      tileElement.dataset.index = index;
+      tileElement.textContent = tile;
+      tileElement.addEventListener('click', flipTile);
+      boardElement.appendChild(tileElement);
+    });
+  }
+
+  function flipTile(e) {
+    if (isProcessing) return;
+
+    const tile = e.target;
+    if (tile.classList.contains('revealed') || tile.classList.contains('matched')) return;
+    if (flippedTiles.length >= 2) return;
+
+    tile.classList.add('revealed');
+    flippedTiles.push({
+      element: tile,
+      value: board[tile.dataset.index]
+    });
+
+    if (flippedTiles.length === 2) {
+      attempts++;
+      attemptsElement.textContent = attempts;
+      checkMatch();
+    }
+  }
+
+  function checkMatch() {
+    isProcessing = true;
+
+    if (flippedTiles[0].value === flippedTiles[1].value) {
+      showMessage('配对成功', 'success');
+
+      setTimeout(() => {
+        flippedTiles[0].element.classList.add('matched');
+        flippedTiles[1].element.classList.add('matched');
+        flippedTiles = [];
+        matches++;
+        matchesElement.textContent = matches;
+        isProcessing = false;
+
+        if (matches === tiles.length / 2) {
+          setTimeout(() => {
+            showMessage(`恭喜完成! 共尝试 ${attempts} 次`, 'success');
+          }, 500);
+        }
+      }, 500);
+    } else {
+      showMessage('配对失败', 'error');
+
+      setTimeout(() => {
+        flippedTiles[0].element.classList.remove('revealed');
+        flippedTiles[1].element.classList.remove('revealed');
+        flippedTiles = [];
+        isProcessing = false;
+      }, 1000);
+    }
+  }
+
+  function showMessage(text, type) {
+    messageElement.textContent = text;
+    messageElement.className = `message show ${type}`;
+
+    setTimeout(() => {
+      messageElement.className = 'message';
+    }, 2000);
+  }
+
+  document.getElementById('new-game').addEventListener('click', initGame);
+
+  initGame();
+</script>

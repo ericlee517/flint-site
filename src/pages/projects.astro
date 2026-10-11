@@ -1,0 +1,66 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import EmptyState from '../components/EmptyState.astro';
+import { getCollection } from 'astro:content';
+import { projects, novels } from '../data/site';
+
+const shortFilms = await getCollection('projects');
+---
+
+<Layout title="项目" description="涡轮火石项目">
+  <main id="main">
+    <div class="page-hero">
+      <h1><span class="gradient-text">项目</span></h1>
+      <p class="desc">我们正在构建的宇宙与作品</p>
+    </div>
+    <section class="section section--top-tight">
+      <div class="container">
+        <h2 class="section-title section-sub" data-reveal>线上项目</h2>
+        {projects.length > 0 ? (
+          <div class="grid-2">
+            {projects.map((p) => <ProjectCard {...p} />)}
+          </div>
+        ) : (
+          <EmptyState title="暂无线上项目" description="线上项目筹备中，敬请期待" compact />
+        )}
+
+        <h2 class="section-title section-sub" data-reveal>小说宇宙</h2>
+        {novels.length > 0 ? (
+          <div class="grid-2">
+            {novels.map((n) => (
+              <ProjectCard
+                title={n.title}
+                image={n.image}
+                description={n.description}
+                url={n.url}
+                status="预告"
+              />
+            ))}
+          </div>
+        ) : (
+          <EmptyState title="暂无小说宇宙" description="小说宇宙构建中，敬请期待" compact />
+        )}
+
+        <h2 class="section-title section-sub" data-reveal>短片项目</h2>
+        {shortFilms.length > 0 ? (
+          <div class="grid-3">
+            {shortFilms.map((p) => (
+              <a href={`/project/${p.slug}`} class="card project-card" data-reveal>
+                <div class="media">
+                  <img src={p.data.cover} alt={p.data.title} loading="lazy" decoding="async" width="640" height="400" />
+                </div>
+                <div class="body">
+                  <span class="status">短片</span>
+                  <h3>{p.data.title}</h3>
+                </div>
+              </a>
+            ))}
+          </div>
+        ) : (
+          <EmptyState title="暂无短片项目" description="还没有任何短片作品，敬请期待" compact />
+        )}
+      </div>
+    </section>
+  </main>
+</Layout>

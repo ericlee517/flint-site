@@ -1,0 +1,42 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post }
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const formatDate = (d: Date) =>
+  `${d.getFullYear()}年${String(d.getMonth() + 1).padStart(2, '0')}月${String(d.getDate()).padStart(2, '0')}日`;
+---
+
+<Layout title={post.data.title} description={post.data.description} ogImage={post.data.cover}>
+  <main id="main" class="post-layout">
+    <article>
+      <header class="post-header">
+        <h1>{post.data.title}</h1>
+        <div class="post-meta">
+          <span>{post.data.categories[0] ?? '未分类'}</span>
+          <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>
+        </div>
+      </header>
+      {post.data.cover && (
+        <div class="container">
+          <div class="post-cover">
+            <img src={post.data.cover} alt={post.data.title} width="1120" height="630" fetchpriority="high" decoding="async" />
+          </div>
+        </div>
+      )}
+      <div class="post-content">
+        <Content />
+      </div>
+    </article>
+  </main>
+</Layout>

@@ -1,0 +1,108 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import PostCard from '../components/PostCard.astro';
+import EmptyState from '../components/EmptyState.astro';
+import { getCollection } from 'astro:content';
+import { projects, novels } from '../data/site';
+
+const posts = (await getCollection('posts'))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 3);
+---
+
+<Layout>
+  <Hero />
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="section-eyebrow">Projects</span>
+          <h2 class="section-title">正在构建的宇宙</h2>
+          <p class="section-subtitle">每一个项目都是一个新的可能性，每一个宇宙都值得被探索。</p>
+        </div>
+        <div class="grid-2">
+          {projects.length > 0 ? (
+            projects.map((p) => (
+              <ProjectCard {...p} />
+            ))
+          ) : (
+            <EmptyState title="暂无项目" description="正在构建的宇宙筹备中，敬请期待" compact />
+          )}
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--flush">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="section-eyebrow">Novels</span>
+          <h2 class="section-title">小说</h2>
+        </div>
+        <div class="grid-2">
+          {novels.length > 0 ? (
+            novels.map((n) => (
+              <button type="button" class="card project-card novel-card" data-reveal data-title={n.title}>
+                <div class="media">
+                  <img src={n.image} alt={n.title} loading="lazy" decoding="async" width="640" height="400" />
+                </div>
+                <div class="body">
+                  <span class="status">预告</span>
+                  {n.showTitle && <h3>{n.title}</h3>}
+                  {n.description && <p>{n.description}</p>}
+                </div>
+              </button>
+            ))
+          ) : (
+            <EmptyState title="暂无小说" description="敬请期待" compact />
+          )}
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--flush">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="section-eyebrow">Latest</span>
+          <h2 class="section-title">最新动态</h2>
+        </div>
+        <div class="grid-3">
+          {posts.length > 0 ? (
+            posts.map((post) => (
+              <PostCard
+                title={post.data.title}
+                description={post.data.description}
+                date={post.data.date}
+                categories={post.data.categories}
+                slug={post.slug}
+              />
+            ))
+          ) : (
+            <EmptyState title="暂无动态" description="还没有发布任何动态，敬请期待" compact />
+          )}
+        </div>
+        <div class="section-more">
+          <a href="/posts" class="btn btn-ghost">查看全部文章</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="novel-toast" class="toast" role="status" aria-live="polite">暂无发行计划 敬请期待</div>
+
+  <script>
+    const toast = document.getElementById('novel-toast');
+    let toastTimer;
+    const showNovelToast = () => {
+      if (!toast) return;
+      toast.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toast.classList.remove('show'), 2200);
+    };
+    document.querySelectorAll('.novel-card').forEach((card) => {
+      card.addEventListener('click', showNovelToast);
+    });
+  </script>
+</Layout>

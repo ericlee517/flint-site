@@ -1,0 +1,23 @@
+---
+const hero = {
+  title: '无限可能',
+  description:
+    '我坚信未来还有无限可能。'
+};
+---
+
+<section class="hero">
+  <div class="hero-glow one" aria-hidden="true"></div>
+  <div class="hero-glow two" aria-hidden="true"></div>
+  <div class="hero-content">
+    <h1>
+      <span class="gradient-text hero-text" data-split data-hero-part>{hero.title}</span>
+    </h1>
+    <p class="hero-subtext" data-hero-part>{hero.description}</p>
+    <div class="hero-actions" data-hero-part>
+      <a href="/projects" class="btn btn-primary">探索项目</a>
+      <a href="/posts" class="btn btn-ghost">查看文章</a>
+    </div>
+  </div>
+  <div class="hero-scroll" aria-hidden="true" data-hero-part></div>
+</section>

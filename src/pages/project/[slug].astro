@@ -1,0 +1,40 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+    props: { project }
+  }));
+}
+
+const { project } = Astro.props;
+const { Content } = await render(project);
+---
+
+<Layout title={project.data.title} description={`${project.data.title}项目介绍`} ogImage={project.data.cover}>
+  <main id="main" class="post-layout">
+    <article>
+      <header class="post-header">
+        <h1>{project.data.title}</h1>
+        {project.data.author && (
+          <div class="post-meta">
+            <span>作者 {project.data.author}</span>
+          </div>
+        )}
+      </header>
+      {project.data.cover && (
+        <div class="container">
+          <div class="post-cover">
+            <img src={project.data.cover} alt={project.data.title} width="1120" height="630" fetchpriority="high" decoding="async" />
+          </div>
+        </div>
+      )}
+      <div class="post-content">
+        <Content />
+      </div>
+    </article>
+  </main>
+</Layout>

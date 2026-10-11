@@ -1,0 +1,30 @@
+---
+interface Props {
+  title: string;
+  image: string;
+  description: string;
+  url: string;
+  status?: string;
+  showTitle?: boolean;
+}
+
+const { title, image, description, url, status, showTitle = true } = Astro.props;
+const external = url.startsWith('http');
+---
+
+<a
+  href={url}
+  class="card project-card"
+  data-reveal
+  target={external ? '_blank' : undefined}
+  rel={external ? 'noopener noreferrer' : undefined}
+>
+  <div class="media">
+    <img src={image} alt={title} loading="lazy" decoding="async" width="640" height="400" />
+  </div>
+  <div class="body">
+    {status && <span class="status">{status}</span>}
+    {showTitle && <h3>{title}</h3>}
+    {description && <p>{description}</p>}
+  </div>
+</a>

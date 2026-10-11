@@ -1,0 +1,66 @@
+---
+import '../styles/global.css';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import { siteConfig } from '../data/site';
+
+interface Props {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+}
+
+const { title = siteConfig.title, description = siteConfig.description, ogImage = siteConfig.ogImage } =
+  Astro.props;
+
+const fullTitle = title === siteConfig.title ? title : `${title} - ${siteConfig.shortName}`;
+const ogImageUrl = ogImage ? new URL(ogImage, siteConfig.url).href : siteConfig.url + siteConfig.ogImage;
+---
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content={siteConfig.keywords} />
+    <meta name="author" content={siteConfig.author} />
+    <meta name="theme-color" content="#000000" />
+    <meta name="color-scheme" content="dark" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={siteConfig.shortName} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={siteConfig.url + Astro.url.pathname} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+
+    <link rel="icon" type="image/png" href="/image/logos/logo_nav.png" />
+    <!-- 全站唯一字体栈，无外部字体请求：中文由系统字体渲染，零网络开销 -->
+    <script is:inline>
+      // JS 可用标记 + 动效待接管标记（样式据此隐藏待进场元素）
+      const root = document.documentElement;
+      root.classList.add('js');
+      root.dataset.motion = 'pending';
+      // 看门狗：若动效脚本因异常未能接管，及时释放全部内容
+      window.setTimeout(() => {
+        if (root.dataset.motion === 'pending') root.dataset.motion = 'off';
+      }, 2500);
+    </script>
+  </head>
+  <body>
+    <a href="#main" class="skip-link">跳到主要内容</a>
+    <Nav />
+    <slot />
+    <Footer />
+    <script>
+      import '../scripts/nav.js';
+      import '../scripts/motion.js';
+    </script>
+  </body>
+</html>

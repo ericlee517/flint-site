@@ -1,0 +1,15 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+  compact?: boolean;
+}
+
+const { title = '暂无内容', description = '这里还没有内容，敬请期待', compact = false } = Astro.props;
+---
+
+<div class:list={['empty-state', compact ? 'empty-state-compact' : '']}>
+  <div class="empty-state-icon" aria-hidden="true">◇</div>
+  <p class="empty-state-title">{title}</p>
+  <p class="empty-state-desc">{description}</p>
+</div>
