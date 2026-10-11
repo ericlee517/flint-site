@@ -46,7 +46,7 @@ const shortFilms = await getCollection('projects');
         {shortFilms.length > 0 ? (
           <div class="grid-3">
             {shortFilms.map((p) => (
-              <a href={`/project/${p.slug}`} class="card project-card" data-reveal>
+              <a href={`/project/${p.id}`} class="card project-card" data-reveal>
                 <div class="media">
                   <img src={p.data.cover} alt={p.data.title} loading="lazy" decoding="async" width="640" height="400" />
                 </div>
